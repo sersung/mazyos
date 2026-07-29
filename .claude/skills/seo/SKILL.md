@@ -1,4 +1,4 @@
-﻿---
+---
 name: seo
 description: >
   Fluxo completo de SEO, AEO e GEO + Google Ads em 9 passos: idioma do site, pesquisa de

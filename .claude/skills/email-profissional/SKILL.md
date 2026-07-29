@@ -1,4 +1,4 @@
-﻿---
+---
 name: email-profissional
 description: >
   Rascunha um email profissional a partir de um contexto livre.
@@ -26,6 +26,8 @@ Se o usuário não forneceu as informações necessárias, perguntar:
 3. "Tem algo específico que precisa constar ou que precisa evitar dizer?"
 
 Se o usuário deu o contexto de forma livre (mesmo que bagunçado), extrai o que der e prossegue.
+
+**Idioma:** escrever no idioma do destinatário. Se o usuário colou um email recebido, responder no mesmo idioma dele (inglês → inglês, português → português). Se não estiver óbvio e o destinatário puder ser estrangeiro, perguntar. Em inglês, calibrar a formalidade pro padrão do mercado de lá (abertura "Hi [Name]," costuma servir; "Dear" só em contexto muito formal).
 
 ### Passo 2 — Escrever o email
 

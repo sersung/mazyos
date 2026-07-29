@@ -1,4 +1,4 @@
-﻿---
+---
 name: carrossel
 description: >
   Cria carrosséis e posts visuais pra Instagram, TikTok, LinkedIn com a identidade visual da marca.
@@ -120,6 +120,8 @@ Se o usuário não souber qual foi a última, perguntar.
 ### Linguagem (regra crítica)
 
 Seguir `_memoria/preferencias.md`. Em geral: frases naturais, sem jargão de marketing, sem corporativês. O público real raramente fala "ticket médio", "performance", "B2B". Falar como ele fala.
+
+**Idioma:** o carrossel sai no idioma do público daquele post (português ou inglês). Se veio do `/publicar-tema`, herdar o idioma do artigo. Se for avulso e não estiver óbvio, perguntar. Se o mesmo conteúdo for sair nos dois idiomas, são dois carrosséis — reescrever os slides pro público de cada idioma (expressões, exemplos), nunca traduzir ao pé da letra. Hashtags e legenda sempre no idioma da peça.
 
 ### Legenda — sempre gerar junto
 
