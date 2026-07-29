@@ -1,4 +1,4 @@
-﻿---
+---
 name: responder-avaliacoes
 description: >
   Escreve respostas curtas e humanas pras avaliações do Google Meu Negócio.
@@ -30,6 +30,7 @@ Respostas são **curtas** (1 a 2 frases), **pessoais** e **concretas**. Nada de 
 3. **Frase concreta, não genérica.** Puxar algo específico da review ou algo da empresa (produto, processo, cuidado, tradição). Evitar "seu feedback é muito importante pra nós", "estamos sempre à disposição", "agradecemos a preferência".
 4. **Emoji no final — opcional, na maioria das vezes sim.** Usar em reviews calorosas/elogiosas. Pular em reviews formais, curtas secas, ou críticas. Nunca mais de 1 emoji.
 5. **Tom:** seguir `_memoria/preferencias.md`. Sem jargão de marketing. Sem "premium", "qualidade ímpar", "experiência diferenciada".
+6. **Idioma:** responder no idioma da review. Review em inglês → resposta em inglês, com a mesma naturalidade ("Thanks, [Name]!" em vez de tradução dura de fórmula em português). Nunca responder em português uma review escrita em inglês, nem o contrário.
 
 ### Exemplos genéricos (adaptar ao negócio)
 

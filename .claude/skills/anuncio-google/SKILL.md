@@ -1,4 +1,4 @@
-﻿---
+---
 name: anuncio-google
 description: >
   Cria estrutura completa de campanha do Google Ads a partir de um briefing ou da pesquisa SEO.
@@ -31,9 +31,10 @@ Se o usuário não passou briefing, perguntar:
 1. **Produto/serviço a anunciar?** (1-3 linhas)
 2. **Quem é o público?** (perfil, dor que resolve)
 3. **Região:** raio em km a partir de qual cidade?
-4. **Orçamento diário?** (R$/dia)
-5. **Objetivo:** ligações / WhatsApp / formulário / visita?
-6. **Site/landing page** existe? URL?
+4. **Idioma do público-alvo:** português, inglês, ou os dois? (se os dois, montar **campanhas separadas por idioma** — keywords, copies e landing page próprias de cada uma; nunca misturar keyword EN com anúncio PT na mesma campanha)
+5. **Orçamento diário?** (R$/dia ou US$/dia, conforme o mercado)
+6. **Objetivo:** ligações / WhatsApp / formulário / visita?
+7. **Site/landing page** existe? URL? (no idioma da campanha — anúncio EN caindo em página PT queima dinheiro)
 
 Se já existe `marketing/seo/06-google-ads.md` (criado pelo `/seo`), usar como base — pular as perguntas que já foram respondidas lá.
 
