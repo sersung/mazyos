@@ -1,16 +1,18 @@
 ﻿---
 name: seo
 description: >
-  Fluxo completo de SEO, GEO e Google Ads em 8 passos: pesquisa de demanda, análise de
-  concorrência, Google Meu Negócio, otimização on-page, estratégia de conteúdo, Google Ads,
-  checklist de monitoramento e GEO (aparecer em IAs como ChatGPT, Gemini, Perplexity).
-  Use quando o usuário pedir "seo", "geo", "palavras-chave", "google ads",
-  "aparecer no google", "aparecer no chatgpt", "aparecer nas ias",
-  "google meu negócio", "gmb", "analisar concorrência seo",
+  Fluxo completo de SEO, AEO e GEO + Google Ads em 9 passos: idioma do site, pesquisa de
+  demanda, análise de concorrência, Google Meu Negócio, otimização on-page, estratégia de
+  conteúdo, Google Ads, checklist de monitoramento, AEO/GEO (aparecer em respostas diretas do
+  Google e em IAs como ChatGPT, Gemini, Perplexity) e auditoria de qualidade/E-E-A-T. Funciona
+  em português e em inglês, inclusive sites bilíngues.
+  Use quando o usuário pedir "seo", "aeo", "geo", "palavras-chave", "google ads",
+  "aparecer no google", "aparecer no chatgpt", "aparecer nas ias", "featured snippet",
+  "google meu negócio", "gmb", "analisar concorrência seo", "qualidade de conteúdo", "e-e-a-t",
   "pesquisa de nicho", "google trends".
 ---
 
-# /seo — SEO completo + GEO + Google Ads
+# /seo — SEO completo + AEO + GEO + Google Ads
 
 ## Dependências
 
@@ -24,9 +26,27 @@ description: >
 
 ## Workflow
 
+### Passo 0 — IDIOMA: em que idioma(s) o site/conteúdo existe?
+
+**Objetivo:** Calibrar toda a pesquisa e os outputs pro(s) idioma(s) certo(s) antes de gastar uma chamada de busca.
+
+1. Se já estiver claro pela conversa ou pelo `_memoria/empresa.md` (site, público, país), seguir sem perguntar.
+2. Senão, perguntar:
+
+   > "Esse trabalho de SEO é pra um site em português, em inglês, ou os dois (bilíngue)?"
+
+3. Se **bilíngue**: cada passo abaixo roda **uma vez por idioma** (termos de busca diferentes, concorrentes diferentes — o concorrente PT-BR raramente é o mesmo do mercado EN). Os outputs ficam nos mesmos arquivos, com seções separadas por idioma (`## 🇧🇷 Português` / `## 🇺🇸 English`).
+4. Confirmar também: as versões PT e EN são **páginas separadas com hreflang** (ex: `/pt/artigo` e `/en/article`) ou é **conteúdo único só em um idioma**? Isso muda o checklist técnico do Passo 4 (hreflang só se aplica a multi-idioma real).
+
+**Regra:** nunca misturar termos de busca dos dois idiomas na mesma pesquisa — "melhor fornecedor de X" e "best X supplier" têm concorrência, volume e intenção diferentes, mesmo que o produto seja o mesmo.
+
+---
+
 ### Passo 1 — DEMANDA: O que as pessoas buscam nesse nicho?
 
 **Objetivo:** Entender se existe demanda real e como as pessoas buscam.
+
+> Se o Passo 0 identificou mais de um idioma, repetir esse passo inteiro pra cada idioma — termos-semente, sazonalidade e classificação são independentes por idioma, nunca tradução direta de um pro outro.
 
 1. Ler `_memoria/empresa.md` pra extrair: produtos/serviços, região, público-alvo, diferenciais
 2. Gerar uma lista inicial de **30-50 termos-semente** baseados em:
@@ -55,6 +75,8 @@ description: >
 ### Passo 2 — CONCORRÊNCIA: Quem aparece pra essas buscas?
 
 **Objetivo:** Mapear quem domina os resultados e onde estão os gaps.
+
+> Se bilíngue: os concorrentes do mercado PT-BR e do mercado EN costumam ser empresas diferentes — mapear os dois conjuntos separadamente, sem assumir que quem ganha em um idioma ganha no outro.
 
 1. Pegar os **top 10 termos** do Passo 1
 2. Pra cada termo, usar **WebSearch** e analisar:
@@ -124,35 +146,47 @@ description: >
 
 ### Passo 4 — ON-PAGE: Otimizar o site
 
-**Objetivo:** Garantir que cada página esteja otimizada pras palavras-chave certas.
+**Objetivo:** Garantir que cada página esteja otimizada pras palavras-chave certas — e pronta pra ser lida por rich results e por IAs.
 
 1. Ler a estrutura atual do site (se `site/` existir; senão, perguntar as páginas)
 2. Pra cada página:
 
-   **Mapeamento de palavras-chave por página**
+   **Mapeamento de palavras-chave por página** (por idioma, se bilíngue)
 
    **Meta tags otimizadas:**
    - Title (50-60 caracteres, keyword no início)
    - Meta description (150-160 caracteres, com CTA)
    - H1, H2, H3 sugeridos
+   - Idioma declarado no HTML (`<html lang="pt-BR">` ou `<html lang="en">`)
 
-   **Schema Markup (dados estruturados):**
-   - LocalBusiness schema (JSON-LD)
-   - Product schema pros produtos
-   - FAQ schema se tiver seção de perguntas
+   **Multi-idioma (só se o site tiver páginas PT e EN separadas):**
+   - `hreflang` recíproco entre as versões (`<link rel="alternate" hreflang="pt-BR" href="...">` e `hreflang="en"`, mais uma tag `x-default`)
+   - Nunca traduzir automático sem revisão humana — Google e IAs penalizam/ignoram tradução mecânica
+   - URLs separadas por idioma (`/pt/...` e `/en/...`, ou subdomínio/domínio próprio) — nunca o mesmo path trocando conteúdo por cookie/JS
+
+   **Schema Markup (dados estruturados, JSON-LD):**
+   - `LocalBusiness` (ou subtipo mais específico: `Restaurant`, `Store`, `ProfessionalService`)
+   - `Organization` na home (nome, logo, redes sociais via `sameAs`)
+   - `Product`/`Offer` pros produtos, com preço e disponibilidade reais
+   - `Article`/`BlogPosting` nos posts (autor, data de publicação, data de atualização)
+   - `FAQPage` nas seções de perguntas
+   - `BreadcrumbList` pra hierarquia de navegação
+   - `AggregateRating`/`Review` só se existirem avaliações reais — nunca inventar nota
+   - Validar todo schema no [Rich Results Test do Google](https://search.google.com/test/rich-results) antes de considerar pronto
 
    **Checklist técnico:**
-   - URLs amigáveis
-   - Alt text das imagens
-   - Velocidade de carregamento
+   - URLs amigáveis, sem stopwords desnecessárias, no idioma certo
+   - Alt text das imagens (descritivo, com keyword natural, no idioma da página)
+   - Imagens em formato moderno (WebP/AVIF) e comprimidas — pesa direto no Core Web Vitals
+   - Core Web Vitals (LCP, INP, CLS) dentro da faixa "bom" — checar via PageSpeed Insights
    - Mobile-friendly
-   - Sitemap.xml, robots.txt, canonical, Open Graph
+   - Sitemap.xml (listando todas as versões de idioma), robots.txt, canonical, Open Graph + Twitter Card
 
-   **Internal linking:** mapa de links internos sugerido
+   **Internal linking:** mapa de links internos sugerido, sempre dentro do mesmo idioma — nunca linkar uma página PT pra uma EN como se fosse "leitura relacionada"
 
 **Output:** `marketing/seo/04-otimizacao-on-page.md` com:
-- Tabela: página → keyword principal → title → description → H1
-- Schema markup pronto pra copiar (JSON-LD)
+- Tabela: página → idioma → keyword principal → title → description → H1
+- Schema markup pronto pra copiar (JSON-LD), por página
 - Checklist técnico com status (feito / pendente)
 
 ---
@@ -180,6 +214,14 @@ description: >
    **Conteúdo local:**
    - Páginas de área de atendimento (se fizer sentido)
    - Conteúdo com referências locais
+
+   **Sinais de E-E-A-T pra incluir em cada peça:**
+   - Autor identificado (nome + credencial/experiência real, não "Equipe [Empresa]" genérico)
+   - Fontes e referências verificáveis quando citar dado externo
+   - Data de publicação e de última atualização visíveis
+   - Exemplo ou caso concreto do próprio negócio, não só teoria genérica
+
+   > Se bilíngue: conteúdo em EN não é tradução 1:1 do PT (nem o contrário) — adaptar exemplos, moeda, unidades, referências culturais e os termos de busca próprios daquele mercado.
 
 **Output:** `marketing/seo/05-estrategia-conteudo.md`
 
@@ -247,49 +289,94 @@ description: >
 
 ---
 
-### Passo 8 — GEO: Aparecer nas respostas de IAs
+### Passo 8 — AEO + GEO: Aparecer em respostas diretas (Google e IAs)
 
-**Objetivo:** Otimizar a presença pra que IAs generativas (ChatGPT, Gemini, Perplexity, Copilot) citem a empresa quando alguém perguntar sobre o nicho.
+**Objetivo:** Otimizar pra dois tipos de "resposta pronta" que competem com o clique tradicional:
 
-**Por que importa:** Cada vez mais clientes perguntam pra IAs "qual o melhor fornecedor/serviço de X em Y?" — quem aparece ganha lead qualificado sem pagar ads.
+- **AEO (Answer Engine Optimization):** featured snippets, People Also Ask, painel de resposta direta e AI Overviews do Google, busca por voz (Google Assistant, Siri, Alexa)
+- **GEO (Generative Engine Optimization):** citação em respostas de ChatGPT, Gemini, Perplexity, Copilot
 
-1. **Auditoria GEO:**
-   - WebSearch nos top 10 termos em engines de IA (Perplexity, etc.)
-   - Verificar se a empresa (ou concorrentes) aparece
-   - Mapear quais fontes as IAs citam pra esse nicho
+São otimizações relacionadas mas distintas — tratar as duas, não só uma.
 
-2. **Conteúdo otimizado pra IA:**
-   - Cada artigo do Passo 5 deve ter **respostas diretas** nas primeiras linhas
-   - Incluir **dados concretos** (números, certificações, endereços, fatos verificáveis)
-   - Estruturar com **perguntas como H2/H3** (formato Q&A)
-   - Evitar texto vago — IAs descartam genérico
+**Por que importa:** Cada vez mais gente pergunta direto pra um assistente ou lê a resposta pronta no topo do Google, sem clicar em nada. Quem é citado ganha lead qualificado sem pagar ads e sem depender só da posição #1 tradicional.
 
-3. **FAQ Schema no site:**
-   - Seção de FAQ com perguntas reais do nicho
-   - Implementar FAQPage schema (JSON-LD)
-   - 5-10 perguntas sugeridas baseadas no que o público pergunta
+1. **Auditoria AEO/GEO** (repetir por idioma, se bilíngue):
+   - WebSearch nos top 10 termos do Passo 1 e checar: existe featured snippet/AI Overview? é a empresa, concorrente, ou ninguém do nicho?
+   - WebSearch dos mesmos termos em formato de pergunta ("o que é...", "how does... work") pra ver como o Google responde direto
+   - Testar os mesmos termos em engines de IA acessíveis via WebSearch/WebFetch e registrar: a empresa aparece? quem aparece? qual fonte foi citada?
 
-4. **Citações externas (menções):**
-   - As IAs pesam menções em fontes confiáveis
-   - Ações: diretórios, sites de avaliação, guest posts, menções em blogs do nicho, aparições em mídia
+2. **Estrutura "resposta primeiro" (answer-first):**
+   - Cada H2/H3 que for uma pergunta real do público deve ter a resposta direta nas **primeiras 1-3 frases** (40-60 palavras), só depois o desenvolvimento
+   - Formato: pergunta como heading → resposta objetiva → detalhamento, exemplos, contexto
+   - Evitar rodeio: Google e IAs descartam parágrafos que enrolam antes de responder
 
-5. **Dados estruturados reforçados:**
-   - LocalBusiness, FAQPage, Product, Article schemas
+3. **Formatos que engines preferem extrair:**
+   - Listas numeradas/com bullets pra processos e passo a passo
+   - Tabelas comparativas (preço, prazo, especificação) — fáceis de citar/renderizar
+   - Definições curtas em bloco isolado ("X é...") logo no início de artigos sobre conceito
+   - Dados concretos e verificáveis: números, datas, certificações, endereço — nunca vago
 
-6. **Monitoramento GEO:**
-   - A cada 30 dias, testar os top 5 termos no ChatGPT, Gemini, Perplexity
-   - Registrar: a empresa apareceu? quem apareceu? fonte citada?
+4. **Clareza de entidade:**
+   - Nome da empresa, localização e categoria consistentes em todo o site e nas citações externas (mesmo NAP do Passo 3)
+   - Nomear a entidade explicitamente no texto (empresa/produto/pessoa) em vez de só usar pronomes — IAs conectam melhor entidades nomeadas
+
+5. **FAQ Schema + páginas de pergunta:**
+   - Seção de FAQ com perguntas reais do nicho (5-10, baseadas no que o público pergunta de verdade)
+   - Implementar `FAQPage` schema (JSON-LD)
+   - Página dedicada tipo "perguntas frequentes sobre X" quando o volume de dúvidas justificar
+
+6. **Citações externas (menções):**
+   - IAs generativas pesam menções em fontes que consideram confiáveis
+   - Ações: diretórios do nicho, sites de avaliação, guest posts, menções em blogs relevantes, aparições em mídia, Wikipedia/Wikidata quando aplicável
+   - Se bilíngue: buscar citações no ecossistema de cada idioma — um guest post em blog brasileiro não ajuda a aparecer em respostas em inglês, e vice-versa
+
+7. **Dados estruturados reforçados:** `LocalBusiness`, `FAQPage`, `Product`, `Article`/`BlogPosting`, `HowTo` quando o conteúdo for um passo a passo
+
+8. **Monitoramento AEO/GEO:**
+   - A cada 30 dias, testar os top 5 termos (por idioma) no Google e via WebSearch em engines de IA
+   - Registrar: apareceu? quem apareceu? qual fonte foi citada?
    - Ajustar conteúdo com base nos resultados
 
-**Output:** `marketing/seo/08-geo-otimizacao-ia.md` com auditoria, FAQ + schema JSON-LD, lista de ações pra aumentar citações, checklist de monitoramento.
+**Output:** `marketing/seo/08-geo-otimizacao-ia.md` com auditoria (por idioma), FAQ + schema JSON-LD, lista de ações pra aumentar citações, checklist de monitoramento.
+
+---
+
+### Passo 9 — QUALIDADE: Auditoria de E-E-A-T e saúde técnica
+
+**Objetivo:** Garantir que o site passe no "teste de confiança" do Google e das IAs — conteúdo raso ou site com problema técnico não aparece em lugar nenhum, não importa a keyword.
+
+1. **E-E-A-T (Experience, Expertise, Authoritativeness, Trust):**
+   - **Experience:** o conteúdo mostra vivência real (fotos próprias, casos reais, processo mostrado) em vez de genérico?
+   - **Expertise:** tem autor identificado com credencial/bio? (`author` no schema `Article`)
+   - **Authoritativeness:** o site é citado/linkado por outras fontes do nicho? aparece em diretórios relevantes?
+   - **Trust:** HTTPS, página de contato real, política de privacidade, avaliações reais visíveis, dados da empresa (CNPJ/endereço) verificáveis
+
+2. **Qualidade do conteúdo (por página/artigo, por idioma):**
+   - Responde a intenção de busca por completo, ou só arranha a superfície?
+   - Original — não é reescrita rasa de concorrente
+   - Atualizado — data de publicação e de última atualização visíveis
+   - Livre de erro gramatical/ortográfico (revisar no idioma nativo de cada versão, não só tradução automática)
+   - Legibilidade adequada ao público: frases curtas, parágrafos de 2-4 linhas, sem jargão desnecessário
+
+3. **Saúde técnica:**
+   - Links quebrados (internos e externos) — checar amostra das páginas principais
+   - Conteúdo duplicado (inclusive entre versões PT/EN mal configuradas sem hreflang correto)
+   - Core Web Vitals dentro do "bom" no PageSpeed Insights
+   - Todas as páginas indexáveis que deveriam estar (checar `robots.txt` e `noindex` acidental)
+
+4. **Prioridades:** listar os 5 problemas que mais travam ranqueamento/aparição em IA, do mais barato de resolver pro mais caro
+
+**Output:** `marketing/seo/09-qualidade-eeat.md` com checklist marcado (feito/pendente), lista de problemas encontrados e prioridades de correção.
+
+> Pra auditoria avulsa de qualidade em conteúdo já publicado (sem rodar o `/seo` inteiro), usar a skill `/qualidade-conteudo` diretamente.
 
 ---
 
 ## Execução
 
-Ao rodar `/seo`, executar **todos os 8 passos em sequência**, salvando cada output no arquivo correspondente. Entre cada passo, mostrar resumo do que foi encontrado antes de seguir.
+Ao rodar `/seo`, executar o Passo 0 (idioma) e depois **todos os 9 passos em sequência**, salvando cada output no arquivo correspondente. Entre cada passo, mostrar resumo do que foi encontrado antes de seguir.
 
-Se o usuário quiser rodar apenas um passo: `/seo passo 3` ou `/seo gmb` ou `/seo geo`.
+Se o usuário quiser rodar apenas um passo: `/seo passo 3`, `/seo gmb`, `/seo aeo`, `/seo geo` ou `/seo qualidade`.
 
 Ao finalizar, apresentar **resumo executivo** com:
 - Top 5 oportunidades encontradas
@@ -303,8 +390,10 @@ Ao finalizar, apresentar **resumo executivo** com:
 
 - Toda pesquisa deve ser real (usar WebSearch/WebFetch), nunca inventar dados de volume ou concorrência
 - Copies e textos seguem `_memoria/preferencias.md` estritamente
-- Termos em português do Brasil, como o público busca
+- Termos no idioma real de cada mercado (português do Brasil ou inglês), como o público de lá busca — nunca traduzir termo de busca ao pé da letra de um idioma pro outro
+- Se o site for bilíngue, cada passo roda por idioma — nunca misturar termos, concorrentes ou schema de um idioma no output do outro
+- AEO e GEO são otimizações diferentes (resposta direta do Google vs. citação em IA generativa) — tratar as duas, não só uma
 - Quando um dado não puder ser obtido (ex: volume exato), deixar claro que é estimativa e explicar a lógica
 - Focar em termos com intenção comercial/transacional pra negócio B2C/B2B local
-- Schema markup em formato JSON-LD (padrão Google)
+- Schema markup em formato JSON-LD (padrão Google), validado no Rich Results Test antes de dar como pronto
 - Google Ads: nunca inventar CPC ou estimativas de custo sem base real

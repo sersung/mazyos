@@ -4,7 +4,7 @@
 
 Você acaba de instalar o MazyOS. Em alguns minutos, sua empresa vai
 ter uma memória própria, uma identidade visual aplicada em tudo que
-o sistema gerar, e 15 skills prontas pra fazer marketing, SEO, ads
+o sistema gerar, e 16 skills prontas pra fazer marketing, SEO, ads
 e operação rodarem com você dirigindo.
 
 Bora voar.
@@ -60,10 +60,15 @@ em skill personalizada.
 **Conteúdo e SEO** — vitrine pública da empresa
 `/carrossel` cria carrosséis 1080×1350 com identidade da marca (com ou
 sem foto IA) · `/publicar-tema` pega um tema e entrega artigo de blog +
-carrossel + 3 legendas amarradas · `/seo` roda fluxo completo de 8 passos
-(demanda, concorrência, GMB, on-page, conteúdo, ads, monitoramento, GEO)
-· `/responder-avaliacoes` escreve respostas humanas pras reviews do
-Google · `/aprovar-post` publica blog + Instagram + Facebook num comando.
+carrossel + 3 legendas amarradas, já escrito no formato answer-first pra
+AEO/GEO · `/seo` roda fluxo completo de 9 passos (idioma, demanda,
+concorrência, GMB, on-page, conteúdo, ads, monitoramento, AEO/GEO e
+qualidade/E-E-A-T) — funciona em português e inglês, inclusive sites
+bilíngues · `/qualidade-conteudo` audita um artigo ou página já
+publicada e devolve um scorecard de E-E-A-T, legibilidade e
+AEO-readiness · `/responder-avaliacoes` escreve respostas humanas pras
+reviews do Google · `/aprovar-post` publica blog + Instagram + Facebook
+num comando.
 
 **Anúncios pagos** — onde o dinheiro entra
 `/anuncio-google` monta a campanha inteira em CSV pronto pra importar
