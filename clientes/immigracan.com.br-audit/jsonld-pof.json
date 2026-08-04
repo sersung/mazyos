@@ -1,0 +1,30 @@
+{
+  "block_count": 1,
+  "processed_count": 1,
+  "total_bytes": 246,
+  "truncated": false,
+  "blocks": [
+    {
+      "index": 1,
+      "size_bytes": 246,
+      "valid": true,
+      "types": [
+        "Offer",
+        "WebApplication"
+      ],
+      "types_truncated": false,
+      "data": {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Calculadora de Proof of Funds â Express Entry",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "BRL"
+        }
+      }
+    }
+  ]
+}

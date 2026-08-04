@@ -1,0 +1,40 @@
+{
+  "url": "https://immigracan.com.br/termos",
+  "status_code": 200,
+  "content": "<!doctype html>\r\n<html lang=\"pt-BR\">\r\n  <head>\r\n    <!-- FIX P-7: GTM foi movido para src/lib/third-party.ts (carregado via\r\n         requestIdleCallback), pois o snippet inline s\u00c3\u00adncrono no topo do\r\n         <head> bloqueava parsing/render e prejudicava LCP mobile. -->\r\n    <meta charset=\"UTF-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>Termos de Uso e Servi\u00c3\u00a7o | ImmigraCan</title>\r\n    <meta name=\"description\" content=\"Conhe\u00c3\u00a7a os termos de us...",
+  "raw_content": "<!doctype html>\r\n<html lang=\"pt-BR\">\r\n  <head>\r\n    <!-- FIX P-7: GTM foi movido para src/lib/third-party.ts (carregado via\r\n         requestIdleCallback), pois o snippet inline s\u00c3\u00adncrono no topo do\r\n...",
+  "is_spa": false,
+  "extracted_text": "Termos de Uso e Servi\u00c3\u00a7o | ImmigraCan\nO simulador ImmigraCan \u00c3\u00a9 uma ferramenta de car\u00c3\u00a1ter estritamente educacional e informativo. O resultado das simula\u00c3\u00a7\u00c3\u00b5es n\u00c3\u00a3o constitui assessoria jur\u00c3dica de imigra\u00c3\u00a7\u00c3\u00a3o ou promessa de visto.\nPara decis\u00c3\u00b5es oficiais e assessoria regulamentada, sempre contrate um consultor de imigra\u00c3\u00a7\u00c3\u00a3o RCIC licenciado ou advogado especializado no Canad\u00c3\u00a1.",
+  "publication_date": "2026-01-01",
+  "accessibility_tree": null,
+  "headers": {
+    "Alt-Svc": "h3=\":443\"; ma=2592000",
+    "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0",
+    "Content-Encoding": "gzip",
+    "Content-Type": "text/html",
+    "Date": "Thu, 23 Jul 2026 23:49:37 GMT",
+    "Etag": "W/\"6a617893-17ac\"",
+    "Last-Modified": "Thu, 23 Jul 2026 02:12:35 GMT",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Server": "nginx",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Vary": "Accept-Encoding",
+    "X-Content-Type-Options": "nosniff",
+    "Transfer-Encoding": "chunked"
+  },
+  "redirect_chain": [],
+  "console_errors": [],
+  "render_diagnostics": [],
+  "render_engine": null,
+  "render_ms": null,
+  "mode_used": "raw",
+  "error": null,
+  "structured_data": {
+    "block_count": 0,
+    "processed_count": 0,
+    "total_bytes": 0,
+    "truncated": false,
+    "blocks": []
+  }
+}

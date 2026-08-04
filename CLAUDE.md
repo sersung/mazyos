@@ -113,3 +113,33 @@ Quando o usuário pedir skill nova:
 4. Se a skill precisar de arquivos de apoio (templates, exemplos),
    criar dentro da pasta da skill
 5. Seguir o fluxo da skill-creator nativa do Claude Code
+
+---
+
+# Renan — marca pessoal
+
+> Perfil: solopreneur / criador solo. Instalado via `/instalar`.
+
+## Quem sou
+
+Sou Renan Sersun Calefi, engenheiro eletricista. Além da atuação como
+eletricista, entrego sites, SEO, vídeos e cortes de vídeo pra quem quer
+presença profissional online.
+
+## O que produzo
+
+- Sites profissionais
+- SEO
+- Vídeos e cortes de vídeo
+- Carrosséis
+- Melhorias em automação
+
+## Meus clientes
+
+Clientes que querem sites profissionais, carrosséis e melhorias em
+automação. Toco tudo sozinho, sem equipe.
+
+## Posicionamento
+
+Em aberto — atualizar quando o diferencial de cada frente (elétrica vs.
+digital) ficar mais claro.

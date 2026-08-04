@@ -1,0 +1,30 @@
+{
+  "block_count": 1,
+  "processed_count": 1,
+  "total_bytes": 356,
+  "truncated": false,
+  "blocks": [
+    {
+      "index": 1,
+      "size_bytes": 356,
+      "valid": true,
+      "types": [
+        "Dataset",
+        "Organization"
+      ],
+      "types_truncated": false,
+      "data": {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": "Express Entry Draws â HistÃ³rico",
+        "description": "Dataset atualizado com todos os draws do Express Entry canadense, incluindo data, categoria, nÃºmero de ITAs emitidos e CRS mÃ­nimo.",
+        "creator": {
+          "@type": "Organization",
+          "name": "ImmigraCan"
+        },
+        "isAccessibleForFree": true,
+        "inLanguage": "pt-BR"
+      }
+    }
+  ]
+}

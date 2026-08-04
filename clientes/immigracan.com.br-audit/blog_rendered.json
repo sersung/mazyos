@@ -1,0 +1,52 @@
+{
+  "url": "https://immigracan.com.br/blog/o-que-e-imigracao-guia-completo",
+  "status_code": 200,
+  "content": "<!doctype html>\r\n<html lang=\"pt-BR\">\r\n  <head>\r\n    <!-- FIX P-7: GTM foi movido para src/lib/third-party.ts (carregado via\r\n         requestIdleCallback), pois o snippet inline s\u00c3\u00adncrono no topo do\r\n         <head> bloqueava parsing/render e prejudicava LCP mobile. -->\r\n    <meta charset=\"UTF-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>O Que \u00c3\u00a9 Imigra\u00c3\u00a7\u00c3\u00a3o? Significado, Tipos e Guia Completo (2026) | ImmigraCan</title>\r\n    <meta name=\"descrip...",
+  "raw_content": "<!doctype html>\r\n<html lang=\"pt-BR\">\r\n  <head>\r\n    <!-- FIX P-7: GTM foi movido para src/lib/third-party.ts (carregado via\r\n         requestIdleCallback), pois o snippet inline s\u00c3\u00adncrono no topo do\r\n...",
+  "is_spa": false,
+  "extracted_text": "O Que \u00c3\u00a9 Imigra\u00c3\u00a7\u00c3\u00a3o? Significado, Tipos e Guia Completo (2026) | ImmigraCan\nPublicado em: 03/07/2026 | Categoria: geral\nO que \u00c3\u00a9 imigra\u00c3\u00a7\u00c3\u00a3o?\nImigra\u00c3\u00a7\u00c3\u00a3o \u00c3\u00a9 o ato de uma pessoa entrar em um pa\u00c3s que n\u00c3\u00a3o \u00c3\u00a9 o de sua origem com a inten\u00c3\u00a7\u00c3\u00a3o de morar tempor\u00c3\u00a1ria ou permanentemente. \u00c3 um dos fen\u00c3\u00b4menos mais antigos e importantes da hist\u00c3\u00b3ria humana \u00e2 hoje, mais de 280 milh\u00c3\u00b5es de pessoas no mundo vivem fora do pa\u00c3s onde nasceram, segundo dados da ONU.\nEste guia explica em detalhes o significado do...",
+  "publication_date": "2026-07-04",
+  "accessibility_tree": null,
+  "headers": {
+    "Alt-Svc": "h3=\":443\"; ma=2592000",
+    "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0",
+    "Content-Encoding": "gzip",
+    "Content-Type": "text/html",
+    "Date": "Thu, 23 Jul 2026 23:49:34 GMT",
+    "Etag": "W/\"6a617893-36e3\"",
+    "Last-Modified": "Thu, 23 Jul 2026 02:12:35 GMT",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Server": "nginx",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Vary": "Accept-Encoding",
+    "X-Content-Type-Options": "nosniff",
+    "Transfer-Encoding": "chunked"
+  },
+  "redirect_chain": [],
+  "console_errors": [],
+  "render_diagnostics": [],
+  "render_engine": null,
+  "render_ms": null,
+  "mode_used": "raw",
+  "error": null,
+  "structured_data": {
+    "block_count": 1,
+    "processed_count": 1,
+    "total_bytes": 635,
+    "truncated": false,
+    "blocks": [
+      {
+        "index": 1,
+        "size_bytes": 635,
+        "valid": true,
+        "types": [
+          "Article",
+          "ImageObject",
+          "Organization"
+        ],
+        "types_truncated": false
+      }
+    ]
+  }
+}

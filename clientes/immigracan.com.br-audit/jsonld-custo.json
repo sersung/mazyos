@@ -1,0 +1,41 @@
+{
+  "block_count": 1,
+  "processed_count": 1,
+  "total_bytes": 501,
+  "truncated": false,
+  "blocks": [
+    {
+      "index": 1,
+      "size_bytes": 501,
+      "valid": true,
+      "types": [
+        "Answer",
+        "FAQPage",
+        "Question"
+      ],
+      "types_truncated": false,
+      "data": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Quanto custa morar em Toronto?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Uma pessoa gasta em mÃ©dia CAD 3450 por mÃªs em Toronto. Uma famÃ­lia de 4 pessoas gasta cerca de CAD 6800."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Qual o salÃ¡rio mÃ©dio em Toronto?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O salÃ¡rio mÃ©dio mensal em Toronto Ã© de aproximadamente CAD 5800, variando por profissÃ£o."
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

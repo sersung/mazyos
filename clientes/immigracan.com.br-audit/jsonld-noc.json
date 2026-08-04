@@ -1,0 +1,75 @@
+{
+  "block_count": 2,
+  "processed_count": 2,
+  "total_bytes": 1053,
+  "truncated": false,
+  "blocks": [
+    {
+      "index": 1,
+      "size_bytes": 682,
+      "valid": true,
+      "types": [
+        "Answer",
+        "FAQPage",
+        "Question"
+      ],
+      "types_truncated": false,
+      "data": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Qual o cÃ³digo NOC de gerente de serviÃ§os de saÃºde?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O cÃ³digo NOC de Gerente de serviÃ§os de saÃºde Ã© 30010 (Managers in health care), classificado como TEER 0 â TEER 0 â OcupaÃ§Ãµes de gestÃ£o."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "NOC 30010 Ã© elegÃ­vel para o Express Entry?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim, elegÃ­vel para o Federal Skilled Worker (FSW). ElegÃ­vel para o Canadian Experience Class (CEC) com 1+ ano de experiÃªncia canadense. Aparece nos draws de categoria: Healthcare."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "size_bytes": 371,
+      "valid": true,
+      "types": [
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "types_truncated": false,
+      "data": {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "InÃ­cio",
+            "item": "https://immigracan.com.br/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "CÃ³digos NOC",
+            "item": "https://immigracan.com.br/buscador-noc"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "NOC 30010",
+            "item": "https://immigracan.com.br/noc/30010"
+          }
+        ]
+      }
+    }
+  ]
+}

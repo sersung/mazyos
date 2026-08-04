@@ -1,0 +1,463 @@
+{
+  "summary": {
+    "health_score": 47,
+    "business_type": "YMYL content publisher + freemium SaaS tool (Canadian-immigration eligibility calculators/quiz for Brazilians; monetized via a R$19.90 one-time AI-generated report and a R$29.90/mo subscription)",
+    "top_findings": [
+      "The blog's backend API is broken in production right now: /api/blog returns [] and /api/blog/{slug} returns 404, so every one of the 90 blog URLs (30% of the site) shows a full 'Erro ao carregar artigo' error page to real visitors and to any JS-rendering crawler, even though the raw server-rendered HTML (what most SEO tools check) still looks fine.",
+      "The entire site runs on a soft-404 architecture: any nonexistent URL, plus four real sitemapped pages (/faq, /templates, /comparador, /prontidao), return HTTP 200 with the homepage's exact title/description/canonical/JSON-LD in raw HTML, only correcting client-side after full JS hydration.",
+      "Critical E-E-A-T/trust gaps for a YMYL, money-collecting site: no About page anywhere, no named authors (Article schema uses a bare Organization), no Organization schema at all, and the 'we are not a licensed RCIC/immigration consultant' disclaimer is buried in Terms of Service and a collapsed FAQ answer instead of being shown on /precos at the point of payment.",
+      "A live factual contradiction: /programas/pnp_ontario still states the Ontario PNP is 'Status: Ativo' with open streams, while /pnp/ontario and a blog post correctly report OINP was revoked 30 May 2026 (confirmed against external sources) — a user could land on either page and get the opposite answer.",
+      "100% of blog posts (90/90) ship with an empty meta description / og:description / twitter:description, and the sitemap's lastmod is fabricated (stamped 'today') on 204 of 294 URLs (69%), both of which are pure execution bugs, not design limitations."
+    ],
+    "quick_wins": [
+      "Backfill meta description / og:description / twitter:description on all 90 blog posts (templated fix, one bug covers all 90 pages)",
+      "Add a visible, non-collapsed disclaimer on /precos and at checkout: 'Relatório gerado por IA; não somos consultores licenciados (RCIC/CICC)'",
+      "Fix the raw-HTML SSR metadata for /faq, /comparador, /prontidao, /templates so each serves its own title/description/canonical instead of the homepage's",
+      "Correct the 'Status: Ativo' factual error on /programas/pnp_ontario to reflect the actual May 2026 OINP revocation",
+      "Remove the duplicate /noc/72410 sitemap entry and stop stamping lastmod with today's date on every non-blog URL",
+      "Add X-Frame-Options: SAMEORIGIN (or CSP frame-ancestors) — trivial, closes a clickjacking gap on a payment-taking site",
+      "Add Service/Offer JSON-LD to /precos and WebApplication/Offer schema to /calculadora-crs — currently zero structured data on the two highest-commercial-value pages on the site"
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "score": 61,
+      "what_works": [
+        "HTTPS everywhere with HSTS (preload + includeSubDomains), correct www→apex 301, X-Content-Type-Options, Permissions-Policy, and strict-origin-when-cross-origin referrer policy",
+        "robots.txt is well-formed, correctly disallows private/app routes, and declares the sitemap",
+        "The large majority of templates (blog, NOC, programas, PNP, custo-de-vida, tools) are genuinely server-rendered with unique per-route meta in raw HTML — this is not a thin SPA site",
+        "Mobile viewport meta and PWA manifest/apple-touch tags present and correct on every template sampled",
+        "ads.txt correctly implemented and consistent with the AdSense verification tag"
+      ],
+      "findings": [
+        {
+          "title": "Any non-existent URL, plus /faq, /templates, /comparador, /prontidao, return HTTP 200 with the homepage's raw title/description/canonical/JSON-LD (soft-404)",
+          "severity": "Critical",
+          "description": "curl against a deliberately invented URL returns byte-identical HTML to the real homepage (same title, meta description, canonical, and WebSite/FAQPage/Offer/SoftwareApplication JSON-LD), with HTTP 200 and meta robots 'index, follow'. The same defect hits four real, sitemapped, unique pages — their genuine content only appears after full client-side JS hydration. Only after render does the app correct itself, and even then, stale homepage JSON-LD isn't cleared from the DOM.",
+          "recommendation": "Have the server return a real 404 (or 410) status for unknown routes before falling back to the SPA shell; add the four affected routes to whatever mechanism injects per-route SSR metadata; treat this as a regression test for all future routes."
+        },
+        {
+          "title": "Plain HTTP (port 80) dead-ends on a bare 404 instead of redirecting to HTTPS",
+          "severity": "Critical",
+          "description": "Both http://immigracan.com.br/ and http://www.immigracan.com.br/ return a plain-text 404 with no redirect, unlike the working https://www→apex 301. This breaks old bookmarks, print/QR links, non-browser clients, and any http:// backlink.",
+          "recommendation": "Add/fix the HTTP-only nginx server block to 301-redirect to the HTTPS canonical, preserving path and query."
+        },
+        {
+          "title": "100% of blog posts (90/90) ship an empty meta description, og:description, and twitter:description",
+          "severity": "High",
+          "description": "Systematically confirmed across every blog URL in the sitemap. Every other template (homepage, tools, programas, PNP, custo-de-vida, NOC, imigrar-como) has a correctly populated description; this is isolated to the blog template, likely a null CMS field with no excerpt fallback.",
+          "recommendation": "Backfill descriptions for all 90 posts (auto-generate from first ~155 characters as a fallback), and fix the template so new posts don't ship empty."
+        },
+        {
+          "title": "Blog og:image/twitter:image use root-relative URLs instead of absolute (inconsistent with homepage)",
+          "severity": "High",
+          "description": "Every sampled blog post uses a relative path like /blog/{slug}.png for og:image while the homepage correctly uses an absolute URL. Many WhatsApp/Telegram/Slack/email unfurlers won't resolve relative OG image URLs, breaking link-preview images on the platform this audience shares content through most.",
+          "recommendation": "Emit fully-qualified absolute URLs for og:image/twitter:image on every template."
+        },
+        {
+          "title": "Overlapping /pnp/{province} and /programas/pnp_{code} URL structures compete for the same programs",
+          "severity": "High",
+          "description": "Both structures exist, both self-canonicalize, both target the same real-world program (e.g. Ontario) with different framing (news/status vs. requirements reference) but overlapping keyword space, splitting authority and confusing which is canonical.",
+          "recommendation": "Cross-link each pair explicitly, or consolidate into one canonical page per province with a dated status module."
+        },
+        {
+          "title": "Sitemap lastmod is fabricated for 204 of 294 URLs (69%); blog lastmod is genuinely accurate",
+          "severity": "High",
+          "description": "Every non-blog URL — tools, programas, PNP, NOC (86 pages), custo-de-vida, the homepage itself — shows lastmod stamped to today's date regardless of real changes. The 90 blog posts, by contrast, show real differentiated dates matching their own Article JSON-LD dateModified exactly.",
+          "recommendation": "Only update lastmod when underlying content actually changes; Google may start ignoring lastmod sitewide (including the blog's currently-trustworthy values) if this persists."
+        },
+        {
+          "title": "No Content-Security-Policy or X-Frame-Options header",
+          "severity": "Medium",
+          "description": "The security header baseline is otherwise strong (HSTS, nosniff, Permissions-Policy), but there's no clickjacking protection and no CSP despite third-party scripts (GTM, AdSense, Fonts) and a payment/checkout flow.",
+          "recommendation": "Add X-Frame-Options: SAMEORIGIN immediately (low effort); introduce CSP incrementally starting in Report-Only mode."
+        },
+        {
+          "title": "No IndexNow key file implemented",
+          "severity": "Medium",
+          "description": "The site publishes frequently (draw/news posts, an Express Entry draws page claiming 12-hour auto-updates) but has no IndexNow integration for fast Bing/Yandex indexing.",
+          "recommendation": "Generate and publish an IndexNow key and wire a ping into the publish pipeline for new/updated content."
+        },
+        {
+          "title": "Duplicate sitemap entry: /noc/72410 listed twice",
+          "severity": "Medium",
+          "description": "The NOC-code data pipeline emits this URL twice with identical lastmod/priority/changefreq.",
+          "recommendation": "De-duplicate the source dataset feeding the sitemap generator."
+        }
+      ]
+    },
+    {
+      "name": "Content Quality",
+      "score": 34,
+      "what_works": [
+        "The blog's evergreen definitional guide (o-que-e-imigracao-guia-completo) has genuine depth (~950-1,050 words), clean H2/H3 structure, a comparison table, and a glossary",
+        "Real, differentiated per-article publish dates on the blog (not fabricated, unlike the sitemap)",
+        "/dados/brasileiros-express-entry-2026 is a genuinely original-data asset (a real study with specific numbers) — strong authority-building potential if promoted",
+        "Calculators/quiz pages already carry solid ~120-140 word standalone declarative explainer text alongside the interactive tools",
+        "Keyword usage throughout is natural, not stuffed"
+      ],
+      "findings": [
+        {
+          "title": "No About/Sobre page and no legal-entity identity anywhere on the site",
+          "severity": "Critical",
+          "description": "Only /faq, /precos, /contato, /privacidade, /termos, /blog are linked anywhere. /contato is just a support email with no company name, CNPJ, address, or team. No Organization schema exists. Two different unexplained support emails appear on the site (suporte@ vs. contato@immigracan.com.br). For a YMYL site processing payments, this is one of the most heavily-weighted quality-rater trust signals and is also a Brazilian consumer-protection (CDC) concern.",
+          "recommendation": "Publish a real /sobre page with legal entity name + CNPJ, founder/team names, physical/mailing address, and one consistent support email; add matching Organization schema."
+        },
+        {
+          "title": "No named author or expertise attribution on any content page",
+          "severity": "Critical",
+          "description": "Article JSON-LD uses \"author\":{\"@type\":\"Organization\"} sitewide across ~90 blog posts, ~90 NOC pages, ~36 profession pages, and program pages. No byline, bio, or credential appears anywhere, despite the operators clearly understanding the regulatory landscape (they write about CICC rule changes).",
+          "recommendation": "Add named Person authors with real, disclosed qualifications, or at minimum a credentialed 'reviewed by' for eligibility content; update Article schema to author type Person."
+        },
+        {
+          "title": "The paid R$19.90 AI-generated report has no visible disclaimer or human-review disclosure at the point of sale",
+          "severity": "Critical",
+          "description": "/precos (99 words) never mentions that the report is AI-generated/unreviewed or that ImmigraCan is not a licensed CICC/RCIC consultant. That disclaimer exists only buried in /termos and inside a collapsed FAQ accordion answer — never at the moment someone is deciding whether to pay.",
+          "recommendation": "Add a prominent, non-collapsed disclaimer directly on /precos and immediately before checkout."
+        },
+        {
+          "title": "Thin, near-boilerplate content across ~150+ programmatic page templates (NOC, imigrar-como, custo-de-vida, programas, pnp)",
+          "severity": "High",
+          "description": "Per-page unique content is roughly 40-150 words across these ~150 URLs (about half the site) — e.g. custo-de-vida/toronto is ~40-50 unique words, NOC pages ~90-110. These read as data-field lookups wrapped in identical boilerplate rather than genuine guidance.",
+          "recommendation": "Add substantive unique value per page/family: pathway narratives, pitfalls, sourced figures, cross-links to related content — even 150-250 additional words per page would materially change the picture."
+        },
+        {
+          "title": "Verbatim-template duplicate content across 15+ 'sorteio' draw-result posts and 10+ processing-time update posts",
+          "severity": "High",
+          "description": "Two sampled 'sorteio CEC' posts are word-for-word identical except for date and invite count. This Mad-Libs pattern repeats across at least 25 blog URLs targeting overlapping keywords, risking both a quality read and keyword cannibalization.",
+          "recommendation": "Consolidate into continuously-updated hub pages (the site already has /express-entry/draws and /historico-draws as models) instead of minting a new near-identical article per event."
+        },
+        {
+          "title": "The FAQ page's real, high-quality answers are invisible to any non-JS crawler and hidden inside a click-to-reveal accordion",
+          "severity": "High",
+          "description": "The best trust-building content on the site — 26 genuinely good Q&A pairs including the honest 'we are not a licensed consultant' answer — exists only in JSON-LD/accordion state, not in visible, crawlable text, and the page's raw HTML actually duplicates the homepage (see Technical findings).",
+          "recommendation": "Server-render the FAQ answers as visible text, not JS/click-gated; fix the underlying routing bug causing /faq to serve homepage content in raw HTML."
+        },
+        {
+          "title": "RCIC/licensing disclaimer is present on blog posts but absent from the programmatic pages making the most specific actionable claims",
+          "severity": "High",
+          "description": "Present on blog posts; absent on /programas/pnp_ontario, /pnp/ontario, /imigrar-como/eletricista, and critically /precos — the pages stating specific eligibility criteria, salary ranges, and pricing with no caveat.",
+          "recommendation": "Add the same disclaimer footer used on blog posts to the programas/pnp/noc/imigrar-como templates — one component update covers ~150 URLs."
+        }
+      ]
+    },
+    {
+      "name": "On-Page SEO",
+      "score": 45,
+      "what_works": [
+        "Title tags are natural, well-formed, and reasonably lengthed (mostly 50-70 chars) across sampled templates",
+        "Every one of the 294 crawled pages has exactly one H1 and a canonical tag present",
+        "No stray noindex found anywhere on real templates; robots meta correctly index,follow sitewide",
+        "Zero images site-wide were found missing alt text in the full 294-page crawl"
+      ],
+      "findings": [
+        {
+          "title": "All 90 blog posts (100% of the blog) are missing meta descriptions",
+          "severity": "High",
+          "description": "Confirmed via full-site crawl (crawl-data.psv): every one of the 90 /blog/{slug} URLs has an empty meta description field, while all 204 non-blog pages have one. This is the single largest content section on the site shipping with no SERP/social snippet control at all.",
+          "recommendation": "Backfill and fix the template default (see Technical SEO H1 for the same finding)."
+        },
+        {
+          "title": "5 sitemap-listed pages self-canonicalize to the homepage instead of themselves",
+          "severity": "High",
+          "description": "/comparador, /prontidao, /templates, and /faq all carry <link rel=\"canonical\" href=\"https://immigracan.com.br\"> in raw HTML rather than pointing at themselves, directly contradicting the sitemap's instruction to index them as distinct URLs.",
+          "recommendation": "Fix per-route canonical injection (same root cause as the Technical SEO soft-404 finding)."
+        },
+        {
+          "title": "/quiz — the core conversion entry point — has no <h1> anywhere in the DOM",
+          "severity": "Medium",
+          "description": "Confirmed via rendered DOM inspection; the page shows only a breadcrumb and a progress indicator, no page-level heading, which is suboptimal for both accessibility and for signaling page topic to search engines.",
+          "recommendation": "Add a visually-hidden or small H1 such as 'Quiz de Elegibilidade para Imigrar ao Canadá'."
+        },
+        {
+          "title": "9 pages share duplicate titles/descriptions (2 duplicate title groups beyond the homepage-cannibalized 5, plus a duplicate NOC page)",
+          "severity": "Medium",
+          "description": "/express-entry/draws and /express-entry/draws/2026 share an identical title; the duplicate /noc/72410 sitemap entry produces a literal duplicate title/description pair.",
+          "recommendation": "Differentiate the draws-vs-2026-archive titles; de-duplicate the NOC entry."
+        },
+        {
+          "title": "Blog post H1 duplicates the full <title> including the site-name suffix",
+          "severity": "Low",
+          "description": "H1 repeats \"... | ImmigraCan\" verbatim instead of just the headline — the brand suffix belongs in <title> for SERP branding, not the visible on-page H1.",
+          "recommendation": "Strip the site-name suffix when rendering H1 on the blog template."
+        }
+      ]
+    },
+    {
+      "name": "Schema / Structured Data",
+      "score": 40,
+      "what_works": [
+        "All JSON-LD found sitewide uses correct @context and is server-rendered in raw HTML (no raw-vs-rendered discrepancy)",
+        "NOC (~90), imigrar-como (36), and pnp (12) templates correctly carry matched FAQPage + BreadcrumbList schema",
+        "Homepage carries WebSite, FAQPage, and SoftwareApplication/Offer blocks",
+        "Express Entry draws pages carry Dataset schema — a good, underused pattern"
+      ],
+      "findings": [
+        {
+          "title": "/precos (the pricing/checkout page) has zero structured data",
+          "severity": "Critical",
+          "description": "Despite listing two real paid tiers (R$19.90 report, R$29.90/mo subscription), there is no Product/Service/Offer markup at all — the single highest-value schema gap on the site given real money changes hands here.",
+          "recommendation": "Add Service + OfferCatalog (or Product + Offer) JSON-LD describing both paid tiers with real pricing."
+        },
+        {
+          "title": "No Organization schema anywhere on the site",
+          "severity": "Critical",
+          "description": "Every Organization reference found (in Article.publisher, Article.author, Dataset.creator) is a bare {\"@type\":\"Organization\",\"name\":\"ImmigraCan\"} stub with no @id, logo, sameAs, or founder — Google cannot merge these into one entity, and there's no knowledge-panel-eligible identity for a YMYL site.",
+          "recommendation": "Add one site-wide Organization block with a real ≥112x112px logo (not favicon.ico) and real sameAs links (omit sameAs entirely rather than inventing profiles that don't exist), referenced by @id elsewhere."
+        },
+        {
+          "title": "Homepage SoftwareApplication is missing aggregateRating (blocking rich-result eligibility) and only represents the free tier",
+          "severity": "Critical",
+          "description": "Without aggregateRating the page cannot earn the Software App rich result at all; the same defect exists on every WebApplication block on tool pages. Separately, the single Offer for price \"0\" ignores the two paid products entirely.",
+          "recommendation": "Do not fabricate ratings — only add aggregateRating once a real rating-collection mechanism exists. Expand offers to an array/AggregateOffer covering all three tiers."
+        },
+        {
+          "title": "Blog Article.author is Organization, not Person; publisher.logo uses favicon.ico; Article.image is a relative URL",
+          "severity": "High",
+          "description": "Three related gaps on the same Article schema: weak E-E-A-T authorship signal, a non-standard .ico image format for the logo property, and a relative (non-absolute) image URL that fails Google's structured-data URL requirements.",
+          "recommendation": "Use a named Person author (or add reviewedBy), swap the logo to a real PNG/SVG brand asset, and make the image URL absolute."
+        },
+        {
+          "title": "/programas/pnp_{code} template (~18 pages) has zero schema while the sibling /pnp/{province} template has FAQPage+BreadcrumbList",
+          "severity": "High",
+          "description": "Directly inconsistent implementation across two overlapping templates covering the same real-world programs.",
+          "recommendation": "Port the same FAQPage+BreadcrumbList pattern from /pnp/{province} onto /programas/{id}."
+        },
+        {
+          "title": "No BreadcrumbList on blog posts or on /custo-de-vida/{city} pages (~15 pages)",
+          "severity": "High",
+          "description": "Both are 2+ level-deep URL families that would benefit from Google's breadcrumb rich result replacing the raw URL in the SERP snippet.",
+          "recommendation": "Add BreadcrumbList to both templates."
+        },
+        {
+          "title": "/calculadora-crs and several other free tools have zero structured data; /quiz uses a non-rich-result Quiz type",
+          "severity": "Medium",
+          "description": "Only 3 of 9 tool pages carry WebApplication+Offer; /calculadora-crs, /conversor-clb, /simulador-cenarios, /historico-draws, /buscador-noc, and /checklist-documentos have none at all, despite /calculadora-crs likely being the single highest-intent page on the site.",
+          "recommendation": "Standardize every free-tool page on WebApplication+Offer (Quiz type can be kept in addition via @graph)."
+        },
+        {
+          "title": "NOC pages (~90) have no Occupation/DefinedTerm entity markup",
+          "severity": "Medium",
+          "description": "Each page's core content (NOC code, occupation name, TEER level, EE category) is exactly the kind of fact that benefits from explicit entity markup for AI-answer-engine clarity, even without a Google rich-result surface.",
+          "recommendation": "Add DefinedTerm/DefinedTermSet markup referencing the NOC 2021 classification."
+        }
+      ]
+    },
+    {
+      "name": "Performance (Core Web Vitals)",
+      "score": 55,
+      "what_works": [
+        "TTFB is consistently good (163-364ms) across every page tested — server response is not a bottleneck",
+        "Google Fonts use a correct async preload→swap pattern with a working noscript fallback",
+        "GTM/AdSense are deferred via requestIdleCallback rather than blocking the head, and this is confirmed to keep them off the LCP path",
+        "DOM size is reasonable (775 elements on homepage, well under the ~1,500 excessive-DOM threshold)"
+      ],
+      "findings": [
+        {
+          "title": "SSR-fallback-to-hydration DOM swap causes severe CLS (0.31-0.52, 'Poor') on /quiz and /calculadora-crs — the two primary conversion pages",
+          "severity": "Critical",
+          "description": "Lighthouse attributes ~100% of the CLS on both pages to the footer jumping into a new position when React replaces the minimal SSR fallback markup with the much-taller real interactive widget.",
+          "recommendation": "Reserve layout height in the SSR fallback matching the hydrated content's real height, or set a min-height on the wrapping container so hydration only fills in interactivity rather than replacing a short DOM subtree with a tall one."
+        },
+        {
+          "title": "None of the 5 tested pages pass all three Core Web Vitals in this lab run",
+          "severity": "High",
+          "description": "Homepage TBT 1,380ms / max-potential-FID 638ms; blog LCP 4.9s (Poor); quiz and calculadora-crs both fail CLS. Lighthouse performance scores range 51-70.",
+          "recommendation": "See individual findings below; prioritize the CLS fix (highest severity) and the third-party/hydration main-thread contention fix."
+        },
+        {
+          "title": "Blog LCP (4.9s, Poor) and quiz LCP are distorted by late-mounting fixed overlays (PWA install promo, cookie-consent banner) becoming the LCP element instead of real content",
+          "severity": "High",
+          "description": "The LCP element on the blog page resolves to a position:fixed promotional banner's text, and on /quiz to the cookie-consent banner — both mount after hydration and are large relative to viewport.",
+          "recommendation": "Mount these overlays earlier (ideally synchronously) and constrain their visual size on mobile so they're not selected as LCP candidates."
+        },
+        {
+          "title": "AdSense script execution directly overlaps React hydration's long tasks on the main thread, producing 1,380ms TBT / 638ms max-potential-FID on the homepage",
+          "severity": "High",
+          "description": "requestIdleCallback fires earlier than intended (mid-hydration) rather than truly after it, stacking AdSense's ~555ms scripting cost directly on top of React's 638ms hydration task.",
+          "recommendation": "Gate third-party script injection on an explicit 'hydration complete' signal rather than the first available idle slot, or delay AdSense/analytics until after first user interaction."
+        },
+        {
+          "title": "Blog hero image is an unoptimized 308KB PNG with no WebP/AVIF or responsive srcset",
+          "severity": "High",
+          "description": "This single image is 31% of the blog page's total byte weight; a well-optimized WebP/AVIF at the same dimensions should be 75-85% smaller.",
+          "recommendation": "Re-encode blog feature images as WebP/AVIF with 2-3 responsive srcset widths."
+        },
+        {
+          "title": "Render-blocking CSS bundle (16.2KB) on every page with no critical-CSS inlining",
+          "severity": "Medium",
+          "description": "Estimated 150-300ms of savings per page available.",
+          "recommendation": "Inline critical above-the-fold CSS and defer the rest using the same preload pattern already used for fonts."
+        }
+      ]
+    },
+    {
+      "name": "AI Search Readiness (GEO)",
+      "score": 43,
+      "what_works": [
+        "robots.txt currently allows all major AI crawlers (GPTBot, ChatGPT-User, ClaudeBot, PerplexityBot, CCBot, anthropic-ai) — good for AI visibility",
+        "~150+ NOC/PNP/imigrar-como templated pages carry genuine, well-matched FAQPage + BreadcrumbList schema",
+        "Calculators/quiz pages already carry solid standalone declarative explainer text independent of the interactive tools",
+        "The Dataset schema pattern on Express Entry draws pages is a good, underused citability asset"
+      ],
+      "findings": [
+        {
+          "title": "/faq — the site's richest, most citable Q&A content — is completely invisible to every non-JS-executing AI crawler",
+          "severity": "Critical",
+          "description": "GPTBot, ClaudeBot, PerplexityBot, and OAI-SearchBot don't execute JavaScript, so a plain fetch of /faq returns the homepage's content instead (see Technical/On-Page findings), hiding 26 genuinely good Q&A pairs — including the honest 'we are not a licensed consultant' answer — from the exact systems most likely to want to cite it.",
+          "recommendation": "Add /faq to the same static-generation/prerender path used for the site's other correctly-SSR'd routes; audit the full route list for any other page silently falling back to the homepage shell."
+        },
+        {
+          "title": "The universal soft-200 catch-all disguises the fact that llms.txt does not exist",
+          "severity": "Critical",
+          "description": "GET /llms.txt returns HTTP 200 with homepage HTML rather than a real 404 or a real file, so a naive status-code check would falsely report it as present.",
+          "recommendation": "Fix the catch-all to return a real 404/noindex for unmatched paths, then create a real /llms.txt listing the site's content hubs."
+        },
+        {
+          "title": "Homepage FAQPage schema doesn't match any visible on-page text",
+          "severity": "High",
+          "description": "The two schema questions ('O que é o ImmigraCan?', 'O quiz é gratuito?') appear nowhere in the visible homepage body, which is about general immigration definitions instead — a schema/content mismatch that risks rich-result demotion and looks like a manipulation signal to AI quality classifiers.",
+          "recommendation": "Either add matching visible Q&A text to the homepage or remove/relocate this specific FAQPage block (the real FAQ content lives on /faq)."
+        },
+        {
+          "title": "None of the ~150+ templated pages use question-phrased headings",
+          "severity": "High",
+          "description": "Every category uses statement-style H2s ('Elegibilidade no Express Entry') instead of question form, despite the question phrasing already existing in each page's own FAQPage Question.name fields — a cheap, high-leverage citability lever currently unused.",
+          "recommendation": "Rewrite heading templates to question form, reusing text already written for the schema — a template-level change that cascades to ~150 pages at once."
+        },
+        {
+          "title": "No Organization schema and no sameAs/social profile links found anywhere — near-zero externally-verifiable entity presence",
+          "severity": "High",
+          "description": "An LLM asked whether ImmigraCan is a trustworthy source today has almost nothing to corroborate it with beyond the site's own text; the only social reference is an unlinked twitter:site meta tag.",
+          "recommendation": "Add sitewide Organization JSON-LD with real sameAs links, publish a static /sobre page, and prioritize a real off-site presence (e.g. YouTube) over backlink volume."
+        },
+        {
+          "title": "A freshness claim is contradicted by live data on /express-entry/draws",
+          "severity": "Medium",
+          "description": "The page claims automatic updates every 12 hours, but the underlying data endpoint's latest draw date was roughly 7 weeks stale at audit time.",
+          "recommendation": "Fix the update job or soften the on-page freshness claim to match actual cadence, and add dateModified to the Dataset schema."
+        }
+      ]
+    },
+    {
+      "name": "Images",
+      "score": 65,
+      "what_works": [
+        "Zero images site-wide were found missing alt text across the full 294-page crawl",
+        "Explicit width/height attributes are set on the blog hero image, preventing its own layout shift",
+        "No hotlinking to external image hosts was observed despite a leftover Unsplash dns-prefetch hint",
+        "loading=\"eager\" is correctly used for the above-the-fold blog hero image"
+      ],
+      "findings": [
+        {
+          "title": "Blog hero images are unoptimized (308KB PNG) with no modern format or responsive delivery",
+          "severity": "High",
+          "description": "This is the largest single network transfer on blog pages (31% of total byte weight); no AVIF/WebP variant and no srcset for mobile clients.",
+          "recommendation": "Re-encode as WebP/AVIF with 2-3 responsive widths; target 30-80KB at these dimensions."
+        },
+        {
+          "title": "Money pages (quiz, calculators, pricing) carry almost no imagery at all",
+          "severity": "Medium",
+          "description": "No CRS score-breakdown visual, no sample-report screenshot, no city cost-of-living map/comparison graphic — a missed trust/comprehension opportunity on exactly the pages where visual proof would help conversion most.",
+          "recommendation": "Add at least a sample-report screenshot on /precos and simple comparison visuals on high-value tool/data pages."
+        },
+        {
+          "title": "Unused images.unsplash.com dns-prefetch hint",
+          "severity": "Low",
+          "description": "Zero requests to this origin were observed across all pages tested — the hint is currently pure waste.",
+          "recommendation": "Remove the hint, or confirm it's needed on an untested route."
+        }
+      ]
+    }
+  ],
+  "additional_categories": [
+    {
+      "name": "Search Experience (SXO)",
+      "note": "Not part of the weighted health score; supplements Content Quality and On-Page SEO with SERP-backwards page-type/intent analysis.",
+      "primary_finding": "CRITICAL page-type/intent mismatch: /precos sells an unlicensed AI-generated report with zero trust signals, while the SERPs for the two most commercially-adjacent queries ('consultor de imigração canadá', 'quanto custa imigrar para o canadá') are dominated by licensed RCIC/lawyer service pages and itemized real-cost blog posts respectively — neither intent is credibly served.",
+      "sxo_gap_scores": {
+        "/precos": 24,
+        "/custo-de-vida/toronto": 39,
+        "/calculadora-crs": 42,
+        "/programas/express_entry_fsw": 43,
+        "/quiz": 48,
+        "/blog/o-que-e-imigracao-guia-completo": 66
+      }
+    },
+    {
+      "name": "Content Architecture / Clustering",
+      "note": "Not part of the weighted health score; supplements Content Quality and Technical SEO with hub-and-spoke and cannibalization analysis.",
+      "primary_finding": "The Ontario PNP keyword space is split across 4 URLs with a live factual contradiction (one page says the program is active, others correctly say revoked); the NOC hub (/buscador-noc, ~90 spokes) contains zero links to any spoke page; ~25 recurring 'sorteio'/processing-time blog posts cannibalize each other and their own intended canonical pages."
+    },
+    {
+      "name": "Visual / Mobile",
+      "note": "Not part of the weighted health score; supplements Performance and On-Page SEO with real-browser rendering checks.",
+      "primary_finding": "The blog's client-side API is broken in production (GET /api/blog returns [], GET /api/blog/{slug} returns 404), so every blog post renders 'Erro ao carregar artigo' to real visitors despite good server-rendered HTML. The LGPD cookie-consent banner also covers 35-45% of the mobile viewport and hides the Premium plan CTA on desktop /precos without scrolling."
+    },
+    {
+      "name": "Backlinks / Authority",
+      "note": "Not part of the weighted health score (Tier 0 data only — no Moz/Bing/DataForSEO configured); reported as insufficient data rather than a fabricated score.",
+      "primary_finding": "immigracan.com.br is entirely absent from Common Crawl's web graph (not merely low-ranked), consistent with a young, 2026-launched domain. No sameAs entries, no discoverable social profile links, and no verifiable referring domains were found through any free-tier source."
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {
+        "name": "Phase 1: Critical Fixes",
+        "timeframe": "Week 1",
+        "items": [
+          "Fix the broken blog backend (/api/blog and /api/blog/{slug} currently return empty/404) so real visitors stop seeing 'Erro ao carregar artigo' on every one of the 90 blog posts",
+          "Fix the soft-404 architecture: return a real HTTP 404 for unknown routes, and add /faq, /templates, /comparador, /prontidao to the SSR/prerender route list so they stop serving the homepage's title/description/canonical/JSON-LD",
+          "Add a prominent, non-collapsed disclaimer on /precos and at checkout stating the report is AI-generated and ImmigraCan is not a licensed RCIC/CICC consultant",
+          "Correct the factual error on /programas/pnp_ontario ('Status: Ativo') to reflect the real OINP revocation (30 May 2026)",
+          "Fix plain-HTTP (port 80) to 301-redirect to HTTPS instead of dead-ending on a bare 404",
+          "Add site-wide Organization JSON-LD (real logo, real sameAs only — no fabricated profiles) and Service/Offer schema to /precos"
+        ]
+      },
+      {
+        "name": "Phase 2: High-Impact Improvements",
+        "timeframe": "Weeks 2-3",
+        "items": [
+          "Backfill meta description/og:description/twitter:description on all 90 blog posts and fix the template default",
+          "Fix absolute vs. relative og:image/Article.image URLs on the blog template",
+          "Reserve layout height in the SSR fallback for /quiz and /calculadora-crs to eliminate the 0.31-0.52 CLS from the hydration DOM swap",
+          "Re-time AdSense/analytics script injection so it stops overlapping React hydration's main-thread work (homepage TBT 1,380ms)",
+          "Add a named Person author (or reviewedBy) to Article schema; publish a real /sobre page with legal entity name, CNPJ, and team info",
+          "Add BreadcrumbList to blog posts and /custo-de-vida/{city}; port FAQPage+BreadcrumbList from /pnp/{province} onto /programas/{id}",
+          "Add WebApplication/Offer schema to /calculadora-crs and the other schema-less tool pages",
+          "Fix the four late-mounting fixed overlays (cookie banner, PWA promo) that are distorting LCP measurements and covering CTAs on mobile/desktop",
+          "Add X-Frame-Options / begin a CSP Report-Only rollout"
+        ]
+      },
+      {
+        "name": "Phase 3: Content & Authority",
+        "timeframe": "Month 2",
+        "items": [
+          "Consolidate the ~25 recurring 'sorteio'/processing-time blog posts into continuously-updated hub pages instead of a new near-identical article per event",
+          "Add substantive unique content to the ~150 thin programmatic pages (NOC, imigrar-como, custo-de-vida, programas, pnp) — pathway narratives, sourced figures, cross-links",
+          "Fix the NOC hub (/buscador-noc) to link forward to its ~90 spoke pages; add /pnp, /buscador-noc, /custo-de-vida, /imigrar-como to global navigation",
+          "Rewrite the ~150 templated page headings into question form, reusing existing FAQPage Question.name text",
+          "Add cross-links between related clusters (profession → NOC → PNP → city cost-of-living)",
+          "Re-encode blog hero images as WebP/AVIF with responsive srcset",
+          "Build a real off-site brand presence (Organization sameAs targets) and begin digital-PR/link-building now that the domain has content worth linking to"
+        ]
+      },
+      {
+        "name": "Phase 4: Monitoring & Iteration",
+        "timeframe": "Ongoing",
+        "items": [
+          "Stop stamping sitemap lastmod with the build date on non-blog URLs; only update on real content changes",
+          "Set up a regression check: for every sitemap URL, fetch raw HTML and confirm the title matches the expected page (catches future soft-404 regressions automatically)",
+          "Get a free Moz API key and verify the domain in Bing Webmaster Tools to start measuring backlinks (currently absent from Common Crawl entirely)",
+          "Re-run Core Web Vitals measurement with real CrUX/PSI field data once Google API credentials are configured",
+          "Audit the remaining PNP province pairs (BC, Alberta, Quebec, Atlantic) for the same live/revoked factual-contradiction pattern found on Ontario"
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "findings_dir": "findings/",
+    "screenshots_dir": "screenshots/"
+  }
+}

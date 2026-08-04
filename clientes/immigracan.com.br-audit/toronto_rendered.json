@@ -1,0 +1,52 @@
+{
+  "url": "https://immigracan.com.br/custo-de-vida/toronto",
+  "status_code": 200,
+  "content": "<!doctype html>\r\n<html lang=\"pt-BR\">\r\n  <head>\r\n    <!-- FIX P-7: GTM foi movido para src/lib/third-party.ts (carregado via\r\n         requestIdleCallback), pois o snippet inline s\u00c3\u00adncrono no topo do\r\n         <head> bloqueava parsing/render e prejudicava LCP mobile. -->\r\n    <meta charset=\"UTF-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>Custo de vida em Toronto 2026: quanto custa morar (em reais)</title>\r\n    <meta name=\"description\" content=\"M...",
+  "raw_content": "<!doctype html>\r\n<html lang=\"pt-BR\">\r\n  <head>\r\n    <!-- FIX P-7: GTM foi movido para src/lib/third-party.ts (carregado via\r\n         requestIdleCallback), pois o snippet inline s\u00c3\u00adncrono no topo do\r\n...",
+  "is_spa": false,
+  "extracted_text": "Custo de vida em Toronto 2026: quanto custa morar (em reais)\nMorar em Toronto custa em m\u00c3\u00a9dia CAD 3450 (~R$ 12.938) por m\u00c3\u00aas para uma pessoa, ou CAD 6800 para fam\u00c3lia de 4.\nPrincipais custos mensais\n- Aluguel 1 quarto no centro: CAD 2450\n- Sal\u00c3\u00a1rio m\u00c3\u00a9dio na cidade: CAD 5800/m\u00c3\u00aas\n- Prov\u00c3ncia: Ont\u00c3\u00a1rio",
+  "publication_date": "2026-01-01",
+  "accessibility_tree": null,
+  "headers": {
+    "Alt-Svc": "h3=\":443\"; ma=2592000",
+    "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0",
+    "Content-Encoding": "gzip",
+    "Content-Type": "text/html",
+    "Date": "Thu, 23 Jul 2026 23:49:30 GMT",
+    "Etag": "W/\"6a617893-1b09\"",
+    "Last-Modified": "Thu, 23 Jul 2026 02:12:35 GMT",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Server": "nginx",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Vary": "Accept-Encoding",
+    "X-Content-Type-Options": "nosniff",
+    "Transfer-Encoding": "chunked"
+  },
+  "redirect_chain": [],
+  "console_errors": [],
+  "render_diagnostics": [],
+  "render_engine": null,
+  "render_ms": null,
+  "mode_used": "raw",
+  "error": null,
+  "structured_data": {
+    "block_count": 1,
+    "processed_count": 1,
+    "total_bytes": 501,
+    "truncated": false,
+    "blocks": [
+      {
+        "index": 1,
+        "size_bytes": 501,
+        "valid": true,
+        "types": [
+          "Answer",
+          "FAQPage",
+          "Question"
+        ],
+        "types_truncated": false
+      }
+    ]
+  }
+}

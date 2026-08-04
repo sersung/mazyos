@@ -1,0 +1,72 @@
+{
+  "url": "https://immigracan.com.br/this-page-definitely-does-not-exist-xyz123",
+  "status_code": 200,
+  "content": "<!DOCTYPE html><html lang=\"pt-BR\"><head>\n    <!-- FIX P-7: GTM foi movido para src/lib/third-party.ts (carregado via\n         requestIdleCallback), pois o snippet inline s\u00edncrono no topo do\n         <head> bloqueava parsing/render e prejudicava LCP mobile. -->\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>P\u00e1gina n\u00e3o encontrada \u2014 ImmigraCan</title>\n    <meta name=\"description\" content=\"A p\u00e1gina que voc\u00ea procura n\u00e3o existe ou foi m...",
+  "raw_content": "<!doctype html>\r\n<html lang=\"pt-BR\">\r\n  <head>\r\n    <!-- FIX P-7: GTM foi movido para src/lib/third-party.ts (carregado via\r\n         requestIdleCallback), pois o snippet inline s\u00c3\u00adncrono no topo do\r\n...",
+  "is_spa": false,
+  "extracted_text": "Utilizamos cookies para analisar o tr\u00e1fego do site, personalizar an\u00fancios e melhorar sua experi\u00eancia. Consulte nossa Pol\u00edtica de Privacidade para mais informa\u00e7\u00f5es.\nOps! P\u00e1gina n\u00e3o encontrada\nA p\u00e1gina que voc\u00ea tentou acessar n\u00e3o existe ou foi movida.",
+  "publication_date": "2026-07-21",
+  "accessibility_tree": null,
+  "headers": {
+    "alt-svc": "h3=\":443\"; ma=2592000",
+    "cache-control": "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0",
+    "content-encoding": "gzip",
+    "content-type": "text/html",
+    "date": "Thu, 23 Jul 2026 23:48:18 GMT",
+    "etag": "W/\"6a617893-2690\"",
+    "last-modified": "Thu, 23 Jul 2026 02:12:35 GMT",
+    "permissions-policy": "camera=(), microphone=(), geolocation=()",
+    "referrer-policy": "strict-origin-when-cross-origin",
+    "server": "nginx",
+    "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+    "vary": "Accept-Encoding",
+    "x-content-type-options": "nosniff"
+  },
+  "redirect_chain": [],
+  "console_errors": [
+    "404 Error: User attempted to access non-existent route: /this-page-definitely-does-not-exist-xyz123"
+  ],
+  "render_diagnostics": [],
+  "render_engine": "playwright-chromium",
+  "render_ms": 11239.073399978224,
+  "mode_used": "rendered",
+  "error": null,
+  "structured_data": {
+    "block_count": 3,
+    "processed_count": 3,
+    "total_bytes": 1500,
+    "truncated": false,
+    "blocks": [
+      {
+        "index": 1,
+        "size_bytes": 302,
+        "valid": true,
+        "types": [
+          "WebSite"
+        ],
+        "types_truncated": false
+      },
+      {
+        "index": 2,
+        "size_bytes": 710,
+        "valid": true,
+        "types": [
+          "Answer",
+          "FAQPage",
+          "Question"
+        ],
+        "types_truncated": false
+      },
+      {
+        "index": 3,
+        "size_bytes": 488,
+        "valid": true,
+        "types": [
+          "Offer",
+          "SoftwareApplication"
+        ],
+        "types_truncated": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "block_count": 3,
+  "processed_count": 3,
+  "total_bytes": 1555,
+  "truncated": false,
+  "blocks": [
+    {
+      "index": 1,
+      "size_bytes": 310,
+      "valid": true,
+      "types": [
+        "WebSite"
+      ],
+      "types_truncated": false,
+      "data": {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ImmigraCan",
+        "url": "https://immigracan.com.br",
+        "description": "Descubra seu caminho para o CanadÃ¡. Calculadora CRS, anÃ¡lise de elegibilidade e ranking personalizado de programas de imigraÃ§Ã£o canadense para brasileiros.",
+        "inLanguage": "pt-BR"
+      }
+    },
+    {
+      "index": 2,
+      "size_bytes": 742,
+      "valid": true,
+      "types": [
+        "Answer",
+        "FAQPage",
+        "Question"
+      ],
+      "types_truncated": false,
+      "data": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "O que Ã© o ImmigraCan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O ImmigraCan Ã© uma ferramenta online gratuita que analisa seu perfil e calcula sua elegibilidade para programas de imigraÃ§Ã£o canadense, incluindo estimativa de pontuaÃ§Ã£o CRS para o Express Entry, com foco em brasileiros."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O quiz de elegibilidade Ã© gratuito?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. O quiz completo com resultado preliminar Ã© 100% gratuito e nÃ£o exige cadastro. O relatÃ³rio detalhado com anÃ¡lise aprofundada, plano de aÃ§Ã£o e documentos necessÃ¡rios estÃ¡ disponÃ­vel por R$19,90."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "size_bytes": 503,
+      "valid": true,
+      "types": [
+        "Offer",
+        "SoftwareApplication"
+      ],
+      "types_truncated": false,
+      "data": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ImmigraCan â Simulador de ImigraÃ§Ã£o para o CanadÃ¡",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "url": "https://immigracan.com.br",
+        "description": "Calculadora CRS e simulador de elegibilidade para programas de imigraÃ§Ã£o canadense, com foco em brasileiros.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "BRL",
+          "description": "Quiz gratuito com resultado instantÃ¢neo, sem cadastro."
+        }
+      }
+    }
+  ]
+}

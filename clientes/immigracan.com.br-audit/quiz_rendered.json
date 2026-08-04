@@ -1,0 +1,50 @@
+{
+  "url": "https://immigracan.com.br/quiz",
+  "status_code": 200,
+  "content": "<!doctype html>\r\n<html lang=\"pt-BR\">\r\n  <head>\r\n    <!-- FIX P-7: GTM foi movido para src/lib/third-party.ts (carregado via\r\n         requestIdleCallback), pois o snippet inline s\u00c3\u00adncrono no topo do\r\n         <head> bloqueava parsing/render e prejudicava LCP mobile. -->\r\n    <meta charset=\"UTF-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>Quiz Imigra\u00c3\u00a7\u00c3\u00a3o Canad\u00c3\u00a1 2026 \u00e2\u0080\u0093 Descubra Sua Elegibilidade Gr\u00c3\u00a1tis</title>\r\n    <meta name=\"description\" co...",
+  "raw_content": "<!doctype html>\r\n<html lang=\"pt-BR\">\r\n  <head>\r\n    <!-- FIX P-7: GTM foi movido para src/lib/third-party.ts (carregado via\r\n         requestIdleCallback), pois o snippet inline s\u00c3\u00adncrono no topo do\r\n...",
+  "is_spa": false,
+  "extracted_text": "Quiz Imigra\u00c3\u00a7\u00c3\u00a3o Canad\u00c3\u00a1 2026 \u00e2 Descubra Sua Elegibilidade Gr\u00c3\u00a1tis\nO Quiz de Elegibilidade ImmigraCan \u00c3\u00a9 gratuito, leva menos de 5 minutos e n\u00c3\u00a3o exige cadastro. Ao final, voc\u00c3\u00aa recebe:\n- Sua pontua\u00c3\u00a7\u00c3\u00a3o CRS estimada para o Express Entry\n- Lista dos programas de imigra\u00c3\u00a7\u00c3\u00a3o canadense compat\u00c3veis com o seu perfil\n- Ranking personalizado por probabilidade de aprova\u00c3\u00a7\u00c3\u00a3o\nAvaliamos mais de 10 programas: Express Entry FSW, CEC, PNP de Ont\u00c3\u00a1rio, British Columbia PNP, Quebec Skilled Worker, patroc\u00c3nio ...",
+  "publication_date": "2026-01-01",
+  "accessibility_tree": null,
+  "headers": {
+    "Alt-Svc": "h3=\":443\"; ma=2592000",
+    "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0",
+    "Content-Encoding": "gzip",
+    "Content-Type": "text/html",
+    "Date": "Thu, 23 Jul 2026 23:49:06 GMT",
+    "Etag": "W/\"6a617893-1cc5\"",
+    "Last-Modified": "Thu, 23 Jul 2026 02:12:35 GMT",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Server": "nginx",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Vary": "Accept-Encoding",
+    "X-Content-Type-Options": "nosniff",
+    "Transfer-Encoding": "chunked"
+  },
+  "redirect_chain": [],
+  "console_errors": [],
+  "render_diagnostics": [],
+  "render_engine": null,
+  "render_ms": null,
+  "mode_used": "raw",
+  "error": null,
+  "structured_data": {
+    "block_count": 1,
+    "processed_count": 1,
+    "total_bytes": 389,
+    "truncated": false,
+    "blocks": [
+      {
+        "index": 1,
+        "size_bytes": 389,
+        "valid": true,
+        "types": [
+          "Quiz"
+        ],
+        "types_truncated": false
+      }
+    ]
+  }
+}

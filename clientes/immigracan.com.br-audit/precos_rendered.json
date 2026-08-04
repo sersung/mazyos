@@ -1,0 +1,40 @@
+{
+  "url": "https://immigracan.com.br/precos",
+  "status_code": 200,
+  "content": "<!doctype html>\r\n<html lang=\"pt-BR\">\r\n  <head>\r\n    <!-- FIX P-7: GTM foi movido para src/lib/third-party.ts (carregado via\r\n         requestIdleCallback), pois o snippet inline s\u00c3\u00adncrono no topo do\r\n         <head> bloqueava parsing/render e prejudicava LCP mobile. -->\r\n    <meta charset=\"UTF-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>Pre\u00c3\u00a7os e Planos \u00e2\u0080\u0093 Relat\u00c3\u00b3rio de Elegibilidade | ImmigraCan</title>\r\n    <meta name=\"description\" content=\"...",
+  "raw_content": "<!doctype html>\r\n<html lang=\"pt-BR\">\r\n  <head>\r\n    <!-- FIX P-7: GTM foi movido para src/lib/third-party.ts (carregado via\r\n         requestIdleCallback), pois o snippet inline s\u00c3\u00adncrono no topo do\r\n...",
+  "is_spa": false,
+  "extracted_text": "Pre\u00c3\u00a7os e Planos \u00e2 Relat\u00c3\u00b3rio de Elegibilidade | ImmigraCan\nPlano Relat\u00c3\u00b3rio \u00c3nico (R$ 19,90)\nAn\u00c3\u00a1lise detalhada por IA enviada por e-mail, recomenda\u00c3\u00a7\u00c3\u00a3o dos 3 melhores programas e checklist b\u00c3\u00a1sico de pr\u00c3\u00b3ximos passos.\nPlano Acesso Premium (R$ 29,90/m\u00c3\u00aas)\nAt\u00c3\u00a9 10 simula\u00c3\u00a7\u00c3\u00b5es de cen\u00c3\u00a1rios por m\u00c3\u00aas, compara\u00c3\u00a7\u00c3\u00a3o avan\u00c3\u00a7ada de prov\u00c3ncias, atualiza\u00c3\u00a7\u00c3\u00b5es de novos draws oficiais e checklist interativo.",
+  "publication_date": "2026-01-01",
+  "accessibility_tree": null,
+  "headers": {
+    "Alt-Svc": "h3=\":443\"; ma=2592000",
+    "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0",
+    "Content-Encoding": "gzip",
+    "Content-Type": "text/html",
+    "Date": "Thu, 23 Jul 2026 23:49:16 GMT",
+    "Etag": "W/\"6a617893-18ab\"",
+    "Last-Modified": "Thu, 23 Jul 2026 02:12:35 GMT",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Server": "nginx",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Vary": "Accept-Encoding",
+    "X-Content-Type-Options": "nosniff",
+    "Transfer-Encoding": "chunked"
+  },
+  "redirect_chain": [],
+  "console_errors": [],
+  "render_diagnostics": [],
+  "render_engine": null,
+  "render_ms": null,
+  "mode_used": "raw",
+  "error": null,
+  "structured_data": {
+    "block_count": 0,
+    "processed_count": 0,
+    "total_bytes": 0,
+    "truncated": false,
+    "blocks": []
+  }
+}

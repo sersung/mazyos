@@ -1,0 +1,137 @@
+{
+  "title": "Quiz Imigra\u00c3\u00a7\u00c3\u00a3o Canad\u00c3\u00a1 2026 \u00e2\u0080\u0093 Descubra Sua Elegibilidade Gr\u00c3\u00a1tis",
+  "meta_description": "Fa\u00c3\u00a7a o quiz gratuito em 5 minutos e descubra para quais programas de imigra\u00c3\u00a7\u00c3\u00a3o canadense voc\u00c3\u00aa se qualifica. Sem cadastro, resultado instant\u00c3\u00a2neo.",
+  "meta_robots": "index, follow",
+  "canonical": "https://immigracan.com.br/quiz",
+  "h1": [
+    "Quiz Imigra\u00c3\u00a7\u00c3\u00a3o Canad\u00c3\u00a1 2026 \u00e2\u0080\u0093 Descubra Sua Elegibilidade Gr\u00c3\u00a1tis"
+  ],
+  "h2": [],
+  "h3": [],
+  "images": [],
+  "links": {
+    "internal": [
+      {
+        "href": "https://immigracan.com.br/",
+        "text": "ImmigraCan",
+        "rel": []
+      },
+      {
+        "href": "https://immigracan.com.br/calculadora-crs",
+        "text": "Calculadora CRS",
+        "rel": []
+      },
+      {
+        "href": "https://immigracan.com.br/programas",
+        "text": "Programas de Imigra\u00c3\u00a7\u00c3\u00a3o",
+        "rel": []
+      },
+      {
+        "href": "https://immigracan.com.br/blog",
+        "text": "Blog",
+        "rel": []
+      },
+      {
+        "href": "https://immigracan.com.br/precos",
+        "text": "Pre\u00c3\u00a7os",
+        "rel": []
+      },
+      {
+        "href": "https://immigracan.com.br/contato",
+        "text": "Contato",
+        "rel": []
+      },
+      {
+        "href": "https://immigracan.com.br/programas/express_entry_fsw",
+        "text": "Express Entry FSW",
+        "rel": []
+      },
+      {
+        "href": "https://immigracan.com.br/programas/express_entry_cec",
+        "text": "CEC",
+        "rel": []
+      },
+      {
+        "href": "https://immigracan.com.br/programas/pnp_ontario",
+        "text": "PNP de Ont\u00c3\u00a1rio",
+        "rel": []
+      },
+      {
+        "href": "https://immigracan.com.br/programas/pnp_bc",
+        "text": "British Columbia PNP",
+        "rel": []
+      },
+      {
+        "href": "https://immigracan.com.br/programas/quebec_skilled",
+        "text": "Quebec Skilled Worker",
+        "rel": []
+      },
+      {
+        "href": "https://immigracan.com.br/programas/family_sponsorship",
+        "text": "patroc\u00c3\u00adnio familiar",
+        "rel": []
+      },
+      {
+        "href": "https://immigracan.com.br/programas",
+        "text": "programa de imigra\u00c3\u00a7\u00c3\u00a3o canadense",
+        "rel": []
+      },
+      {
+        "href": "https://immigracan.com.br/calculadora-crs",
+        "text": "calculadora CRS",
+        "rel": []
+      },
+      {
+        "href": "https://immigracan.com.br/privacidade",
+        "text": "Pol\u00c3\u00adtica de Privacidade",
+        "rel": []
+      },
+      {
+        "href": "https://immigracan.com.br/termos",
+        "text": "Termos de Uso",
+        "rel": []
+      }
+    ],
+    "external": []
+  },
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Quiz",
+      "name": "Quiz de Elegibilidade para Imigra\u00c3\u00a7\u00c3\u00a3o ao Canad\u00c3\u00a1",
+      "description": "Simulador gratuito de 12 perguntas que avalia sua elegibilidade para Express Entry, PNPs e outros programas de imigra\u00c3\u00a7\u00c3\u00a3o canadense.",
+      "inLanguage": "pt-BR",
+      "educationalLevel": "beginner",
+      "assesses": "Elegibilidade para programas de imigra\u00c3\u00a7\u00c3\u00a3o canadense"
+    }
+  ],
+  "open_graph": {
+    "og:type": "website",
+    "og:locale": "pt_BR",
+    "og:site_name": "ImmigraCan",
+    "og:image": "https://immigracan.com.br/og-image.png",
+    "og:image:width": "1200",
+    "og:image:height": "630",
+    "og:title": "Quiz Imigra\u00c3\u00a7\u00c3\u00a3o Canad\u00c3\u00a1 2026 \u00e2\u0080\u0093 Descubra Sua Elegibilidade Gr\u00c3\u00a1tis",
+    "og:description": "Fa\u00c3\u00a7a o quiz gratuito em 5 minutos e descubra para quais programas de imigra\u00c3\u00a7\u00c3\u00a3o canadense voc\u00c3\u00aa se qualifica. Sem cadastro, resultado instant\u00c3\u00a2neo.",
+    "og:url": "https://immigracan.com.br/quiz"
+  },
+  "twitter_card": {
+    "twitter:card": "summary_large_image",
+    "twitter:site": "@ImmigraCan",
+    "twitter:image": "https://immigracan.com.br/og-image.png",
+    "twitter:title": "Quiz Imigra\u00c3\u00a7\u00c3\u00a3o Canad\u00c3\u00a1 2026 \u00e2\u0080\u0093 Descubra Sua Elegibilidade Gr\u00c3\u00a1tis",
+    "twitter:description": "Fa\u00c3\u00a7a o quiz gratuito em 5 minutos e descubra para quais programas de imigra\u00c3\u00a7\u00c3\u00a3o canadense voc\u00c3\u00aa se qualifica. Sem cadastro, resultado instant\u00c3\u00a2neo."
+  },
+  "word_count": 127,
+  "hreflang": [
+    {
+      "lang": "pt-BR",
+      "href": "https://immigracan.com.br/"
+    },
+    {
+      "lang": "x-default",
+      "href": "https://immigracan.com.br/"
+    }
+  ]
+}

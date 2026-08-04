@@ -1,0 +1,43 @@
+{
+  "block_count": 1,
+  "processed_count": 1,
+  "total_bytes": 635,
+  "truncated": false,
+  "blocks": [
+    {
+      "index": 1,
+      "size_bytes": 635,
+      "valid": true,
+      "types": [
+        "Article",
+        "ImageObject",
+        "Organization"
+      ],
+      "types_truncated": false,
+      "data": {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "O Que Ã© ImigraÃ§Ã£o? Significado, Tipos e Guia Completo (2026)",
+        "image": "/blog/o-que-e-imigracao-guia-completo.png",
+        "datePublished": "2026-07-04",
+        "dateModified": "2026-07-04",
+        "author": {
+          "@type": "Organization",
+          "name": "ImmigraCan"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ImmigraCan",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://immigracan.com.br/favicon.ico"
+          }
+        },
+        "mainEntityOfPage": "https://immigracan.com.br/blog/o-que-e-imigracao-guia-completo",
+        "articleSection": "geral",
+        "keywords": "imigraÃ§Ã£o, conceitos, emigraÃ§Ã£o, refugiado, guia",
+        "inLanguage": "pt-BR"
+      }
+    }
+  ]
+}

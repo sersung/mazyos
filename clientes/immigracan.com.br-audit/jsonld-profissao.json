@@ -1,0 +1,83 @@
+{
+  "block_count": 2,
+  "processed_count": 2,
+  "total_bytes": 1335,
+  "truncated": false,
+  "blocks": [
+    {
+      "index": 1,
+      "size_bytes": 949,
+      "valid": true,
+      "types": [
+        "Answer",
+        "FAQPage",
+        "Question"
+      ],
+      "types_truncated": false,
+      "data": {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Como imigrar para o CanadÃ¡ como Eletricista?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Eletricistas brasileiros podem imigrar via: Express Entry FSW, Express Entry FST, Draw de Trades. NOC 72200 (TEER 2), categoria Trades."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Qual o salÃ¡rio de Eletricista no CanadÃ¡?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SalÃ¡rio mÃ©dio anual de Eletricista no CanadÃ¡: CAD 78.000. ProvÃ­nicas com maior demanda: Alberta, British Columbia, OntÃ¡rio, Manitoba."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Eletricista precisa de licenÃ§a no CanadÃ¡?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Requer licenÃ§a provincial (Red Seal ou Certificate of Qualification). Cada provÃ­ncia tem exame prÃ³prio â em OntÃ¡rio, o 309A Ã© o mais comum. Vale a pena comeÃ§ar o processo de reconhecimento antes de imigrar."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "size_bytes": 386,
+      "valid": true,
+      "types": [
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "types_truncated": false,
+      "data": {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "InÃ­cio",
+            "item": "https://immigracan.com.br/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Imigrar como",
+            "item": "https://immigracan.com.br/imigrar-como"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Eletricista",
+            "item": "https://immigracan.com.br/imigrar-como/eletricista"
+          }
+        ]
+      }
+    }
+  ]
+}

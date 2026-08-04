@@ -1,0 +1,40 @@
+{
+  "url": "https://immigracan.com.br/calculadora-crs",
+  "status_code": 200,
+  "content": "<!doctype html>\r\n<html lang=\"pt-BR\">\r\n  <head>\r\n    <!-- FIX P-7: GTM foi movido para src/lib/third-party.ts (carregado via\r\n         requestIdleCallback), pois o snippet inline s\u00c3\u00adncrono no topo do\r\n         <head> bloqueava parsing/render e prejudicava LCP mobile. -->\r\n    <meta charset=\"UTF-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>Calculadora CRS Canad\u00c3\u00a1 2026 \u00e2\u0080\u0093 Simule sua Pontua\u00c3\u00a7\u00c3\u00a3o Gr\u00c3\u00a1tis</title>\r\n    <meta name=\"description\" content...",
+  "raw_content": "<!doctype html>\r\n<html lang=\"pt-BR\">\r\n  <head>\r\n    <!-- FIX P-7: GTM foi movido para src/lib/third-party.ts (carregado via\r\n         requestIdleCallback), pois o snippet inline s\u00c3\u00adncrono no topo do\r\n...",
+  "is_spa": false,
+  "extracted_text": "Calculadora CRS Canad\u00c3\u00a1 2026 \u00e2 Simule sua Pontua\u00c3\u00a7\u00c3\u00a3o Gr\u00c3\u00a1tis\nA pontua\u00c3\u00a7\u00c3\u00a3o CRS (Comprehensive Ranking System) do Express Entry vai de 0 a 1.200 pontos e \u00c3\u00a9 calculada a partir de idade, escolaridade, profici\u00c3\u00aancia em ingl\u00c3\u00aas/franc\u00c3\u00aas, experi\u00c3\u00aancia profissional, c\u00c3\u00b4njuge, oferta de emprego canadense e nomea\u00c3\u00a7\u00c3\u00a3o provincial. Draws gerais em 2026 t\u00c3\u00aam cortes entre 507 e 528; draws de categoria (Healthcare, STEM, French, Trades) cortam bem mais baixo. Use a calculadora abaixo com as regras oficiais ...",
+  "publication_date": "2026-01-01",
+  "accessibility_tree": null,
+  "headers": {
+    "Alt-Svc": "h3=\":443\"; ma=2592000",
+    "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0",
+    "Content-Encoding": "gzip",
+    "Content-Type": "text/html",
+    "Date": "Thu, 23 Jul 2026 23:49:11 GMT",
+    "Etag": "W/\"6a617893-1ab3\"",
+    "Last-Modified": "Thu, 23 Jul 2026 02:12:35 GMT",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Server": "nginx",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Vary": "Accept-Encoding",
+    "X-Content-Type-Options": "nosniff",
+    "Transfer-Encoding": "chunked"
+  },
+  "redirect_chain": [],
+  "console_errors": [],
+  "render_diagnostics": [],
+  "render_engine": null,
+  "render_ms": null,
+  "mode_used": "raw",
+  "error": null,
+  "structured_data": {
+    "block_count": 0,
+    "processed_count": 0,
+    "total_bytes": 0,
+    "truncated": false,
+    "blocks": []
+  }
+}

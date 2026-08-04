@@ -1,0 +1,2022 @@
+{
+  "home_desktop": {
+    "status": 200,
+    "early_body_text_len": 7894,
+    "late_body_text_len": 7894,
+    "ad_info": {
+      "viewportArea": 1296000,
+      "totalAdArea": 0,
+      "adRatio": 0,
+      "adCount": 0,
+      "adRects": [],
+      "vw": 1440,
+      "vh": 900
+    },
+    "cta_info": {
+      "h1": {
+        "top": 221,
+        "left": 160,
+        "width": 672,
+        "height": 240,
+        "inFold": true,
+        "text": "Descubra qual é o melhor caminho para você imigrar para o Canadá"
+      },
+      "ctaCandidates": [
+        {
+          "top": 12,
+          "left": 583.171875,
+          "width": 136.265625,
+          "height": 36,
+          "inFold": true,
+          "text": "Calculadora CRS"
+        },
+        {
+          "top": 12,
+          "left": 927.484375,
+          "width": 119.875,
+          "height": 36,
+          "inFold": true,
+          "text": "Quiz Grátis"
+        },
+        {
+          "top": 12,
+          "left": 1129.703125,
+          "width": 150.296875,
+          "height": 36,
+          "inFold": true,
+          "text": "Começar Grátis"
+        },
+        {
+          "top": 727,
+          "left": 361.625,
+          "width": 143.109375,
+          "height": 17,
+          "inFold": true,
+          "text": "Crie uma conta grátis"
+        },
+        {
+          "top": 1389,
+          "left": 613.59375,
+          "width": 212.8125,
+          "height": 44,
+          "inFold": false,
+          "text": "Fazer quiz gratuito"
+        }
+      ]
+    },
+    "tap_targets": {
+      "totalInteractive": 92,
+      "smallCount": 51,
+      "smallSample": [
+        {
+          "tag": "A",
+          "text": "Política de Privacidade",
+          "width": 151,
+          "height": 17,
+          "top": 756
+        },
+        {
+          "tag": "A",
+          "text": "ImmigraCan",
+          "width": 127,
+          "height": 28,
+          "top": 16
+        },
+        {
+          "tag": "A",
+          "text": "Início",
+          "width": 60,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Programas",
+          "width": 96,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Comparador",
+          "width": 108,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Calculadora CRS",
+          "width": 136,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Blog",
+          "width": 54,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "FAQ",
+          "width": 51,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Preços",
+          "width": 70,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Quiz Grátis",
+          "width": 120,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Entrar",
+          "width": 66,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Começar Grátis",
+          "width": 150,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Crie uma conta grátis",
+          "width": 143,
+          "height": 17,
+          "top": 727
+        },
+        {
+          "tag": "A",
+          "text": "Entrar",
+          "width": 34,
+          "height": 15,
+          "top": 2792
+        },
+        {
+          "tag": "A",
+          "text": "Criar conta grátis",
+          "width": 318,
+          "height": 40,
+          "top": 3303
+        }
+      ]
+    },
+    "overflow_info": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "hasHorizontalScroll": false
+    },
+    "trust_info": {
+      "found": {
+        "ssl": false,
+        "seguro": false,
+        "garantia": false,
+        "reembolso": false,
+        "pix": false,
+        "cartão": true,
+        "stripe": false,
+        "mercado pago": false,
+        "cnpj": false,
+        "termos de uso": true,
+        "privacidade": true,
+        "sobre nós": false,
+        "quem somos": false,
+        "contato": false,
+        "suporte": false
+      },
+      "hasLockIcon": true,
+      "paymentLogos": []
+    }
+  },
+  "quiz_desktop": {
+    "status": 200,
+    "early_body_text_len": 1441,
+    "late_body_text_len": 1441,
+    "ad_info": {
+      "viewportArea": 1296000,
+      "totalAdArea": 0,
+      "adRatio": 0,
+      "adCount": 0,
+      "adRects": [],
+      "vw": 1440,
+      "vh": 900
+    },
+    "cta_info": {
+      "h1": null,
+      "ctaCandidates": [
+        {
+          "top": 12,
+          "left": 583.171875,
+          "width": 136.265625,
+          "height": 36,
+          "inFold": true,
+          "text": "Calculadora CRS"
+        },
+        {
+          "top": 12,
+          "left": 927.484375,
+          "width": 119.875,
+          "height": 36,
+          "inFold": true,
+          "text": "Quiz Grátis"
+        },
+        {
+          "top": 12,
+          "left": 1129.703125,
+          "width": 150.296875,
+          "height": 36,
+          "inFold": true,
+          "text": "Começar Grátis"
+        },
+        {
+          "top": 1434.5,
+          "left": 544,
+          "width": 352,
+          "height": 16,
+          "inFold": false,
+          "text": "Quiz de Elegibilidade"
+        },
+        {
+          "top": 1456.5,
+          "left": 544,
+          "width": 352,
+          "height": 16,
+          "inFold": false,
+          "text": "Calculadora CRS"
+        }
+      ]
+    },
+    "tap_targets": {
+      "totalInteractive": 54,
+      "smallCount": 45,
+      "smallSample": [
+        {
+          "tag": "A",
+          "text": "Política de Privacidade",
+          "width": 151,
+          "height": 17,
+          "top": 756
+        },
+        {
+          "tag": "A",
+          "text": "ImmigraCan",
+          "width": 127,
+          "height": 28,
+          "top": 16
+        },
+        {
+          "tag": "A",
+          "text": "Início",
+          "width": 60,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Programas",
+          "width": 96,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Comparador",
+          "width": 108,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Calculadora CRS",
+          "width": 136,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Blog",
+          "width": 54,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "FAQ",
+          "width": 51,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Preços",
+          "width": 70,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Quiz Grátis",
+          "width": 120,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Entrar",
+          "width": 66,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Começar Grátis",
+          "width": 150,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "width": 622,
+          "height": 40,
+          "top": 1087
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 1166
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 1166
+        }
+      ]
+    },
+    "overflow_info": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "hasHorizontalScroll": false
+    },
+    "trust_info": {
+      "found": {
+        "ssl": false,
+        "seguro": false,
+        "garantia": false,
+        "reembolso": false,
+        "pix": false,
+        "cartão": false,
+        "stripe": false,
+        "mercado pago": false,
+        "cnpj": false,
+        "termos de uso": true,
+        "privacidade": true,
+        "sobre nós": false,
+        "quem somos": false,
+        "contato": false,
+        "suporte": false
+      },
+      "hasLockIcon": true,
+      "paymentLogos": []
+    }
+  },
+  "calc-crs_desktop": {
+    "status": 200,
+    "early_body_text_len": 5041,
+    "late_body_text_len": 5041,
+    "ad_info": {
+      "viewportArea": 1296000,
+      "totalAdArea": 0,
+      "adRatio": 0,
+      "adCount": 0,
+      "adRects": [],
+      "vw": 1440,
+      "vh": 900
+    },
+    "cta_info": {
+      "h1": {
+        "top": 179,
+        "left": 288,
+        "width": 672,
+        "height": 96,
+        "inFold": true,
+        "text": "Calcule sua pontuação CRS para imigrar para o Canadá"
+      },
+      "ctaCandidates": [
+        {
+          "top": 12,
+          "left": 583.171875,
+          "width": 136.265625,
+          "height": 36,
+          "inFold": true,
+          "text": "Calculadora CRS"
+        },
+        {
+          "top": 12,
+          "left": 927.484375,
+          "width": 119.875,
+          "height": 36,
+          "inFold": true,
+          "text": "Quiz Grátis"
+        },
+        {
+          "top": 12,
+          "left": 1129.703125,
+          "width": 150.296875,
+          "height": 36,
+          "inFold": true,
+          "text": "Começar Grátis"
+        },
+        {
+          "top": 432,
+          "left": 288,
+          "width": 294.78125,
+          "height": 44,
+          "inFold": true,
+          "text": "Calcular minha pontuação CRS"
+        },
+        {
+          "top": 3555,
+          "left": 419.75,
+          "width": 294.78125,
+          "height": 44,
+          "inFold": false,
+          "text": "Calcular minha pontuação CRS"
+        }
+      ]
+    },
+    "tap_targets": {
+      "totalInteractive": 53,
+      "smallCount": 45,
+      "smallSample": [
+        {
+          "tag": "A",
+          "text": "Política de Privacidade",
+          "width": 151,
+          "height": 17,
+          "top": 756
+        },
+        {
+          "tag": "A",
+          "text": "ImmigraCan",
+          "width": 127,
+          "height": 28,
+          "top": 16
+        },
+        {
+          "tag": "A",
+          "text": "Início",
+          "width": 60,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Programas",
+          "width": 96,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Comparador",
+          "width": 108,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Calculadora CRS",
+          "width": 136,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Blog",
+          "width": 54,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "FAQ",
+          "width": 51,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Preços",
+          "width": 70,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Quiz Grátis",
+          "width": 120,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Entrar",
+          "width": 66,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Começar Grátis",
+          "width": 150,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "width": 622,
+          "height": 40,
+          "top": 3821
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 3900
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 3900
+        }
+      ]
+    },
+    "overflow_info": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "hasHorizontalScroll": false
+    },
+    "trust_info": {
+      "found": {
+        "ssl": false,
+        "seguro": false,
+        "garantia": false,
+        "reembolso": false,
+        "pix": false,
+        "cartão": false,
+        "stripe": false,
+        "mercado pago": false,
+        "cnpj": false,
+        "termos de uso": true,
+        "privacidade": true,
+        "sobre nós": false,
+        "quem somos": false,
+        "contato": false,
+        "suporte": false
+      },
+      "hasLockIcon": true,
+      "paymentLogos": []
+    }
+  },
+  "blog_desktop": {
+    "status": 200,
+    "early_body_text_len": 1230,
+    "late_body_text_len": 1312,
+    "ad_info": {
+      "viewportArea": 1296000,
+      "totalAdArea": 0,
+      "adRatio": 0,
+      "adCount": 0,
+      "adRects": [],
+      "vw": 1440,
+      "vh": 900
+    },
+    "cta_info": {
+      "h1": {
+        "top": 197,
+        "left": 352,
+        "width": 736,
+        "height": 32,
+        "inFold": true,
+        "text": "Erro ao carregar artigo"
+      },
+      "ctaCandidates": [
+        {
+          "top": 12,
+          "left": 583.171875,
+          "width": 136.265625,
+          "height": 36,
+          "inFold": true,
+          "text": "Calculadora CRS"
+        },
+        {
+          "top": 12,
+          "left": 927.484375,
+          "width": 119.875,
+          "height": 36,
+          "inFold": true,
+          "text": "Quiz Grátis"
+        },
+        {
+          "top": 12,
+          "left": 1129.703125,
+          "width": 150.296875,
+          "height": 36,
+          "inFold": true,
+          "text": "Começar Grátis"
+        },
+        {
+          "top": 874.5,
+          "left": 544,
+          "width": 352,
+          "height": 16,
+          "inFold": true,
+          "text": "Quiz de Elegibilidade"
+        },
+        {
+          "top": 896.5,
+          "left": 544,
+          "width": 352,
+          "height": 16,
+          "inFold": true,
+          "text": "Calculadora CRS"
+        }
+      ]
+    },
+    "tap_targets": {
+      "totalInteractive": 50,
+      "smallCount": 46,
+      "smallSample": [
+        {
+          "tag": "A",
+          "text": "Política de Privacidade",
+          "width": 151,
+          "height": 17,
+          "top": 756
+        },
+        {
+          "tag": "A",
+          "text": "ImmigraCan",
+          "width": 127,
+          "height": 28,
+          "top": 16
+        },
+        {
+          "tag": "A",
+          "text": "Início",
+          "width": 60,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Programas",
+          "width": 96,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Comparador",
+          "width": 108,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Calculadora CRS",
+          "width": 136,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Blog",
+          "width": 54,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "FAQ",
+          "width": 51,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Preços",
+          "width": 70,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Quiz Grátis",
+          "width": 120,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Entrar",
+          "width": 66,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Começar Grátis",
+          "width": 150,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Voltar ao Blog",
+          "width": 159,
+          "height": 40,
+          "top": 281
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "width": 622,
+          "height": 40,
+          "top": 527
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 606
+        }
+      ]
+    },
+    "overflow_info": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "hasHorizontalScroll": false
+    },
+    "trust_info": {
+      "found": {
+        "ssl": false,
+        "seguro": false,
+        "garantia": false,
+        "reembolso": false,
+        "pix": false,
+        "cartão": false,
+        "stripe": false,
+        "mercado pago": false,
+        "cnpj": false,
+        "termos de uso": true,
+        "privacidade": true,
+        "sobre nós": false,
+        "quem somos": false,
+        "contato": false,
+        "suporte": false
+      },
+      "hasLockIcon": true,
+      "paymentLogos": []
+    }
+  },
+  "precos_desktop": {
+    "status": 200,
+    "early_body_text_len": 3707,
+    "late_body_text_len": 3707,
+    "ad_info": {
+      "viewportArea": 1296000,
+      "totalAdArea": 0,
+      "adRatio": 0,
+      "adCount": 0,
+      "adRects": [],
+      "vw": 1440,
+      "vh": 900
+    },
+    "cta_info": {
+      "h1": {
+        "top": 150,
+        "left": 160,
+        "width": 1120,
+        "height": 48,
+        "inFold": true,
+        "text": "Escolha o seu plano de planejamento contínuo"
+      },
+      "ctaCandidates": [
+        {
+          "top": 12,
+          "left": 583.171875,
+          "width": 136.265625,
+          "height": 36,
+          "inFold": true,
+          "text": "Calculadora CRS"
+        },
+        {
+          "top": 12,
+          "left": 927.484375,
+          "width": 119.875,
+          "height": 36,
+          "inFold": true,
+          "text": "Quiz Grátis"
+        },
+        {
+          "top": 12,
+          "left": 1129.703125,
+          "width": 150.296875,
+          "height": 36,
+          "inFold": true,
+          "text": "Começar Grátis"
+        },
+        {
+          "top": 791,
+          "left": 185,
+          "width": 307.328125,
+          "height": 40,
+          "inFold": true,
+          "text": "Começar Grátis"
+        },
+        {
+          "top": 791,
+          "left": 566.328125,
+          "width": 307.328125,
+          "height": 40,
+          "inFold": true,
+          "text": "Assinar Básico"
+        }
+      ]
+    },
+    "tap_targets": {
+      "totalInteractive": 54,
+      "smallCount": 50,
+      "smallSample": [
+        {
+          "tag": "A",
+          "text": "Política de Privacidade",
+          "width": 151,
+          "height": 17,
+          "top": 756
+        },
+        {
+          "tag": "A",
+          "text": "ImmigraCan",
+          "width": 127,
+          "height": 28,
+          "top": 16
+        },
+        {
+          "tag": "A",
+          "text": "Início",
+          "width": 60,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Programas",
+          "width": 96,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Comparador",
+          "width": 108,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Calculadora CRS",
+          "width": 136,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Blog",
+          "width": 54,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "FAQ",
+          "width": 51,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Preços",
+          "width": 70,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Quiz Grátis",
+          "width": 120,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Entrar",
+          "width": 66,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "A",
+          "text": "Começar Grátis",
+          "width": 150,
+          "height": 36,
+          "top": 12
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Mensal",
+          "width": 80,
+          "height": 36,
+          "top": 300
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Anual\n-40%",
+          "width": 117,
+          "height": 40,
+          "top": 298
+        },
+        {
+          "tag": "A",
+          "text": "Começar Grátis",
+          "width": 307,
+          "height": 40,
+          "top": 791
+        }
+      ]
+    },
+    "overflow_info": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "hasHorizontalScroll": false
+    },
+    "trust_info": {
+      "found": {
+        "ssl": false,
+        "seguro": true,
+        "garantia": true,
+        "reembolso": true,
+        "pix": true,
+        "cartão": false,
+        "stripe": false,
+        "mercado pago": true,
+        "cnpj": false,
+        "termos de uso": true,
+        "privacidade": true,
+        "sobre nós": false,
+        "quem somos": false,
+        "contato": true,
+        "suporte": false
+      },
+      "hasLockIcon": true,
+      "paymentLogos": [
+        "pix"
+      ]
+    }
+  },
+  "home_mobile": {
+    "status": 200,
+    "early_body_text_len": 7785,
+    "late_body_text_len": 7785,
+    "ad_info": {
+      "viewportArea": 329160,
+      "totalAdArea": 0,
+      "adRatio": 0,
+      "adCount": 0,
+      "adRects": [],
+      "vw": 390,
+      "vh": 844
+    },
+    "cta_info": {
+      "h1": {
+        "top": 197,
+        "left": 16,
+        "width": 358,
+        "height": 180,
+        "inFold": true,
+        "text": "Descubra qual é o melhor caminho para você imigrar para o Canadá"
+      },
+      "ctaCandidates": [
+        {
+          "top": 0,
+          "left": 0,
+          "width": 0,
+          "height": 0,
+          "inFold": false,
+          "text": "Calculadora CRS"
+        },
+        {
+          "top": 0,
+          "left": 0,
+          "width": 0,
+          "height": 0,
+          "inFold": false,
+          "text": "Quiz Grátis "
+        },
+        {
+          "top": 0,
+          "left": 0,
+          "width": 0,
+          "height": 0,
+          "inFold": false,
+          "text": "Começar Grátis "
+        },
+        {
+          "top": 850.75,
+          "left": 217.625,
+          "width": 143.109375,
+          "height": 17,
+          "inFold": false,
+          "text": "Crie uma conta grátis"
+        },
+        {
+          "top": 1984.75,
+          "left": 88.59375,
+          "width": 212.8125,
+          "height": 44,
+          "inFold": false,
+          "text": "Fazer quiz gratuito"
+        }
+      ]
+    },
+    "tap_targets": {
+      "totalInteractive": 92,
+      "smallCount": 41,
+      "smallSample": [
+        {
+          "tag": "A",
+          "text": "Política de Privacidade",
+          "width": 222,
+          "height": 35,
+          "top": 652
+        },
+        {
+          "tag": "A",
+          "text": "ImmigraCan",
+          "width": 127,
+          "height": 28,
+          "top": 20
+        },
+        {
+          "tag": "A",
+          "text": "Crie uma conta grátis",
+          "width": 143,
+          "height": 17,
+          "top": 851
+        },
+        {
+          "tag": "A",
+          "text": "Entrar",
+          "width": 34,
+          "height": 15,
+          "top": 4357
+        },
+        {
+          "tag": "A",
+          "text": "Criar conta grátis",
+          "width": 316,
+          "height": 40,
+          "top": 5627
+        },
+        {
+          "tag": "A",
+          "text": "Ver todos os programas",
+          "width": 218,
+          "height": 40,
+          "top": 6223
+        },
+        {
+          "tag": "A",
+          "text": "Ver todos os 6 materiais grátis →",
+          "width": 219,
+          "height": 17,
+          "top": 8231
+        },
+        {
+          "tag": "A",
+          "text": "Ver planos e preços",
+          "width": 113,
+          "height": 15,
+          "top": 10982
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "width": 308,
+          "height": 40,
+          "top": 11220
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 11298
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 11298
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 11320
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 11320
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 11342
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 11342
+        }
+      ]
+    },
+    "overflow_info": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "hasHorizontalScroll": false
+    },
+    "trust_info": {
+      "found": {
+        "ssl": false,
+        "seguro": false,
+        "garantia": false,
+        "reembolso": false,
+        "pix": false,
+        "cartão": true,
+        "stripe": false,
+        "mercado pago": false,
+        "cnpj": false,
+        "termos de uso": true,
+        "privacidade": true,
+        "sobre nós": false,
+        "quem somos": false,
+        "contato": false,
+        "suporte": false
+      },
+      "hasLockIcon": true,
+      "paymentLogos": []
+    }
+  },
+  "quiz_mobile": {
+    "status": 200,
+    "early_body_text_len": 1332,
+    "late_body_text_len": 1332,
+    "ad_info": {
+      "viewportArea": 329160,
+      "totalAdArea": 0,
+      "adRatio": 0,
+      "adCount": 0,
+      "adRects": [],
+      "vw": 390,
+      "vh": 844
+    },
+    "cta_info": {
+      "h1": null,
+      "ctaCandidates": [
+        {
+          "top": 0,
+          "left": 0,
+          "width": 0,
+          "height": 0,
+          "inFold": false,
+          "text": "Calculadora CRS"
+        },
+        {
+          "top": 0,
+          "left": 0,
+          "width": 0,
+          "height": 0,
+          "inFold": false,
+          "text": "Quiz Grátis "
+        },
+        {
+          "top": 0,
+          "left": 0,
+          "width": 0,
+          "height": 0,
+          "inFold": false,
+          "text": "Começar Grátis "
+        },
+        {
+          "top": 1591.5,
+          "left": 16,
+          "width": 358,
+          "height": 16,
+          "inFold": false,
+          "text": "Quiz de Elegibilidade"
+        },
+        {
+          "top": 1613.5,
+          "left": 16,
+          "width": 358,
+          "height": 16,
+          "inFold": false,
+          "text": "Calculadora CRS"
+        }
+      ]
+    },
+    "tap_targets": {
+      "totalInteractive": 54,
+      "smallCount": 35,
+      "smallSample": [
+        {
+          "tag": "A",
+          "text": "Política de Privacidade",
+          "width": 222,
+          "height": 35,
+          "top": 652
+        },
+        {
+          "tag": "A",
+          "text": "ImmigraCan",
+          "width": 127,
+          "height": 28,
+          "top": 20
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "width": 308,
+          "height": 40,
+          "top": 1071
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 1150
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 1150
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 1172
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 1172
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 1194
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 1194
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 1216
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 1216
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 1238
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 1238
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 1260
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 1260
+        }
+      ]
+    },
+    "overflow_info": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "hasHorizontalScroll": false
+    },
+    "trust_info": {
+      "found": {
+        "ssl": false,
+        "seguro": false,
+        "garantia": false,
+        "reembolso": false,
+        "pix": false,
+        "cartão": false,
+        "stripe": false,
+        "mercado pago": false,
+        "cnpj": false,
+        "termos de uso": true,
+        "privacidade": true,
+        "sobre nós": false,
+        "quem somos": false,
+        "contato": false,
+        "suporte": false
+      },
+      "hasLockIcon": true,
+      "paymentLogos": []
+    }
+  },
+  "calc-crs_mobile": {
+    "status": 200,
+    "early_body_text_len": 4932,
+    "late_body_text_len": 4932,
+    "ad_info": {
+      "viewportArea": 329160,
+      "totalAdArea": 0,
+      "adRatio": 0,
+      "adCount": 0,
+      "adRects": [],
+      "vw": 390,
+      "vh": 844
+    },
+    "cta_info": {
+      "h1": {
+        "top": 171,
+        "left": 16,
+        "width": 358,
+        "height": 112.5,
+        "inFold": true,
+        "text": "Calcule sua pontuação CRS para imigrar para o Canadá"
+      },
+      "ctaCandidates": [
+        {
+          "top": 0,
+          "left": 0,
+          "width": 0,
+          "height": 0,
+          "inFold": false,
+          "text": "Calculadora CRS"
+        },
+        {
+          "top": 0,
+          "left": 0,
+          "width": 0,
+          "height": 0,
+          "inFold": false,
+          "text": "Quiz Grátis "
+        },
+        {
+          "top": 0,
+          "left": 0,
+          "width": 0,
+          "height": 0,
+          "inFold": false,
+          "text": "Começar Grátis "
+        },
+        {
+          "top": 528.25,
+          "left": 16,
+          "width": 358,
+          "height": 44,
+          "inFold": true,
+          "text": "Calcular minha pontuação CRS"
+        },
+        {
+          "top": 4515,
+          "left": 16,
+          "width": 358,
+          "height": 44,
+          "inFold": false,
+          "text": "Calcular minha pontuação CRS"
+        }
+      ]
+    },
+    "tap_targets": {
+      "totalInteractive": 53,
+      "smallCount": 35,
+      "smallSample": [
+        {
+          "tag": "A",
+          "text": "Política de Privacidade",
+          "width": 222,
+          "height": 35,
+          "top": 652
+        },
+        {
+          "tag": "A",
+          "text": "ImmigraCan",
+          "width": 127,
+          "height": 28,
+          "top": 20
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "width": 308,
+          "height": 40,
+          "top": 4869
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 4948
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 4948
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 4970
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 4970
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 4992
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 4992
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 5014
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 5014
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 5036
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 5036
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 5058
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 5058
+        }
+      ]
+    },
+    "overflow_info": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "hasHorizontalScroll": false
+    },
+    "trust_info": {
+      "found": {
+        "ssl": false,
+        "seguro": false,
+        "garantia": false,
+        "reembolso": false,
+        "pix": false,
+        "cartão": false,
+        "stripe": false,
+        "mercado pago": false,
+        "cnpj": false,
+        "termos de uso": true,
+        "privacidade": true,
+        "sobre nós": false,
+        "quem somos": false,
+        "contato": false,
+        "suporte": false
+      },
+      "hasLockIcon": true,
+      "paymentLogos": []
+    }
+  },
+  "blog_mobile": {
+    "status": 200,
+    "early_body_text_len": 1121,
+    "late_body_text_len": 1203,
+    "ad_info": {
+      "viewportArea": 329160,
+      "totalAdArea": 0,
+      "adRatio": 0,
+      "adCount": 0,
+      "adRects": [],
+      "vw": 390,
+      "vh": 844
+    },
+    "cta_info": {
+      "h1": {
+        "top": 205,
+        "left": 16,
+        "width": 358,
+        "height": 32,
+        "inFold": true,
+        "text": "Erro ao carregar artigo"
+      },
+      "ctaCandidates": [
+        {
+          "top": 0,
+          "left": 0,
+          "width": 0,
+          "height": 0,
+          "inFold": false,
+          "text": "Calculadora CRS"
+        },
+        {
+          "top": 0,
+          "left": 0,
+          "width": 0,
+          "height": 0,
+          "inFold": false,
+          "text": "Quiz Grátis "
+        },
+        {
+          "top": 0,
+          "left": 0,
+          "width": 0,
+          "height": 0,
+          "inFold": false,
+          "text": "Começar Grátis "
+        },
+        {
+          "top": 1087.5,
+          "left": 16,
+          "width": 358,
+          "height": 16,
+          "inFold": false,
+          "text": "Quiz de Elegibilidade"
+        },
+        {
+          "top": 1109.5,
+          "left": 16,
+          "width": 358,
+          "height": 16,
+          "inFold": false,
+          "text": "Calculadora CRS"
+        }
+      ]
+    },
+    "tap_targets": {
+      "totalInteractive": 50,
+      "smallCount": 36,
+      "smallSample": [
+        {
+          "tag": "A",
+          "text": "Política de Privacidade",
+          "width": 222,
+          "height": 35,
+          "top": 652
+        },
+        {
+          "tag": "A",
+          "text": "ImmigraCan",
+          "width": 127,
+          "height": 28,
+          "top": 20
+        },
+        {
+          "tag": "A",
+          "text": "Voltar ao Blog",
+          "width": 159,
+          "height": 40,
+          "top": 289
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "width": 308,
+          "height": 40,
+          "top": 567
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 646
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 646
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 668
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 668
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 690
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 690
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 712
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 712
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 734
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 734
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 756
+        }
+      ]
+    },
+    "overflow_info": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "hasHorizontalScroll": false
+    },
+    "trust_info": {
+      "found": {
+        "ssl": false,
+        "seguro": false,
+        "garantia": false,
+        "reembolso": false,
+        "pix": false,
+        "cartão": false,
+        "stripe": false,
+        "mercado pago": false,
+        "cnpj": false,
+        "termos de uso": true,
+        "privacidade": true,
+        "sobre nós": false,
+        "quem somos": false,
+        "contato": false,
+        "suporte": false
+      },
+      "hasLockIcon": true,
+      "paymentLogos": []
+    }
+  },
+  "precos_mobile": {
+    "status": 200,
+    "early_body_text_len": 3598,
+    "late_body_text_len": 3598,
+    "ad_info": {
+      "viewportArea": 329160,
+      "totalAdArea": 0,
+      "adRatio": 0,
+      "adCount": 0,
+      "adRects": [],
+      "vw": 390,
+      "vh": 844
+    },
+    "cta_info": {
+      "h1": {
+        "top": 158,
+        "left": 16,
+        "width": 358,
+        "height": 72,
+        "inFold": true,
+        "text": "Escolha o seu plano de planejamento contínuo"
+      },
+      "ctaCandidates": [
+        {
+          "top": 0,
+          "left": 0,
+          "width": 0,
+          "height": 0,
+          "inFold": false,
+          "text": "Calculadora CRS"
+        },
+        {
+          "top": 0,
+          "left": 0,
+          "width": 0,
+          "height": 0,
+          "inFold": false,
+          "text": "Quiz Grátis "
+        },
+        {
+          "top": 0,
+          "left": 0,
+          "width": 0,
+          "height": 0,
+          "inFold": false,
+          "text": "Começar Grátis "
+        },
+        {
+          "top": 765,
+          "left": 41,
+          "width": 308,
+          "height": 40,
+          "inFold": true,
+          "text": "Começar Grátis"
+        },
+        {
+          "top": 1201,
+          "left": 41,
+          "width": 308,
+          "height": 40,
+          "inFold": false,
+          "text": "Assinar Básico"
+        }
+      ]
+    },
+    "tap_targets": {
+      "totalInteractive": 54,
+      "smallCount": 40,
+      "smallSample": [
+        {
+          "tag": "A",
+          "text": "Política de Privacidade",
+          "width": 222,
+          "height": 35,
+          "top": 652
+        },
+        {
+          "tag": "A",
+          "text": "ImmigraCan",
+          "width": 127,
+          "height": 28,
+          "top": 20
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Mensal",
+          "width": 80,
+          "height": 36,
+          "top": 332
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Anual\n-40%",
+          "width": 117,
+          "height": 40,
+          "top": 330
+        },
+        {
+          "tag": "A",
+          "text": "Começar Grátis",
+          "width": 308,
+          "height": 40,
+          "top": 765
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Assinar Básico",
+          "width": 308,
+          "height": 40,
+          "top": 1201
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Assinar Premium",
+          "width": 306,
+          "height": 40,
+          "top": 1666
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "width": 308,
+          "height": 40,
+          "top": 3334
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 3412
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 3412
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 3434
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 3434
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 3456
+        },
+        {
+          "tag": "INPUT",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 3456
+        },
+        {
+          "tag": "BUTTON",
+          "text": "on",
+          "width": 16,
+          "height": 16,
+          "top": 3478
+        }
+      ]
+    },
+    "overflow_info": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "hasHorizontalScroll": false
+    },
+    "trust_info": {
+      "found": {
+        "ssl": false,
+        "seguro": true,
+        "garantia": true,
+        "reembolso": true,
+        "pix": true,
+        "cartão": false,
+        "stripe": false,
+        "mercado pago": true,
+        "cnpj": false,
+        "termos de uso": true,
+        "privacidade": true,
+        "sobre nós": false,
+        "quem somos": false,
+        "contato": true,
+        "suporte": false
+      },
+      "hasLockIcon": true,
+      "paymentLogos": [
+        "pix"
+      ]
+    }
+  }
+}

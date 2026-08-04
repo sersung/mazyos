@@ -1,0 +1,3 @@
+[submodule "clientes/immigracan-portugues"]
+	path = clientes/immigracan-portugues
+	url = https://github.com/sersung/immigracan-portugues.git

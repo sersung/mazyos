@@ -1,0 +1,87 @@
+{
+  "title": "Termos de Uso e Servi\u00c3\u00a7o | ImmigraCan",
+  "meta_description": "Conhe\u00c3\u00a7a os termos de uso, responsabilidades e licen\u00c3\u00a7a de uso das simula\u00c3\u00a7\u00c3\u00b5es de elegibilidade da ImmigraCan.",
+  "meta_robots": "index, follow",
+  "canonical": "https://immigracan.com.br/termos",
+  "h1": [
+    "Termos de Uso e Servi\u00c3\u00a7o | ImmigraCan"
+  ],
+  "h2": [],
+  "h3": [],
+  "images": [],
+  "links": {
+    "internal": [
+      {
+        "href": "https://immigracan.com.br/",
+        "text": "ImmigraCan",
+        "rel": []
+      },
+      {
+        "href": "https://immigracan.com.br/calculadora-crs",
+        "text": "Calculadora CRS",
+        "rel": []
+      },
+      {
+        "href": "https://immigracan.com.br/programas",
+        "text": "Programas de Imigra\u00c3\u00a7\u00c3\u00a3o",
+        "rel": []
+      },
+      {
+        "href": "https://immigracan.com.br/blog",
+        "text": "Blog",
+        "rel": []
+      },
+      {
+        "href": "https://immigracan.com.br/precos",
+        "text": "Pre\u00c3\u00a7os",
+        "rel": []
+      },
+      {
+        "href": "https://immigracan.com.br/contato",
+        "text": "Contato",
+        "rel": []
+      },
+      {
+        "href": "https://immigracan.com.br/privacidade",
+        "text": "Pol\u00c3\u00adtica de Privacidade",
+        "rel": []
+      },
+      {
+        "href": "https://immigracan.com.br/termos",
+        "text": "Termos de Uso",
+        "rel": []
+      }
+    ],
+    "external": []
+  },
+  "schema": [],
+  "open_graph": {
+    "og:type": "website",
+    "og:locale": "pt_BR",
+    "og:site_name": "ImmigraCan",
+    "og:image": "https://immigracan.com.br/og-image.png",
+    "og:image:width": "1200",
+    "og:image:height": "630",
+    "og:title": "Termos de Uso e Servi\u00c3\u00a7o | ImmigraCan",
+    "og:description": "Conhe\u00c3\u00a7a os termos de uso, responsabilidades e licen\u00c3\u00a7a de uso das simula\u00c3\u00a7\u00c3\u00b5es de elegibilidade da ImmigraCan.",
+    "og:url": "https://immigracan.com.br/termos"
+  },
+  "twitter_card": {
+    "twitter:card": "summary_large_image",
+    "twitter:site": "@ImmigraCan",
+    "twitter:image": "https://immigracan.com.br/og-image.png",
+    "twitter:title": "Termos de Uso e Servi\u00c3\u00a7o | ImmigraCan",
+    "twitter:description": "Conhe\u00c3\u00a7a os termos de uso, responsabilidades e licen\u00c3\u00a7a de uso das simula\u00c3\u00a7\u00c3\u00b5es de elegibilidade da ImmigraCan."
+  },
+  "word_count": 67,
+  "hreflang": [
+    {
+      "lang": "pt-BR",
+      "href": "https://immigracan.com.br/"
+    },
+    {
+      "lang": "x-default",
+      "href": "https://immigracan.com.br/"
+    }
+  ]
+}

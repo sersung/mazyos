@@ -1,0 +1,40 @@
+{
+  "url": "https://immigracan.com.br/programas/express_entry_fsw",
+  "status_code": 200,
+  "content": "<!doctype html>\r\n<html lang=\"pt-BR\">\r\n  <head>\r\n    <!-- FIX P-7: GTM foi movido para src/lib/third-party.ts (carregado via\r\n         requestIdleCallback), pois o snippet inline s\u00c3\u00adncrono no topo do\r\n         <head> bloqueava parsing/render e prejudicava LCP mobile. -->\r\n    <meta charset=\"UTF-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>Express Entry \u00e2\u0080\u0093 Federal Skilled Worker (FSW) \u00e2\u0080\u0093 Requisitos e Elegibilidade | ImmigraCan</title>\r\n    <meta...",
+  "raw_content": "<!doctype html>\r\n<html lang=\"pt-BR\">\r\n  <head>\r\n    <!-- FIX P-7: GTM foi movido para src/lib/third-party.ts (carregado via\r\n         requestIdleCallback), pois o snippet inline s\u00c3\u00adncrono no topo do\r\n...",
+  "is_spa": false,
+  "extracted_text": "Express Entry \u00e2 Federal Skilled Worker (FSW) \u00e2 Requisitos e Elegibilidade | ImmigraCan\nJurisdi\u00c3\u00a7\u00c3\u00a3o: Federal\nStatus: Ativo\nTempo m\u00c3\u00a9dio de Processamento: ~6 meses\nResumo do Programa\nPrincipal via de imigra\u00c3\u00a7\u00c3\u00a3o econ\u00c3\u00b4mica para trabalhadores qualificados com experi\u00c3\u00aancia em ocupa\u00c3\u00a7\u00c3\u00b5es TEER 0\u00e23. Baseado em pontua\u00c3\u00a7\u00c3\u00a3o CRS.\nRequisitos de Elegibilidade\nM\u00c3nimo 1 ano cont\u00c3nuo (1.560h) de experi\u00c3\u00aancia qualificada nos \u00c3\u00baltimos 10 anos, em ocupa\u00c3\u00a7\u00c3\u00a3o TEER 0\u00e23. M\u00c3nimo 67/100 na grade de sele\u00c3\u00a7\u00c3\u00a3o. Teste ...",
+  "publication_date": "2026-01-01",
+  "accessibility_tree": null,
+  "headers": {
+    "Alt-Svc": "h3=\":443\"; ma=2592000",
+    "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0",
+    "Content-Encoding": "gzip",
+    "Content-Type": "text/html",
+    "Date": "Thu, 23 Jul 2026 23:49:25 GMT",
+    "Etag": "W/\"6a617893-1c22\"",
+    "Last-Modified": "Thu, 23 Jul 2026 02:12:35 GMT",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Server": "nginx",
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "Vary": "Accept-Encoding",
+    "X-Content-Type-Options": "nosniff",
+    "Transfer-Encoding": "chunked"
+  },
+  "redirect_chain": [],
+  "console_errors": [],
+  "render_diagnostics": [],
+  "render_engine": null,
+  "render_ms": null,
+  "mode_used": "raw",
+  "error": null,
+  "structured_data": {
+    "block_count": 0,
+    "processed_count": 0,
+    "total_bytes": 0,
+    "truncated": false,
+    "blocks": []
+  }
+}
