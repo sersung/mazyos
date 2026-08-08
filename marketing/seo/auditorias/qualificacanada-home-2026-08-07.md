@@ -115,10 +115,8 @@ preciso Search Console + GA4 ligados (ver item 8).
 ## O que ficou de fora e depende do Renan
 
 1. **Checkout do combo na Hotmart** (item 1) — maior impacto direto em receita.
-2. **Captura de e-mail no material gratuito.** O Guia de Entrada é entregue
-   como download direto de PDF, sem pedir e-mail. Um lead magnet sem captura
-   não constrói lista, e sem lista não existe retenção nem remarketing.
-   É o segundo maior vazamento da página.
+2. ~~**Captura de e-mail no material gratuito.**~~ ✅ **Resolvido** — ver
+   seção "Captura do Guia de Entrada" no fim deste documento.
 3. **Prova social.** A página não tem um único depoimento, número de alunos ou
    avaliação. Tem só o selo "Mais vendido". Inventar depoimento ou nota está
    fora de questão — mas se existirem mensagens reais de quem usou os guias,
@@ -126,6 +124,9 @@ preciso Search Console + GA4 ligados (ver item 8).
 4. **Links para as fontes oficiais** (Skilled Trades Ontario, Ontario.ca,
    Canada.ca) — citadas no texto sem link. Elevaria a nota de
    Authoritativeness, que segue em 1.
+
+---
+
 ## Resolvido depois da primeira rodada — AdSense removido do site
 
 O Renan decidiu tirar o AdSense inteiro, para não ter anúncio de terceiro
@@ -145,3 +146,49 @@ todas as páginas, e as páginas de artigo ficaram mais limpas.
 
 **Se um dia voltar a monetizar com display,** lembrar de repor o `ads.txt`
 (sem ele o AdSense não serve anúncio) e a seção da política de privacidade.
+
+---
+
+## Captura do Guia de Entrada — implementada
+
+O guia era entregue como download direto de PDF em `public/`, sem pedir nada
+em troca. Lead magnet sem captura não constrói lista, e sem lista não há
+retenção nem remarketing. Agora:
+
+**Fluxo:** landing → `/guia-de-entrada` (página de captura) → formulário
+(nome, e-mail, profissão opcional) → Server Action grava o lead → cookie
+`httpOnly` libera o download → `/api/guia-de-entrada` serve o PDF.
+
+**O PDF saiu de `public/`.** Enquanto estivesse lá, ele teria URL fixa e
+pública, e a captura seria decorativa: bastava compartilhar o link direto.
+Foi para `private/`, servido só por rota que confere o cookie. A URL antiga
+(`/Guia-entrada-skilled-workers.pdf`) virou redirect 301 para a captura,
+porque esse link já circulou e provavelmente está indexado.
+
+**Onde os leads caem:** Supabase (`SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY`,
+tabela criada por `supabase/leads.sql`) e/ou um webhook genérico
+(`LEADS_WEBHOOK_URL`) para Make/Zapier/e-mail marketing. Os dois são opcionais
+e independentes; se ambos estiverem configurados, o lead vai para os dois.
+
+**Decisões que valem registrar:**
+
+- Falha ao gravar o lead **não** bloqueia o download. A pessoa cumpriu a parte
+  dela; o erro vai para o log do servidor e ela recebe o guia.
+- Sem nenhum destino configurado, o lead é perdido — por isso o `console.error`
+  é explícito. Configurar o Supabase é pré-requisito para valer a pena.
+- Validação de e-mail proposital frouxa: regex rígida rejeita endereço válido.
+- Honeypot em vez de captcha: robô que preenche o campo escondido vê tela de
+  sucesso falsa, mas não gera lead nem recebe o cookie de download.
+- RLS ligado sem policy na tabela: a anon key não lê nada, então a lista de
+  e-mails não vaza pelo endpoint público do Supabase.
+
+**Testado de ponta a ponta** com navegador real: fluxo completo entrega PDF
+válido de 1,09 MB; validação server-side barra e-mail inválido mesmo com a
+validação do browser desligada; honeypot não gera lead; cookie sai `httpOnly`
+e invisível ao JS; URL antiga redireciona; download sem captura redireciona
+para o formulário; o PDF é copiado para o build standalone.
+
+**Privacidade:** a política foi atualizada com o que é coletado, base legal
+(consentimento), onde fica armazenado, direito de acesso/exclusão e o cookie
+técnico. Isso deixou de ser opcional a partir do momento que o site passou a
+coletar dado pessoal.
