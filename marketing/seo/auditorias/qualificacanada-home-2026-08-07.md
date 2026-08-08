@@ -126,6 +126,22 @@ preciso Search Console + GA4 ligados (ver item 8).
 4. **Links para as fontes oficiais** (Skilled Trades Ontario, Ontario.ca,
    Canada.ca) — citadas no texto sem link. Elevaria a nota de
    Authoritativeness, que segue em 1.
-5. **AdSense na página de venda.** O script roda no site inteiro, incluindo a
-   landing. Anúncio de terceiro numa página de venda compete com o próprio
-   CTA. Decisão de receita — não mexi.
+## Resolvido depois da primeira rodada — AdSense removido do site
+
+O Renan decidiu tirar o AdSense inteiro, para não ter anúncio de terceiro
+competindo com a venda dos guias. Removidos:
+
+- script `adsbygoogle.js` e meta `google-adsense-account` do layout raiz
+  (carregavam em **todas** as páginas, inclusive na landing de vendas);
+- `public/ads.txt`;
+- duas caixas cinzas escrito `[Anúncio Google AdSense]` nas páginas de
+  artigo — placeholders que nunca viraram anúncio de verdade e que estavam
+  **visíveis para o visitante** em produção, entre o título e o texto;
+- seção de AdSense da política de privacidade, substituída por declaração
+  de que o site não exibe anúncio de terceiro.
+
+Ganho colateral: menos um script de terceiro bloqueando carregamento em
+todas as páginas, e as páginas de artigo ficaram mais limpas.
+
+**Se um dia voltar a monetizar com display,** lembrar de repor o `ads.txt`
+(sem ele o AdSense não serve anúncio) e a seção da política de privacidade.
