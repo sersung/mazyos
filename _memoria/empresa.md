@@ -14,3 +14,7 @@
 ## Contexto adicional
 
 Renan é engenheiro eletricista de formação e atua também com serviços digitais (sites, SEO, vídeo). As duas frentes competem pelo mesmo gargalo: captação de clientes.
+
+## Projetos próprios
+
+**Finance From Zero** — série de vídeos curtos (60–90s) de educação financeira em stick figures, narrados, verticais para Shorts/Reels/TikTok. Idioma base inglês, com tradução barata para outros idiomas. Produzida pelo pipeline no repo `automacao-videos`, operado pela skill `/video-financas`. Meta de cadência: um vídeo por dia. Custo variável ~$1/vídeo; idioma adicional é praticamente grátis porque as imagens não contêm texto e são reaproveitadas.
