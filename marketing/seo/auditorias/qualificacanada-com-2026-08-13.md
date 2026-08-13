@@ -56,8 +56,9 @@ Os 15 artigos não linkavam entre si; só apontavam para as páginas de venda. A
 
 1. ~~**Links externos para as fontes citadas.**~~ **Resolvido.** Todos os 15 artigos ganharam bloco "Fontes oficiais" com link externo (`rel="noopener noreferrer"`, dofollow) para IRCC, Skilled Trades Ontario, Job Bank, Ontario.ca ou Statistics Canada conforme o assunto. As mesmas fontes entram no `BlogPosting` como `citation`.
 2. ~~**Datas dos valores monetários.**~~ **Resolvido.** Os 6 artigos com valores em dinheiro passam a exibir aviso de que são faixas de referência da data de publicação, com a data explícita, e remetem às fontes oficiais. O H2 "O mercado de trabalho canadense em 2025" — que datava um artigo publicado em 2026 — virou título atemporal.
-3. **Os 10 artigos gerais são genéricos.** *Ainda aberto.* Cobrem bem o básico, mas não têm ângulo próprio — qualquer portal de imigração tem texto equivalente. Os 5 de ofício técnico são o oposto: específicos e defensáveis. A vantagem competitiva do site está nesse segundo grupo.
-4. **Aviso do AdSense.** *Ainda aberto.* Com os placeholders removidos, definir se os slots reais entram ou se a monetização sai do escopo.
+3. ~~**Os 10 artigos gerais são genéricos.**~~ **Tratado.** Os 10 receberam bloco de perguntas + `FAQPage` — agora os 15 artigos têm FAQ, com todas as respostas extraídas do corpo do próprio texto. Foram criados links contextuais dos artigos gerais para os de ofício técnico nos dois pontos em que o texto já puxava para o assunto (seção de trades em "profissões com demanda"; item de revalidação de diploma em "erros comuns"), fechando o funil entre conteúdo de topo e produto.
+   *Ressalva honesta:* isso resolve a prontidão técnica e o funil, não o fundo editorial. Os 10 continuam sem ângulo autoral próprio, e isso não é corrigível sem material do Renan — inventar vivência num site YMYL seria exatamente a fraude de E-E-A-T que esta auditoria existe para evitar. A recomendação de concentrar conteúdo novo no grupo de ofício técnico continua de pé.
+4. ~~**Aviso do AdSense.**~~ **Resolvido:** monetização removida. Saíram o script do `adsbygoogle`, a meta `google-adsense-account` e o `public/ads.txt`. Com 3 páginas indexadas e ~0 impressões, o script custava carregamento em toda página sem nenhuma unidade renderizando. Volta quando houver audiência.
 5. ~~**Métricas reais.**~~ **Parcialmente resolvido** — ver a seção de Search Console abaixo.
 
 ---
@@ -111,3 +112,43 @@ Dado que 15 das 23 URLs nunca foram descobertas, o passo com maior retorno não 
 - DNS: `A @ → 2.25.141.59` e `CNAME www`, apontando para a VPS correta. Verificação do Google Search Console presente no TXT.
 - Container `qualificacanada` rodando na VPS `srv1710158.hstgr.cloud`, atrás do Traefik do Coolify.
 - **Ponto de atenção de segurança:** a VPS não tem nenhum firewall group associado (`firewall_group_id: null`, lista de firewalls vazia) e expõe em `0.0.0.0` as portas 8080 (dashboard do Traefik), 8000 (painel do Coolify), 32768 (n8n), 5001 e 8088. Vale restringir por firewall ou fechar o que não precisa ser público.
+
+---
+
+## Deploy de 2026-08-13
+
+Merge da branch de correções na `main`, disparando o workflow `Deploy QualificaCanadá para VPS`.
+
+- **Run 31705952533 — sucesso.** rsync e `docker compose up -d --build` concluídos às 13:39:37 UTC.
+- Não foi possível confirmar o site no ar a partir deste ambiente (proxy bloqueia egress para o domínio) nem ler o container via MCP (ver abaixo). A confirmação do deploy vem dos passos do workflow, todos verdes.
+
+### Achado: o deploy anterior nunca chegou em produção
+
+O run de 2026-08-10 (commit `2b32b1b`, "captura de e-mail no guia grátis + GA4 + tracking pronto pra Meta Pixel") **falhou**:
+
+```
+ssh: connect to host *** port 22: Operation timed out
+rsync error: unexplained error (code 255)
+```
+
+Ou seja: o formulário de captura de lead, o GA4 e o tracking do Meta Pixel ficaram três dias no repositório sem estar no ar. Só entraram em produção com o deploy de hoje. Se o GA4 aparentava não registrar nada nesse período, essa é a explicação.
+
+O SSH da VPS já se mostrou instável a partir dos runners do GitHub — vale monitorar, porque é o único caminho de deploy do projeto.
+
+### Firewall: planejado, NÃO aplicado
+
+O firewall foi aprovado mas **não pôde ser criado**: o servidor MCP da Hostinger reconectou sob outro identificador no meio da sessão e passou a exigir aprovação manual em cada chamada, que não foi concedida. Nenhuma alteração de infraestrutura foi feita.
+
+Plano para executar depois, na ordem exata — a API da Hostinger **dropa todo tráfego de entrada por padrão**, então as regras de liberação têm de existir antes da ativação, ou a VPS fica inacessível:
+
+1. `VPS_createNewFirewallV1` — criar o firewall.
+2. `VPS_createFirewallRuleV1` — liberar, com `source: any`, nesta ordem: **TCP 22** (sem isso o deploy via GitHub Actions morre), **TCP 80** e **TCP 443** (sem isso os 19 sites saem do ar).
+3. Conferir a lista de regras com `VPS_getFirewallDetailsV1` **antes** de seguir.
+4. `VPS_activateFirewallV1` — só então ativar na VM 1710158.
+
+Duas consequências a aceitar conscientemente antes de ativar, porque não são óbvias:
+
+- **O painel do Coolify em `http://<ip>:8000` para de responder.** Se ele não estiver publicado por domínio atrás do Traefik, o acesso ao painel se perde — numa VPS que hospeda 19 projetos.
+- **O n8n em `:32768` para de receber chamadas externas.** Webhooks de serviços de terceiros apontando para essa porta quebram silenciosamente. Como automação é uma das frentes do negócio, isso precisa ser verificado antes.
+
+Reversão, se algo quebrar: `VPS_deactivateFirewallV1` na VM 1710158.
