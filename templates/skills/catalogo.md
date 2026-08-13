@@ -43,6 +43,16 @@ Skills externas prontas pra instalar. Use como referencia ao criar skills novas 
 
 ---
 
+## Produzir vídeos curtos
+
+### Vídeo Diário
+**O que faz:** Pesquisa um tema atual, produz um vídeo curto vertical, cria narração, trilha, legendas inferiores incorporadas, SRT, metadados de YouTube Shorts/TikTok e aplica um quality gate antes da entrega.
+**Bom pra:** Conteúdo educativo recorrente, Shorts, TikToks e Reels que precisam sair prontos para revisão e postagem manual.
+**Como instalar:** Já está disponível neste projeto. Chamar com `/video-diario`.
+**Fonte:** Skill personalizada do MazyOS para o canal My First Million Vault.
+
+---
+
 ## Trabalhar com documentos
 
 ### PDF

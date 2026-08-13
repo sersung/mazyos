@@ -16,6 +16,7 @@ Conforme você for ativando skills, isso aqui vai sendo populado. Lista do que c
 | `/aprovar-post` | `postar-facebook.js` | Publica carrossel no Facebook via Meta Graph API |
 | `/anuncio-google` | (nenhum — gera CSV direto) | — |
 | `/relatorio-ads` | (lê CSV exportado das plataformas) | — |
+| `/video-diario` | `validar-video-diario.mjs` | Valida presença dos arquivos, duração, proporção vertical, áudio, SRT e confirmações de legendas/mixagem antes da entrega. |
 
 ## Pré-requisitos comuns
 
@@ -49,3 +50,13 @@ Quando você roda uma skill que precisa de script ausente, o Claude vai:
 5. Rodar a skill
 
 Você não precisa decorar nada. Roda a skill, segue o fluxo.
+
+## Validador de vídeo diário
+
+A skill `/video-diario` prepara um pacote em `marketing/video-diario/<tema>-<data>/`. Antes da entrega, copiar `marketing/video-diario/quality-check.template.md` para `quality-check.md`, preencher as três confirmações após a montagem e executar:
+
+```bash
+node scripts/validar-video-diario.mjs marketing/video-diario/<tema>-<data>
+```
+
+O comando cria `quality-report.json` e retorna código de erro quando faltar um arquivo, a duração não estiver entre 60 e 90 segundos, o vídeo não estiver em 9:16 vertical, não houver áudio, o SRT estiver inválido ou as confirmações de qualidade estiverem ausentes.
