@@ -52,13 +52,56 @@ Os 15 artigos não linkavam entre si; só apontavam para as páginas de venda. A
 
 ---
 
-## Pendências não resolvidas (recomendação para a próxima rodada)
+## Pendências — status na segunda rodada (2026-08-13)
 
-1. **Links externos para as fontes citadas.** Os artigos nomeiam IRCC, Skilled Trades Ontario e canada.ca, mas quase nunca linkam. Linkar a fonte oficial em cada afirmação regulatória sobe Authoritativeness e é barato.
-2. **Datas dos valores monetários.** As faixas salariais e os custos de vida não dizem a que ano se referem ("em 2025" aparece em um artigo, os outros não datam). Em conteúdo YMYL, número sem data envelhece mal.
-3. **Os 10 artigos gerais são genéricos.** Cobrem bem o básico, mas não têm ângulo próprio — qualquer portal de imigração tem texto equivalente. Os 5 de ofício técnico são o oposto: específicos e defensáveis. A vantagem competitiva do site está nesse segundo grupo.
-4. **Aviso do AdSense.** Com os placeholders removidos, definir se os slots reais entram ou se a monetização sai do escopo do site.
-5. **Métricas reais** (tráfego, posição, backlinks) não são verificáveis por leitura de código — precisam de Search Console para a próxima auditoria.
+1. ~~**Links externos para as fontes citadas.**~~ **Resolvido.** Todos os 15 artigos ganharam bloco "Fontes oficiais" com link externo (`rel="noopener noreferrer"`, dofollow) para IRCC, Skilled Trades Ontario, Job Bank, Ontario.ca ou Statistics Canada conforme o assunto. As mesmas fontes entram no `BlogPosting` como `citation`.
+2. ~~**Datas dos valores monetários.**~~ **Resolvido.** Os 6 artigos com valores em dinheiro passam a exibir aviso de que são faixas de referência da data de publicação, com a data explícita, e remetem às fontes oficiais. O H2 "O mercado de trabalho canadense em 2025" — que datava um artigo publicado em 2026 — virou título atemporal.
+3. **Os 10 artigos gerais são genéricos.** *Ainda aberto.* Cobrem bem o básico, mas não têm ângulo próprio — qualquer portal de imigração tem texto equivalente. Os 5 de ofício técnico são o oposto: específicos e defensáveis. A vantagem competitiva do site está nesse segundo grupo.
+4. **Aviso do AdSense.** *Ainda aberto.* Com os placeholders removidos, definir se os slots reais entram ou se a monetização sai do escopo.
+5. ~~**Métricas reais.**~~ **Parcialmente resolvido** — ver a seção de Search Console abaixo.
+
+---
+
+## Search Console — Cobertura em 2026-08-13
+
+Base: export de cobertura ("Todas as páginas conhecidas"), série de 2026-05-14 a 2026-08-06. Os dois arquivos enviados são o mesmo export duplicado.
+
+### O número que importa
+
+| Data | Indexadas | Não indexadas |
+|---|---|---|
+| 2026-06-29 (site no ar) | 4 | 1 |
+| 2026-06-30 | 2 | 4 |
+| 2026-07-10 | 2 | 6 |
+| 2026-08-06 | 3 | 5 |
+
+**O Google conhece cerca de 8 URLs. O site tem 23** (home + 7 institucionais + índice + 15 artigos, todas no sitemap). Ou seja: o problema principal não é qualidade de indexação, é **descoberta** — dois terços do site nunca foram rastreados. Impressões no período: entre 0 e 4 por dia.
+
+### Problemas críticos reportados
+
+| Motivo | Páginas | Diagnóstico |
+|---|---|---|
+| Não encontrado (404) | 2 | Não identificável por este export — ver abaixo. |
+| Página com redirecionamento | 2 | **Esperado, não é falha.** O `next.config.ts` faz 301 de `www.qualificacanada.com` para o apex, e o DNS tem `CNAME www`. O Google lista a variante www como "com redirecionamento" — é o comportamento correto. |
+| Bloqueada pelo robots.txt | 1 | Não identificável por este export — ver abaixo. |
+
+### O que foi descartado por verificação direta
+
+Três hipóteses testadas contra o HTML gerado pelo build, todas negativas:
+
+- **Canonical apontando para a home.** O root layout usa `alternates: { canonical: "./" }`, que poderia fazer toda página se declarar duplicata da home. Verificado no build: cada página emite o próprio canonical correto (`/sobre`, `/contato`, `/artigos`…). **Não é a causa.**
+- **Links internos quebrados.** Todos os `href` internos de `app/` e `components/` foram cruzados com as rotas reais. **Nenhum link quebrado.**
+- **robots.txt bloqueando algo.** O `app/robots.ts` do repositório emite `allow: /` para `*` e aponta o sitemap. Não há `public/robots.txt` conflitante. **Nada bloqueado pelo código.**
+
+### O que falta para fechar o diagnóstico
+
+O export de cobertura resumido traz apenas as contagens, não as URLs. Para nomear as 2 páginas com 404 e a 1 bloqueada por robots.txt é preciso o **export de dentro de cada problema**: no Search Console, abrir Indexação → Páginas, clicar no motivo específico (ex.: "Não encontrado (404)") e exportar a lista de exemplos dessa tela.
+
+Não foi possível checar o site no ar a partir deste ambiente — o proxy de rede bloqueia egress para `qualificacanada.com` e para os domínios oficiais. Toda a verificação acima veio do código e do build local.
+
+### Recomendação de maior impacto
+
+Dado que 15 das 23 URLs nunca foram descobertas, o passo com maior retorno não está no código: confirmar no Search Console que `sitemap.xml` está **submetido** e sendo lido, e usar "Inspecionar URL → Solicitar indexação" nos 5 artigos de ofício técnico, que são as páginas com intenção comercial. As correções de E-E-A-T desta rodada ajudam a página a ser *mantida* no índice depois de rastreada, mas não substituem o rastreamento inicial.
 
 ---
 
