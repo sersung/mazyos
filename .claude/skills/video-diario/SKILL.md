@@ -75,7 +75,7 @@ Conectar cenas contínuas reaproveitando o último quadro real da cena anterior 
 2. Gerar o primeiro quadro de cada cena em 9:16 e usar esse quadro para animar o clipe. Reservar a faixa inferior para legendas e nunca depender de texto dentro da imagem.
 3. Criar a narração por trecho narrativo, não como uma faixa única excessivamente longa. Manter a velocidade natural; reduzir o texto antes de acelerar a voz.
 4. Gerar trilha instrumental separada a partir do arco de música definido na produção. Na mixagem, preservar som ambiente ou efeitos existentes, narração e música; reduzir a trilha durante a fala.
-5. Criar legendas em inglês sincronizadas. Incorporá-las na faixa inferior segura, nunca no terço central/superior. Em vídeo 720×1280, usar fonte sans-serif branca em negrito de aproximadamente 15 px, contorno azul-marinho fino, fundo/sombra escura discreta e margem inferior de aproximadamente 95 px; escalar proporcionalmente em resoluções maiores. Limitar a duas linhas e preservar espaço acima dos controles das plataformas.
+5. Criar legendas em inglês sincronizadas. Incorporá-las na faixa inferior segura, nunca no terço central/superior. Em vídeo 720×1280, usar fonte sans-serif branca em negrito de aproximadamente 10 px, contorno azul-marinho fino, fundo/sombra escura discreta e margem inferior de aproximadamente 35 px; escalar proporcionalmente em resoluções maiores. Limitar a duas linhas e preservar espaço acima dos controles das plataformas.
 6. Criar `metadados.md` com título do Shorts, descrição, 3–5 hashtags e 10–15 tags pesquisáveis; além de uma legenda de TikTok, 4–6 hashtags e palavras-chave de descoberta.
 
 ## Fase 4 — Quality gate obrigatório
