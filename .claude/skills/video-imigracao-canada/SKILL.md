@@ -95,7 +95,7 @@ Gerar a narração por trecho, mantendo a mesma voz, volume e ritmo entre as cen
 
 Montar em 9:16. Garantir que imagens, transições, legendas e áudio tenham espaço seguro para as interfaces de Reels, Shorts e TikTok.
 
-Reservar os últimos **3–4 segundos** para uma tela final limpa, produzida na etapa de montagem — e não dentro de uma imagem gerada. Exibir, de forma legível, `imigracam.com.br` e exatamente a frase: **“Para mais informações ou quer saber mais, acesse o link na descrição”.** Essa tela deve permanecer estável até o fim, com contraste suficiente e música discreta; não incluir logotipos de terceiros, imagens licenciadas sem registro ou chamadas adicionais.
+Reservar os últimos **3–4 segundos** para uma tela final limpa, produzida na etapa de montagem — e não dentro de uma imagem gerada. Exibir, de forma legível, `imigracam.com.br` e exatamente a frase: **“Quer saber mais? Acesse o link na descrição”.** Essa tela deve permanecer estável até o fim, com contraste suficiente e música discreta; não incluir logotipos de terceiros, imagens licenciadas sem registro ou chamadas adicionais.
 
 Não usar efeitos cômicos, animações de bonecos-palito ou transições que façam a informação parecer entretenimento infantil.
 
@@ -112,7 +112,7 @@ Reprovar e corrigir o episódio se ocorrer qualquer item da tabela.
 | Visual | Imagens documentais do Canadá; nenhuma cena com bonecos-palito, texto, logo ou ativo sem origem verificável. |
 | Licença | Todo ativo consta em `asset-registry.json`; atribuições estão prontas para a descrição. |
 | Legibilidade | Voz clara, legendas quando usadas, áudio equilibrado e corte vertical sem elementos importantes cobertos. |
-| Tela final | Últimos 3–4 segundos exibem `imigracam.com.br` e exatamente: “Para mais informações ou quer saber mais, acesse o link na descrição”. |
+| Tela final | Últimos 3–4 segundos exibem `imigracam.com.br` e exatamente: “Quer saber mais? Acesse o link na descrição”. |
 | Aviso | Aviso informativo presente no fim e na descrição. |
 
 ### 7. Finalizar e registrar
