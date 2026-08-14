@@ -1,0 +1,4 @@
+assets/*
+!assets/asset-registry.json
+audio/
+video/

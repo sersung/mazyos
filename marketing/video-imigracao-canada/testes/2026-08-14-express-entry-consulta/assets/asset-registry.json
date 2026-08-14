@@ -1,0 +1,122 @@
+[
+  {
+    "asset_id": "v01",
+    "file": "assets/visual-anchor-ottawa.jpg",
+    "type": "generated_photo",
+    "subject": "Vista documental de Ottawa e Parliament Hill",
+    "source_url": null,
+    "author": null,
+    "license": "generated_for_project",
+    "attribution": null,
+    "prompt": "Fotografia documental vertical de Ottawa ao amanhecer, sem texto, logos ou pessoas identificáveis.",
+    "checked_at": "2026-08-14T22:00:00Z"
+  },
+  {
+    "asset_id": "v02",
+    "file": "assets/scene-02-professional.jpg",
+    "type": "generated_photo",
+    "subject": "Profissional em escritório canadense",
+    "source_url": null,
+    "author": null,
+    "license": "generated_for_project",
+    "attribution": null,
+    "prompt": "Fotografia documental vertical de profissional visto de costas, sem texto, logos ou rosto identificável.",
+    "checked_at": "2026-08-14T22:00:00Z"
+  },
+  {
+    "asset_id": "v03",
+    "file": "assets/scene-03-library.jpg",
+    "type": "generated_photo",
+    "subject": "Biblioteca universitária canadense",
+    "source_url": null,
+    "author": null,
+    "license": "generated_for_project",
+    "attribution": null,
+    "prompt": "Fotografia documental vertical de biblioteca sem textos legíveis, logos ou rostos identificáveis.",
+    "checked_at": "2026-08-14T22:00:00Z"
+  },
+  {
+    "asset_id": "v04",
+    "file": "assets/scene-04-city-workers.jpg",
+    "type": "generated_photo",
+    "subject": "Centro urbano canadense com trabalhadores distantes",
+    "source_url": null,
+    "author": null,
+    "license": "generated_for_project",
+    "attribution": null,
+    "prompt": "Fotografia documental vertical de corredor urbano sem sinais legíveis, logos ou rostos identificáveis.",
+    "checked_at": "2026-08-14T22:00:00Z"
+  },
+  {
+    "asset_id": "v05",
+    "file": "assets/scene-05-sectors.jpg",
+    "type": "generated_photo",
+    "subject": "Cenário de saúde, ofícios e transporte",
+    "source_url": null,
+    "author": null,
+    "license": "generated_for_project",
+    "attribution": null,
+    "prompt": "Fotografia documental vertical de profissionais não identificáveis, sem logos ou textos.",
+    "checked_at": "2026-08-14T22:00:00Z"
+  },
+  {
+    "asset_id": "v06",
+    "file": "assets/scene-06-trades.jpg",
+    "type": "generated_photo",
+    "subject": "Mãos de profissional de ofício",
+    "source_url": null,
+    "author": null,
+    "license": "generated_for_project",
+    "attribution": null,
+    "prompt": "Fotografia documental vertical de mãos com ferramentas genéricas, sem logos ou marcas.",
+    "checked_at": "2026-08-14T22:00:00Z"
+  },
+  {
+    "asset_id": "v07",
+    "file": "assets/scene-07-french-study.jpg",
+    "type": "generated_photo",
+    "subject": "Espaço de estudo canadense",
+    "source_url": null,
+    "author": null,
+    "license": "generated_for_project",
+    "attribution": null,
+    "prompt": "Fotografia documental vertical de estudo, sem escrita legível, logos ou rosto identificável.",
+    "checked_at": "2026-08-14T22:00:00Z"
+  },
+  {
+    "asset_id": "v08",
+    "file": "assets/scene-08-landscape.jpg",
+    "type": "generated_photo",
+    "subject": "Lago e montanhas canadenses",
+    "source_url": null,
+    "author": null,
+    "license": "generated_for_project",
+    "attribution": null,
+    "prompt": "Fotografia documental vertical de paisagem canadense sem texto, logos ou rosto identificável.",
+    "checked_at": "2026-08-14T22:00:00Z"
+  },
+  {
+    "asset_id": "v09",
+    "file": "assets/scene-09-toronto.jpg",
+    "type": "generated_photo",
+    "subject": "Skyline de Toronto ao anoitecer",
+    "source_url": null,
+    "author": null,
+    "license": "generated_for_project",
+    "attribution": null,
+    "prompt": "Fotografia documental vertical do skyline de Toronto, sem logos, texto ou marcas.",
+    "checked_at": "2026-08-14T22:00:00Z"
+  },
+  {
+    "asset_id": "v10",
+    "file": "assets/scene-10-end-card.png",
+    "type": "generated_graphic",
+    "subject": "Tela final com chamada para o link na descrição",
+    "source_url": null,
+    "author": null,
+    "license": "generated_for_project",
+    "attribution": null,
+    "prompt": "Tela final vertical com apenas a chamada aprovada, sem endereço de site, logotipos ou elementos adicionais.",
+    "checked_at": "2026-08-14T22:00:00Z"
+  }
+]
