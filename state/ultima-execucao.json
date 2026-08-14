@@ -1,0 +1,10 @@
+{
+  "pipeline": "video-imigracao-canada",
+  "timezone": "America/Sao_Paulo",
+  "last_run_at": null,
+  "last_published_at": null,
+  "last_source_published_at": null,
+  "last_source_url": null,
+  "last_episode_id": null,
+  "notes": "Estado inicial criado em 2026-08-14. A primeira execução deve considerar somente pautas oficiais do IRCC ainda úteis e marcar a fonte utilizada."
+}
