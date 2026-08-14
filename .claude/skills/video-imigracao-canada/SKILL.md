@@ -15,6 +15,10 @@ Usar apenas o **IRCC** como fonte factual primária. Toda notícia deve apontar 
 
 Apresentar uma novidade material por episódio. Não tratar rumores, cobertura de terceiros ou postagens sociais como confirmação. Não publicar um vídeo novo quando não houver atualização oficial relevante desde a última execução; registrar a ausência de pauta no histórico e aguardar a próxima execução.
 
+## Operação autônoma
+
+Na execução diária, não pedir confirmação, aprovação de pauta, escolha de voz ou revisão antes de produzir. Aplicar todas as verificações desta habilidade, escolher a pauta oficial material mais recente, produzir o episódio que for aprovado pelo controle de qualidade e registrar o resultado. Se não houver pauta material ou se o controle de qualidade reprovar o episódio, registrar **sem publicação** com a razão e encerrar a execução.
+
 ## Parâmetros fixos
 
 | Item | Padrão obrigatório |
@@ -23,7 +27,7 @@ Apresentar uma novidade material por episódio. Não tratar rumores, cobertura d
 | Formato | Vertical 9:16, para Reels, Shorts e TikTok |
 | Duração | 55–90 segundos |
 | Estrutura | 8–14 cenas de conteúdo, de 3–8 segundos cada, mais tela final de 3–4 segundos |
-| Narração | Voz em português, objetiva, calma e clara; gerar por trecho/cena |
+| Narração | Voz masculina em português brasileiro, objetiva, calma e clara; gerar por trecho/cena |
 | Visual | Fotografia documental contemporânea do Canadá; paisagens e cenários urbanos, aeroportos, universidades e trabalho quando relevantes |
 | Elementos proibidos | Bonecos-palito, ilustração infantil, texto dentro de imagens, logotipos, marcas d’água, marcas, personagens identificáveis sem licença |
 | Base factual | Link e data de uma fonte primária do IRCC |
@@ -91,7 +95,7 @@ Criar `assets/asset-registry.json` para cada episódio e bloquear a montagem cas
 
 ### 5. Produzir narração e montagem
 
-Gerar a narração por trecho, mantendo a mesma voz, volume e ritmo entre as cenas. Usar legendas em português no vídeo apenas se a etapa de montagem as suportar; as legendas não devem fazer parte da imagem gerada. Usar música de fundo instrumental discreta, com licença compatível ou geração própria, em volume inferior ao da voz.
+Gerar a narração por trecho, mantendo a mesma voz masculina, volume e ritmo entre as cenas. Usar legendas em português no vídeo apenas se a etapa de montagem as suportar; as legendas não devem fazer parte da imagem gerada. Usar música de fundo instrumental discreta, com licença compatível ou geração própria, em volume inferior ao da voz.
 
 Montar em 9:16. Garantir que imagens, transições, legendas e áudio tenham espaço seguro para as interfaces de Reels, Shorts e TikTok.
 
