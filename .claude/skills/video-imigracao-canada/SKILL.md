@@ -28,6 +28,7 @@ Na execução diária, não pedir confirmação, aprovação de pauta, escolha d
 | Duração | 55–90 segundos |
 | Estrutura | 8–14 cenas de conteúdo, de 3–8 segundos cada, mais tela final de 3–4 segundos |
 | Narração | Voz masculina em português brasileiro, objetiva, calma e clara; gerar por trecho/cena |
+| Legendas | Obrigatórias em português brasileiro, sincronizadas à locução e posicionadas na área inferior segura |
 | Visual | Fotografia documental contemporânea do Canadá; paisagens e cenários urbanos, aeroportos, universidades e trabalho quando relevantes |
 | Elementos proibidos | Bonecos-palito, ilustração infantil, texto dentro de imagens, logotipos, marcas d’água, marcas, personagens identificáveis sem licença |
 | Base factual | Link e data de uma fonte primária do IRCC |
@@ -95,7 +96,7 @@ Criar `assets/asset-registry.json` para cada episódio e bloquear a montagem cas
 
 ### 5. Produzir narração e montagem
 
-Gerar a narração por trecho, mantendo a mesma voz masculina, volume e ritmo entre as cenas. Usar legendas em português no vídeo apenas se a etapa de montagem as suportar; as legendas não devem fazer parte da imagem gerada. Usar música de fundo instrumental discreta, com licença compatível ou geração própria, em volume inferior ao da voz.
+Gerar a narração por trecho, mantendo a mesma voz masculina, volume e ritmo entre as cenas. Gerar e incorporar legendas obrigatórias em português brasileiro, sincronizadas à locução, com contraste alto, no terço inferior e acima da área coberta pelas interfaces de Reels, Shorts e TikTok. As legendas devem ser aplicadas na etapa de montagem, nunca dentro da imagem gerada. Usar música de fundo instrumental discreta, com licença compatível ou geração própria, em volume inferior ao da voz.
 
 Montar em 9:16. Garantir que imagens, transições, legendas e áudio tenham espaço seguro para as interfaces de Reels, Shorts e TikTok.
 
@@ -115,7 +116,8 @@ Reprovar e corrigir o episódio se ocorrer qualquer item da tabela.
 | Linguagem | Português brasileiro natural, sem promessa, alarmismo ou aconselhamento individual. |
 | Visual | Imagens documentais do Canadá; nenhuma cena com bonecos-palito, texto, logo ou ativo sem origem verificável. |
 | Licença | Todo ativo consta em `asset-registry.json`; atribuições estão prontas para a descrição. |
-| Legibilidade | Voz clara, legendas quando usadas, áudio equilibrado e corte vertical sem elementos importantes cobertos. |
+| Legibilidade | Voz clara, áudio equilibrado e corte vertical sem elementos importantes cobertos. |
+| Legendas | Todas as falas possuem legendas em português brasileiro, sincronizadas, com contraste alto e dentro da área inferior segura. |
 | Tela final | Últimos 3–4 segundos exibem somente: “Quer saber mais? Acesse o link na descrição”. |
 | Aviso | Aviso informativo presente no fim e na descrição. |
 

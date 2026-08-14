@@ -1,0 +1,34 @@
+[Script Info]
+Title: Legendas em português — consulta Express Entry 2027
+ScriptType: v4.00+
+PlayResX: 720
+PlayResY: 1280
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,DejaVu Sans,35,&H00FFFFFF,&H000000FF,&H00101010,&H80000000,1,0,0,0,100,100,0,0,1,2.2,0.7,2,48,48,188,1
+
+[Events]
+Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
+Dialogue: 0,0:00:00.00,0:00:03.70,Default,,0,0,0,,O IRCC abriu consulta pública
+Dialogue: 0,0:00:03.70,0:00:07.60,Default,,0,0,0,,sobre prioridades do Express Entry para 2027.
+Dialogue: 0,0:00:07.60,0:00:11.10,Default,,0,0,0,,Isso não altera as regras de hoje,
+Dialogue: 0,0:00:11.10,0:00:14.80,Default,,0,0,0,,e nenhuma categoria nova foi aprovada.
+Dialogue: 0,0:00:14.80,0:00:18.50,Default,,0,0,0,,Até 1º de setembro, o governo recebe opiniões
+Dialogue: 0,0:00:18.50,0:00:22.20,Default,,0,0,0,,sobre possíveis prioridades para o próximo ano.
+Dialogue: 0,0:00:22.20,0:00:26.40,Default,,0,0,0,,A discussão inclui escassez de mão de obra,
+Dialogue: 0,0:00:26.40,0:00:30.80,Default,,0,0,0,,retenção de talentos e imigração francófona fora de Quebec.
+Dialogue: 0,0:00:30.80,0:00:35.30,Default,,0,0,0,,Em 2026, o foco segue em experiência canadense
+Dialogue: 0,0:00:35.30,0:00:39.80,Default,,0,0,0,,e em saúde, ofícios, transporte, educação, STEM e francês.
+Dialogue: 0,0:00:39.80,0:00:44.60,Default,,0,0,0,,Nas categorias ocupacionais, a regra atual exige
+Dialogue: 0,0:00:44.60,0:00:49.20,Default,,0,0,0,,um ano de experiência elegível acumulada nos últimos três anos.
+Dialogue: 0,0:00:49.20,0:00:53.20,Default,,0,0,0,,Para francês, é necessário nível mínimo 7
+Dialogue: 0,0:00:53.20,0:00:56.70,Default,,0,0,0,,nas quatro habilidades.
+Dialogue: 0,0:00:56.70,0:01:01.10,Default,,0,0,0,,Não faça planos com base em possibilidades para 2027.
+Dialogue: 0,0:01:01.10,0:01:05.40,Default,,0,0,0,,Categorias novas só entram em vigor
+Dialogue: 0,0:01:05.40,0:01:09.00,Default,,0,0,0,,quando forem aprovadas e publicadas oficialmente.
+Dialogue: 0,0:01:09.00,0:01:13.20,Default,,0,0,0,,Conteúdo informativo, baseado no IRCC.
+Dialogue: 0,0:01:13.20,0:01:16.00,Default,,0,0,0,,As regras podem mudar.
+Dialogue: 0,0:01:16.00,0:01:20.00,Default,,0,0,0,,Confira a página oficial antes de decidir.
