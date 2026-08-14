@@ -27,7 +27,7 @@ Apresentar uma novidade material por episódio. Não tratar rumores, cobertura d
 | Visual | Fotografia documental contemporânea do Canadá; paisagens e cenários urbanos, aeroportos, universidades e trabalho quando relevantes |
 | Elementos proibidos | Bonecos-palito, ilustração infantil, texto dentro de imagens, logotipos, marcas d’água, marcas, personagens identificáveis sem licença |
 | Base factual | Link e data de uma fonte primária do IRCC |
-| Tela final | Últimos 3–4 segundos com `imigracam.com.br` e a chamada obrigatória definida abaixo |
+| Tela final | Últimos 3–4 segundos com a chamada obrigatória definida abaixo |
 | Aviso | Aviso informativo obrigatório no fim e na descrição |
 
 ## Fluxo diário
@@ -95,7 +95,7 @@ Gerar a narração por trecho, mantendo a mesma voz, volume e ritmo entre as cen
 
 Montar em 9:16. Garantir que imagens, transições, legendas e áudio tenham espaço seguro para as interfaces de Reels, Shorts e TikTok.
 
-Reservar os últimos **3–4 segundos** para uma tela final limpa, produzida na etapa de montagem — e não dentro de uma imagem gerada. Exibir, de forma legível, `imigracam.com.br` e exatamente a frase: **“Quer saber mais? Acesse o link na descrição”.** Essa tela deve permanecer estável até o fim, com contraste suficiente e música discreta; não incluir logotipos de terceiros, imagens licenciadas sem registro ou chamadas adicionais.
+Reservar os últimos **3–4 segundos** para uma tela final limpa, produzida na etapa de montagem — e não dentro de uma imagem gerada. Exibir, de forma legível, somente a frase: **“Quer saber mais? Acesse o link na descrição”.** Essa tela deve permanecer estável até o fim, com contraste suficiente e música discreta; não incluir endereços de site, logotipos de terceiros, imagens licenciadas sem registro ou chamadas adicionais.
 
 Não usar efeitos cômicos, animações de bonecos-palito ou transições que façam a informação parecer entretenimento infantil.
 
@@ -112,12 +112,12 @@ Reprovar e corrigir o episódio se ocorrer qualquer item da tabela.
 | Visual | Imagens documentais do Canadá; nenhuma cena com bonecos-palito, texto, logo ou ativo sem origem verificável. |
 | Licença | Todo ativo consta em `asset-registry.json`; atribuições estão prontas para a descrição. |
 | Legibilidade | Voz clara, legendas quando usadas, áudio equilibrado e corte vertical sem elementos importantes cobertos. |
-| Tela final | Últimos 3–4 segundos exibem `imigracam.com.br` e exatamente: “Quer saber mais? Acesse o link na descrição”. |
+| Tela final | Últimos 3–4 segundos exibem somente: “Quer saber mais? Acesse o link na descrição”. |
 | Aviso | Aviso informativo presente no fim e na descrição. |
 
 ### 7. Finalizar e registrar
 
-Exportar o vídeo em `videos/ep<NNN>-<slug>/pt-BR/final.mp4`. Criar `descricao.md` com título, resumo curto, URL oficial, data da fonte, link de destino `imigracam.com.br`, aviso e atribuições necessárias. Atualizar `marketing/video-imigracao-canada/historico-temas.md` e `state/ultima-execucao.json` após conclusão ou após uma execução sem publicação.
+Exportar o vídeo em `videos/ep<NNN>-<slug>/pt-BR/final.mp4`. Criar `descricao.md` com título, resumo curto, URL oficial, data da fonte, aviso e atribuições necessárias. Atualizar `marketing/video-imigracao-canada/historico-temas.md` e `state/ultima-execucao.json` após conclusão ou após uma execução sem publicação.
 
 Usar este aviso no fechamento e na descrição:
 
