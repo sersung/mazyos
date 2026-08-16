@@ -2,8 +2,8 @@
 name: video-diario
 description: >
   Produz um pacote diário de vídeo curto, pronto para revisão e postagem manual no YouTube Shorts e TikTok.
-  Pesquisa um tema atual, cria roteiro e plano de cenas, gera vídeo vertical, legenda inferior incorporada,
-  SRT, metadados e nota de fontes; aplica quality gates antes de entregar. Use quando o usuário pedir
+  Pesquisa um tema atual com fontes públicas e 2–3 vídeos relevantes do YouTube, cria roteiro e plano de cenas,
+  gera vídeo vertical, legenda inferior incorporada, SRT, metadados e nota de fontes; aplica quality gates antes de entregar. Use quando o usuário pedir
   "vídeo diário", "Short do dia", "vídeo para TikTok", "vídeo pro YouTube Shorts", "gerar vídeo financeiro"
   ou /video-diario.
 ---
@@ -18,6 +18,7 @@ Crie um pacote editorial completo para um vídeo vertical de 60–90 segundos. O
 - Ler `identidade/design-guide.md` antes de qualquer decisão visual. Quando ele estiver vago, usar o padrão visual definido abaixo.
 - Ler `marketing/video-diario/historico-temas.md` para não repetir o ângulo principal dos últimos 30 dias.
 - Usar `templates/video/pacote-video-diario.md` como lista de produção e entrega.
+- Usar `templates/video/pesquisa-youtube-focada.md` antes de escolher tema, hook, metáfora ou ritmo.
 - Rodar `node scripts/validar-video-diario.mjs <pasta-do-pacote>` antes de entregar. Corrigir qualquer falha bloqueante.
 
 ## Padrão de saída
@@ -37,11 +38,14 @@ O usuário publica manualmente. Nunca enviar, agendar ou publicar em redes socia
 
 ## Fase 1 — Escolher um tema útil e não repetido
 
-1. Pesquisar fontes públicas recentes e confiáveis antes de escolher o assunto. Usar ao menos duas fontes quando houver dado factual no roteiro.
-2. Comparar o assunto com `historico-temas.md`. Mudar o ângulo se o tema ou a promessa central já apareceu nos últimos 30 dias.
-3. Priorizar uma única pergunta prática, com alto potencial de identificação e uma resposta visual clara. Não escolher apenas porque um tópico está em alta.
-4. Explicar com conteúdo educacional geral. Não recomendar ativos específicos, prometer retornos ou tratar cenários financeiros como certeza.
-5. Registrar a decisão e as fontes em `pesquisa.md`.
+1. Ler `templates/video/pesquisa-youtube-focada.md` e decompor a pauta em dor prática, explicação de especialista e embalagem/retenção.
+2. Pesquisar e analisar **2–3 vídeos** recentes do YouTube: priorizar um especialista ou instituição, um educador com execução clara e, quando útil, uma perspectiva alternativa. Registrar URL, criador, data e critério de seleção.
+3. Extrair somente padrões abstratos: tipo de hook, clareza da pergunta, ritmo, metáfora, visualização e lacuna editorial. Nunca reutilizar frase, título, sequência de cenas, visual, áudio, thumbnail ou estrutura específica de outro criador.
+4. Cruzar os aprendizados com pelo menos duas fontes públicas recentes e confiáveis antes de escolher o assunto. Usar vídeos como evidência editorial e fontes públicas para fatos.
+5. Comparar o assunto com `historico-temas.md`. Mudar tema, ângulo, metáfora, promessa ou CTA quando algo equivalente já apareceu nos últimos 30 dias.
+6. Priorizar uma única pergunta prática, com alto potencial de identificação e uma resposta visual clara. Não escolher apenas porque um tópico está em alta.
+7. Explicar com conteúdo educacional geral. Não recomendar ativos específicos, prometer retornos ou tratar cenários financeiros como certeza.
+8. Registrar em `pesquisa.md` as seções `YouTube videos analyzed`, `Editorial synthesis`, `Originality check` e `Public-source verification`.
 
 ## Fase 2 — Definir a produção antes de gerar ativos
 
@@ -90,6 +94,8 @@ Verificar o arquivo final antes de entregar. Reprovar e corrigir quando ocorrer 
 | Legendas | MP4 com legendas inferiores legíveis, pequenas, dentro da zona segura e SRT sincronizado. |
 | Continuidade | Alex, cores, acessórios e estilo permanecem coerentes entre cenas. |
 | Roteiro | Gancho inicial, uma ideia central, ação simples e CTA final. |
+| Pesquisa editorial | Dois ou três vídeos do YouTube analisados, fontes públicas cruzadas e síntese registrada sem cópia de conteúdo. |
+| Originalidade | Hook, metáfora, roteiro, visual e CTA próprios, além de não repetirem o histórico de 30 dias. |
 | Segurança editorial | Sem promessa de retorno, recomendação individual ou ativo específico. |
 | Pacote | MP4, SRT, metadados, pesquisa e relatório de qualidade presentes. |
 
@@ -108,3 +114,5 @@ Executar o validador. O relatório precisa trazer `pass: true`. Se o vídeo falh
 - Não gerar texto longo dentro de imagens; a narração e as legendas carregam a explicação.
 - Não reutilizar o mesmo tema, metáfora e CTA dos últimos 30 dias.
 - Não afirmar dados sem registrar a fonte em `pesquisa.md`.
+- Usar a pesquisa no YouTube para compreender perguntas, formatos e lacunas; nunca para copiar linguagem, cenas, thumbnail, edição, voz, identidade ou trilha de outros canais.
+- Escrever em `quality-check.md`: `youtube_research_used: yes`, `youtube_sources_analyzed: 2` ou `3`, e `originality_check: passed` antes de validar o pacote.

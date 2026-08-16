@@ -93,11 +93,27 @@ if (existsSync(join(packageDirectory, 'legendas.srt'))) {
   addCheck('srt_covers_final_three_seconds', lastEnd !== null && (!expectedDuration || lastEnd >= expectedDuration - 3), lastEnd === null ? 'unreadable' : `${lastEnd.toFixed(2)}s`);
 }
 
+if (existsSync(join(packageDirectory, 'pesquisa.md'))) {
+  const research = readFileSync(join(packageDirectory, 'pesquisa.md'), 'utf8').toLowerCase();
+  const hasYouTubeSection = /#{1,3}\s*youtube videos analyzed/.test(research);
+  const hasSynthesisSection = /#{1,3}\s*editorial synthesis/.test(research);
+  const hasOriginalitySection = /#{1,3}\s*originality check/.test(research);
+  const hasPublicVerification = /#{1,3}\s*public-source verification/.test(research);
+  addCheck(
+    'youtube_research_sections_present',
+    hasYouTubeSection && hasSynthesisSection && hasOriginalitySection && hasPublicVerification,
+    'Require YouTube videos analyzed, Editorial synthesis, Originality check, and Public-source verification sections in pesquisa.md.',
+  );
+}
+
 if (existsSync(join(packageDirectory, 'quality-check.md'))) {
   const review = readFileSync(join(packageDirectory, 'quality-check.md'), 'utf8').toLowerCase();
   addCheck('captions_burned_in_confirmation', /subtitles_burned_in:\s*yes/.test(review), 'Set subtitles_burned_in: yes after rendering captions into the MP4.');
   addCheck('caption_safe_zone_confirmation', /subtitle_safe_zone:\s*yes/.test(review), 'Set subtitle_safe_zone: yes after checking the lower safe zone.');
   addCheck('narration_mix_confirmation', /narration_clear:\s*yes/.test(review), 'Set narration_clear: yes after confirming voice-over remains intelligible.');
+  addCheck('youtube_research_confirmation', /youtube_research_used:\s*yes/.test(review), 'Set youtube_research_used: yes after analyzing 2–3 relevant YouTube videos.');
+  addCheck('youtube_source_count_confirmation', /youtube_sources_analyzed:\s*[23]\b/.test(review), 'Set youtube_sources_analyzed: 2 or 3 after documenting the selected videos.');
+  addCheck('originality_confirmation', /originality_check:\s*passed/.test(review), 'Set originality_check: passed after confirming the hook, metaphor, script, visual approach, and CTA are original.');
 }
 
 const report = {

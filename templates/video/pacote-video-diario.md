@@ -18,8 +18,13 @@
 
 | Fonte | Achado verificável | Como será usado | URL |
 |---|---|---|---|
-| | | | |
-| | | | |
+| Fonte pública | Achado verificável | Como será usado | URL |
+| Vídeo YouTube 1 | Padrão editorial abstrato, sem copiar texto ou sequência | Ajustar pergunta, hook ou lacuna editorial | URL |
+| Vídeo YouTube 2 | Padrão editorial abstrato, sem copiar texto ou sequência | Ajustar pergunta, hook ou lacuna editorial | URL |
+
+**Síntese editorial do YouTube:** Registrar como os vídeos mudaram a pergunta, o hook, a metáfora ou o ritmo sem reproduzir conteúdo de terceiros.
+
+**Originalidade:** Confirmar tema, promessa, metáfora, hook, CTA, roteiro, visual e edição próprios, além de não repetirem o histórico de 30 dias.
 
 **Limite editorial:** O vídeo é educacional. Não inclui recomendação personalizada, promessa de retorno, indicação de ativo específico ou previsão tratada como certeza.
 
@@ -58,7 +63,7 @@
 
 - `legendas.srt` contém todos os blocos em inglês e tempo sincronizado.
 - `metadados.md` contém título, descrição, hashtags, tags e palavras-chave para as duas plataformas.
-- `pesquisa.md` lista a escolha editorial, os achados e links das fontes.
+- `pesquisa.md` lista a escolha editorial, 2–3 vídeos analisados no YouTube, síntese editorial, checagem de originalidade, fontes públicas e links.
 
 ## Quality gate final
 
@@ -71,6 +76,8 @@
 | SRT presente e sincronizado | ☐ |
 | Personagem, paleta e acessórios consistentes | ☐ |
 | Gancho, uma ideia central, ação prática e CTA | ☐ |
+| Dois ou três vídeos do YouTube analisados e documentados | ☐ |
+| Síntese editorial e originalidade verificadas, sem cópia | ☐ |
 | Sem recomendação personalizada ou promessa financeira | ☐ |
 | MP4, SRT, metadados, pesquisa e `quality-report.json` presentes | ☐ |
 
