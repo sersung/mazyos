@@ -211,3 +211,48 @@ Sem isso, qualquer afirmação sobre quais URLs são essas é chute.
 ### Hipótese descartada por teste
 
 Havia registro, num comentário do código, de que a OG image por artigo carregaria hash de build no caminho e portanto quebraria a cada deploy. **Falso.** Testado com rebuild limpo e com alteração do componente: o hash deriva da rota e não muda. O comentário foi corrigido. As OG images não são fonte de 404.
+
+
+---
+
+## Drilldown do Search Console — 2026-08-18 (URLs nomeadas)
+
+Exports por problema, finalmente com a lista de URLs.
+
+### "Detectada, mas não indexada" — as 21 URLs
+
+São **todas as páginas reais do site menos a home**: o índice `/artigos`, os 15 artigos, e `/contato`, `/guia-completo`, `/guia-gratis`, `/privacidade`, `/sobre`, `/termos`.
+
+O dado decisivo está na coluna "Último rastreamento": **`1969-12-31` em todas as 21**. Isso é o epoch Unix (timestamp zero) — a forma do Search Console dizer **nunca rastreada**.
+
+Não é "rastreou e achou fraco". Não é "rastreou e achou duplicada". O Googlebot **nunca buscou uma única dessas páginas**. Nenhum artigo do site foi lido pelo Google até hoje.
+
+Isso encerra a discussão sobre qualidade de conteúdo como causa: nada do que está escrito nessas páginas chegou a ser avaliado. Só a home está indexada.
+
+### "Não encontrado (404)" — as 5 URLs
+
+```
+http://www.qualificacanada.com/info/Mortgage-Loans.html?ses=<token>&category=Mortgage Loans&keyword=Mortgage Loans
+http://www.qualificacanada.com/info/Wedding.html?ses=<token>&category=Wedding&keyword=Wedding
+http://www.qualificacanada.com/info/Chat.html?ses=<token>&category=Chat&keyword=Chat
+http://www.qualificacanada.com/info/Cosmetics-and-Makeup.html?ses=<token>&category=...
+http://www.qualificacanada.com/info/Shoes.html?ses=<token>&category=Shoes&keyword=Shoes
+```
+
+Nenhuma delas é do site. O padrão `/info/<Categoria>.html?ses=<token longo>&category=X&keyword=X`, em `http://www.`, é a assinatura de **página de domínio estacionado** — o tipo de landing de links patrocinados que fica no ar quando um domínio não aponta para lugar nenhum. São resíduos do passado do domínio, anterior ao site.
+
+Consequências:
+
+1. **Essas 404 estão certas e devem continuar 404.** Não há nada a consertar. Rodar "Validar correção" nelas vai falhar todas as vezes, porque validação pressupõe URL consertada — foi exatamente o que aconteceu.
+2. **Correção de uma suposição minha da rodada anterior:** eu havia dito que `/ads.txt`, removida com o AdSense, era "quase certamente" uma das 5. **Estava errado** — `/ads.txt` não aparece na lista. As 5 são todas de estacionamento.
+3. **Detalhe que incomoda:** as datas de rastreamento dessas URLs são 16/07, 23/07, 11/08, 13/08 e 14/08. Ou seja, no mesmo período em que o Googlebot nunca tocou em nenhum artigo, ele voltou cinco vezes buscar lixo de domínio estacionado. O pouco orçamento de rastreio que o domínio tem está sendo gasto no histórico dele, não no conteúdo atual.
+
+### Diagnóstico consolidado
+
+O site não tem problema técnico de indexação pendente. Canonical, robots, sitemap, schema e links internos foram verificados e estão corretos. O que existe é um **domínio novo com passado de estacionamento e sem nenhum link externo**, o que resulta em orçamento de rastreio quase nulo.
+
+Nenhuma mudança de código resolve isso. O que destrava, em ordem de impacto:
+
+1. **Link externo apontando para o site.** É o sinal que falta. Uma menção a partir do `immigracan.com.br` (domínio do mesmo dono, já ativo) é a mais fácil e a mais legítima.
+2. **"Inspecionar URL → Solicitar indexação"** nos 5 artigos de ofício técnico. Força o rastreio de página individual, contornando a fila.
+3. **Não validar as 404.** Deixar o Google descobrir sozinho que o lixo de estacionamento não volta.
