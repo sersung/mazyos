@@ -152,3 +152,62 @@ Duas consequências a aceitar conscientemente antes de ativar, porque não são 
 - **O n8n em `:32768` para de receber chamadas externas.** Webhooks de serviços de terceiros apontando para essa porta quebram silenciosamente. Como automação é uma das frentes do negócio, isso precisa ser verificado antes.
 
 Reversão, se algo quebrar: `VPS_deactivateFirewallV1` na VM 1710158.
+
+
+---
+
+## Search Console — segundo export, 2026-08-18
+
+Série até 2026-08-13; a tabela de problemas é um retrato de 18/08 08:29.
+
+### O sitemap funcionou
+
+| Data | Indexadas | Não indexadas | URLs conhecidas |
+|---|---|---|---|
+| 2026-08-09 | 2 | 6 | 8 |
+| **2026-08-10** | 2 | **31** | **33** |
+| 2026-08-13 | 2 | 31 | 33 |
+
+Em 10/08 o número de URLs conhecidas salta de 8 para 33. Era a recomendação principal da rodada anterior e ela entregou: o Google agora conhece o site inteiro. **Descoberta deixou de ser o gargalo.**
+
+### Onde as 31 estão paradas
+
+| Motivo | Validação | Páginas |
+|---|---|---|
+| Detectada, mas não indexada no momento | Não iniciada | **21** |
+| Não encontrado (404) | **Falha** | 5 |
+| Página com redirecionamento | Iniciada | 3 |
+| Bloqueada pelo robots.txt | Iniciada | 1 |
+| Rastreada, mas não indexada no momento | Não iniciada | 1 |
+
+O novo gargalo é **rastreio**, não qualidade. "Detectada, mas não indexada" significa que o Google tem a URL pelo sitemap e ainda não foi buscá-la. O sinal decisivo é o contraste: só **1** URL chegou a ser rastreada e recusada. Se o problema fosse conteúdo, esse número seria alto e o de detectadas, baixo.
+
+Rastreio de domínio novo responde a duas coisas: link interno a partir das páginas fortes, e link externo. Só a primeira está sob controle do código.
+
+### Por que a validação dos 404 falhou
+
+"Validar correção" faz o Google rebuscar a amostra de URLs do problema. Se qualquer uma ainda responder 404, a validação inteira falha.
+
+O ponto que muda a leitura: **validação existe para URL que foi consertada.** Se o 404 é intencional — página que não deve mesmo existir — não há o que validar, e rodar validação vai falhar todas as vezes. 404 não é penalidade; o Google simplesmente para de pedir a URL depois de um tempo e ela sai do relatório sozinha.
+
+Pelo menos uma das 5 é autoinfligida e correta: **`/ads.txt`**, removida em 13/08 junto com o AdSense. Respondia 200 antes, responde 404 agora, e assim deve ficar.
+
+### Ainda não dá para nomear as URLs
+
+Os três exports enviados até aqui são o **resumo** de cobertura: trazem as contagens, não as URLs. Para nomear as 5 com 404 e a 1 bloqueada por robots.txt, o caminho é:
+
+1. Search Console → **Indexação → Páginas**
+2. Rolar até a tabela "Por que as páginas não são indexadas"
+3. **Clicar na linha** do motivo (ex.: "Não encontrado (404)") — abre a tela de detalhe com a lista de URLs de exemplo
+4. Botão **Exportar** no canto superior direito *dessa tela de detalhe*
+
+Sem isso, qualquer afirmação sobre quais URLs são essas é chute.
+
+### O que foi feito no código nesta rodada
+
+- **A home não linkava nenhum artigo.** Os 15 textos só eram alcançáveis pelo índice `/artigos`, a dois cliques da raiz. Nova seção com os 5 artigos de ofício técnico linkados direto da página de maior autoridade do site.
+- **`/termos` e `/privacidade` não recebiam link da home** — o rodapé apontava para `href="#"`. Corrigido.
+
+### Hipótese descartada por teste
+
+Havia registro, num comentário do código, de que a OG image por artigo carregaria hash de build no caminho e portanto quebraria a cada deploy. **Falso.** Testado com rebuild limpo e com alteração do componente: o hash deriva da rota e não muda. O comentário foi corrigido. As OG images não são fonte de 404.
