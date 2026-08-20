@@ -122,9 +122,10 @@ Quando o usuário pedir skill nova:
 
 ## Quem sou
 
-Sou Renan Sersun Calefi, engenheiro eletricista. Além da atuação como
-eletricista, entrego sites, SEO, vídeos e cortes de vídeo pra quem quer
-presença profissional online.
+Sou Renan Sersun Calefi, eletricista journeyman certificado com Red Seal
+e formado em engenharia elétrica. Além da atuação como eletricista,
+entrego sites, SEO, vídeos e cortes de vídeo pra quem quer presença
+profissional online.
 
 ## O que produzo
 
@@ -141,5 +142,6 @@ automação. Toco tudo sozinho, sem equipe.
 
 ## Posicionamento
 
-Em aberto — atualizar quando o diferencial de cada frente (elétrica vs.
-digital) ficar mais claro.
+Eletricista licenciado (Red Seal) que também constrói site e faz SEO —
+não uma agência que diz entender de trades. Essa é a abertura de
+qualquer proposta, bio ou abordagem fria, especialmente com contractors.
