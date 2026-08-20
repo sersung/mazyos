@@ -53,6 +53,16 @@ Skills externas prontas pra instalar. Use como referencia ao criar skills novas 
 
 ---
 
+## Prospectar clientes
+
+### Prospectar (auditoria como isca)
+**O que faz:** Encontra contractors de um nicho e região, varre o site de cada um em 14 pontos de SEO/AEO, escolhe as 3 falhas mais vendáveis e escreve um email frio em inglês com trilha de conformidade CASL.
+**Bom pra:** Captação fria de trades e contractors no Canadá, onde a auditoria gratuita abre a porta pra auditoria paga.
+**Como instalar:** Já está disponível neste projeto. Chamar com `/prospectar`.
+**Fonte:** Skill personalizada do MazyOS, padrão GTA (electrical, HVAC, plumbing).
+
+---
+
 ## Trabalhar com documentos
 
 ### PDF
