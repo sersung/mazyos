@@ -33,7 +33,7 @@ O produto dessa skill não é a venda. É um email que merece resposta.
 | Idioma do email | Inglês |
 | Lote | 10–15 prospects |
 | Oferta de entrada | Auditoria de 14 pontos em PDF, gratuita, entregue por resposta |
-| Produto vendido | Auditoria completa (`/seo`), CAD $900–$2.000 |
+| Produto vendido | Auditoria completa (`/seo`), CAD 900–2.000 |
 
 Adaptar só quando o usuário pedir outro nicho ou região.
 
@@ -42,7 +42,7 @@ Adaptar só quando o usuário pedir outro nicho ou região.
 ## Passo 0 — CASL antes de qualquer coisa
 
 Email comercial para endereço canadense cai na CASL. Não existe isenção B2B. Multa de até
-CAD $1 milhão para pessoa física, com responsabilidade pessoal.
+CAD 1 milhão (um milhão de dólares canadenses) para pessoa física, com responsabilidade pessoal.
 
 A base usada aqui é **consentimento implícito por publicação conspícua**, válida só quando as
 três condições valem juntas:
@@ -219,7 +219,7 @@ Quando o prospect responder, gerar o relatório a partir de `varreduras/<slug>.m
 o que está ok, o que não está, e o que cada correção resolve. Converter em PDF com a skill `pdf`.
 
 É isca, não entrega. Diagnóstico honesto e específico, sem plano de execução detalhado — o plano
-é a auditoria completa de $900–$2.000, que roda com `/seo`.
+é a auditoria completa de 900–2.000 dólares canadenses, que roda com `/seo`.
 
 Terminar o PDF com uma frase só sobre o próximo passo. Sem página de vendas.
 
