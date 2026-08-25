@@ -256,3 +256,29 @@ Nenhuma mudança de código resolve isso. O que destrava, em ordem de impacto:
 1. **Link externo apontando para o site.** É o sinal que falta. Uma menção a partir do `immigracan.com.br` (domínio do mesmo dono, já ativo) é a mais fácil e a mais legítima.
 2. **"Inspecionar URL → Solicitar indexação"** nos 5 artigos de ofício técnico. Força o rastreio de página individual, contornando a fila.
 3. **Não validar as 404.** Deixar o Google descobrir sozinho que o lixo de estacionamento não volta.
+
+
+---
+
+## Página de vendas — rodada de conversão (2026-08-25)
+
+Framework de página de vendas aplicado. Boa parte já estava no ar: hero com headline específica e CTA, preço visível, FAQ em accordion, garantia de 7 dias, CTA final e CTAs repetidos. O que faltava de fato:
+
+- **"Como funciona"** — nova seção com 4 passos, do pagamento ao envio da documentação. Era a lacuna mais clara: a "trilha" mostra os produtos, não o processo, e o visitante não tinha onde entender o que acontece depois de comprar.
+- **Números conferíveis** — faixa com 140+ ofícios, 5 guias, 3 negativas revertidas e licença em 2022. Todos já sustentados pelo conteúdo do site.
+- **Depoimentos** — estrutura pronta, renderizando só quando houver item cadastrado. O array vai vazio de propósito.
+- **Performance** — fontes migradas para `next/font` (fim do `<link>` render-blocking) e remoção da Geist, que era baixada sem nenhuma regra de CSS usá-la.
+
+### Duas coisas que não foram feitas, e por quê
+
+**Depoimentos inventados: não.** O framework pede "depoimentos com nome, foto e resultado mensurável". Não existe depoimento real para publicar. Fabricar um em página que vende material sobre imigração é propaganda enganosa, e em área YMYL o estrago de credibilidade não se desfaz. A seção existe e aparece sozinha quando o primeiro depoimento verdadeiro entrar. Mesma lógica para "500 alunos certificados" e "95% de aprovação": só entram quando forem números reais.
+
+**Remover o menu de navegação: não.** O framework recomenda tirar navegação e links externos da página de vendas, para concentrar em um CTA. Isso vale para landing page dedicada a tráfego pago. Aqui a home é a **única página indexada do site** e o único ponto de partida de link interno para as 21 URLs que o Googlebot nunca rastreou. Remover navegação agora atacaria justamente o gargalo diagnosticado. Quando houver tráfego pago, o caminho é criar uma landing separada e enxuta, sem mexer na home.
+
+### Contradição encontrada entre a página de vendas e o próprio conteúdo
+
+O artigo de salários foi reescrito em 20/08 com fatos conferidos nas fontes oficiais e concluiu que cada ofício exige a própria aplicação de TEA e o próprio exame, com reaproveitamento de documentação a confirmar caso a caso junto à Skilled Trades Ontario.
+
+A página de vendas seguia prometendo, no card do Produto 3 e na descrição do `Product` schema, "obter uma segunda licença comprovando só uma fração das horas". O site contradizia o próprio artigo — e a promessa mais forte estava na página que cobra R$ 197.
+
+A copy foi alinhada ao que o guia entrega de fato, preservando o benefício (mais vagas, mais poder de negociação) sem afirmar um mecanismo que a pesquisa não sustentou.
