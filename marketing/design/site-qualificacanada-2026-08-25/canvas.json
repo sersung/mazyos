@@ -1,0 +1,16 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 1440, "h": 980, "title": "Recomendação — desktop" },
+    { "file": "MainMobile.dc.html", "x": 1560, "y": 0, "w": 390, "h": 980, "title": "Recomendação — mobile" },
+    { "file": "DirecaoA.dc.html", "x": 0, "y": 1140, "w": 720, "h": 540, "title": "A · Ofício documentado" },
+    { "file": "DirecaoB.dc.html", "x": 820, "y": 1140, "w": 720, "h": 540, "title": "B · Canteiro premium" },
+    { "file": "DirecaoC.dc.html", "x": 1640, "y": 1140, "w": 720, "h": 540, "title": "C · Guia de bolso" }
+  ],
+  "annotations": [
+    { "id": "bug-losangos", "x": 0, "y": -230, "w": 400, "text": "Bug no site atual: os losangos do hero se sobrepõem e cortam o texto — \"PRODUTO 5\" aparece como \"ODUTO 5\". Some nas três direções." },
+    { "id": "bug-mobile", "x": 440, "y": -230, "w": 400, "text": "Bug no mobile: o logo quebra em duas linhas e colide com o botão, e a home não tem menu nenhum (o header dela é separado do resto do site)." },
+    { "id": "bug-idioma", "x": 880, "y": -230, "w": 400, "text": "Erro de idioma no site atual: \"Autor licenciado 309A in Ontário\" — o \"in\" ficou em inglês." },
+    { "id": "escolha", "x": 0, "y": 1750, "w": 560, "text": "Escolha uma direção. A está montada em alta fidelidade acima porque é a minha recomendação — mas B e C são apostas legítimas e diferentes, não versões piores da mesma ideia." }
+  ],
+  "launch": { "view": "canvas" }
+}
