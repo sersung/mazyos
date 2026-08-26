@@ -8,6 +8,9 @@
 > Todos os números vieram dos artigos já publicados, que citam Job Bank e
 > Skilled Trades Ontario como fonte. Nenhum dado foi inventado para o post.
 
+**Imagens:** `marketing/conteudo/post-skilled-workers-2026-08-25/` — uma por post,
+1080x1350, numeradas na mesma ordem (`post-01.png` para o post 1, e assim por diante).
+
 ---
 
 ## 1. O que "skilled worker" realmente significa
