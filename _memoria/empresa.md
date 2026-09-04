@@ -19,11 +19,12 @@ Renan é engenheiro eletricista de formação e atua também com serviços digit
 
 **PromptHub** — <https://www.prompterniche.com> (repositório `sersung/promphub`)
 
-Portal de notícias de IA e automação em português, com venda de pacotes de
-prompts em PDF. Desde 09/2026 opera como hub de notícias: publica de segunda a
-sexta por varredura automática de RSS + Gemini, e monetiza por três frentes —
-AdSense, links de afiliado (`/ferramentas`) e os pacotes próprios (`/produtos`,
-Super Bundle R$ 49,90 e 12 nichos a R$ 19,90, checkout Kiwify).
+Portal de notícias de IA e automação **em inglês** (desde 09/2026; antes era em
+português). Publica de segunda a sexta por varredura automática de RSS + Gemini.
+Monetiza por duas frentes: AdSense e links de afiliado (`/tools`).
+
+Os pacotes de prompts em PDF saíram do ar na troca para inglês — o site não tem
+mais venda direta. O material continua no histórico do repositório.
 
 Documentação de operação: `marketing/seo/prompthub/`.
 

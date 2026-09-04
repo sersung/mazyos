@@ -30,11 +30,17 @@ Não brigar por termo de cabeça ("notícias de IA") — Exame e InfoMoney ocupa
 O espaço é a cauda longa de decisão de compra: "vale a pena assinar X",
 "X ou Y para tal tarefa", "quanto custa X no Brasil".
 
+**Atualização 04/09/2026 — site trocado para inglês, produtos fora.**
+O site agora é em inglês e não vende mais os pacotes de prompts. Sobraram AdSense
+e afiliado como receita. Detalhes em `marketing/seo/prompthub/02-mudanca-para-ingles.md`.
+
 **Pendências que dependem do Renan:**
-- cadastrar os programas de afiliado e preencher `affiliateUrl` em `affiliates.json`
-- ressubmeter o sitemap no Search Console (84 URLs, contra 26 antes)
-- decidir a ferramenta de newsletter — hoje o e-mail capturado fica só no
-  `localStorage` do visitante e não chega a lista nenhuma
-- decidir se assina os artigos com nome próprio (a credencial de engenheiro
-  eletricista que presta automação pesa mais em E-E-A-T que "Redação PromptHub")
+- cadastrar os programas de afiliado e preencher `affiliateUrl` — virou a única
+  receita variável do site, então é a prioridade
+- decidir a ferramenta de newsletter — é o único ativo próprio que restou, e o
+  e-mail capturado ainda fica só no `localStorage` do visitante
+- ressubmeter o sitemap no Search Console: as URLs mudaram todas
+- decidir se o domínio `prompterniche.com` continua fazendo sentido, já que o
+  site não vende mais prompts
+- decidir se assina os artigos com nome próprio em vez de "PromptHub Newsroom"
 
