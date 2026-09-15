@@ -179,18 +179,56 @@ novas).
 
 ---
 
+## Rodada 3 — 2026-09-15 (continuação): soldador, mecânico, HVAC
+
+Mesmo dia, segunda leva — completei os 3 ofícios que tinha sugerido como próximo
+passo. Cada um verificado contra Job Bank do Governo do Canadá e Skilled Trades
+Ontario antes de publicar.
+
+### Três artigos novos
+
+- **`/artigos/soldador-no-canada-salario-como-validar`** — o achado mais importante
+  desta leva: **welding não é ofício compulsório em Ontário** (é em Alberta). Isso
+  muda o argumento de venda — não dá pra dizer "você precisa validar por lei" pra
+  esse público, o enquadramento certo é custo-benefício por empregador-alvo. NOC
+  72106, 6.000h (5.280 trabalho + 720 escola), mediana $28,00/hora — a mais baixa
+  dos ofícios cobertos.
+- **`/artigos/mecanico-automotivo-canada-validacao`** — Automotive Service
+  Technician (NOC 72410), compulsório, 7.220h (6.500 + 720). **Não consegui
+  confirmar a mediana oficial isolada do Job Bank** nas buscas (só o range
+  $18,75–$43,27/hora) — documentei isso explicitamente no artigo em vez de inventar
+  um número, com link direto pro Job Bank pra quem quiser conferir.
+- **`/artigos/hvac-canada-como-validar-refrigeracao`** — Refrigeration and Air
+  Conditioning Systems Mechanic (NOC 72402), compulsório, 9.000h (8.280 + 720),
+  mediana **$37,00/hora — a mais alta entre todos os ofícios cobertos no site**,
+  acima até do eletricista. Virou uma tabela comparativa de mediana salarial entre
+  os 4 ofícios com dado confirmado, linkando os 4 artigos entre si.
+
+### Pilar TEA agora linka os 6 clusters
+
+A seção "O TEA por ofício" no pilar passou de 3 pra 6 links — cobre agora todos os
+ofícios mencionados no "para quem" da landing page (eletricista, encanador,
+soldador, mecânico, carpinteiro fica de fora ainda, HVAC).
+
+**Total do site agora: 19 artigos**, verificado sem link quebrado.
+
+---
+
 ## O que ainda fica pendente
 
 1. **Pilar 3 — Imigração via Trades** (apprenticeship em detalhe, OWP Stream
    aprofundado além do artigo de notícia) — não comecei.
-2. Restam ~7 artigos de cluster de alta intenção comercial do relatório original:
-   soldador, mecânico, HVAC, carpinteiro (ofícios ainda sem conteúdo próprio, citados
-   no produto mas não cobertos), "checklist de documentos do TEA", "erros que
-   reprovam no TEA", "quanto tempo demora todo o processo".
-3. Canal de vídeo/Shorts e presença em comunidades — distribuição, não código.
-4. SEO programático por ofício × província — arquitetura nova, maior escopo técnico.
+2. Restam ~4 artigos de cluster de alta intenção comercial do relatório original:
+   carpinteiro (único ofício do "para quem" da landing ainda sem conteúdo próprio),
+   "checklist de documentos do TEA", "erros que reprovam no TEA", "quanto tempo
+   demora todo o processo".
+3. **Confirmar a mediana oficial de Automotive Service Technician** direto no Job
+   Bank (jobbank.gc.ca/marketreport/wages-occupation/14799/ON) quando o WebFetch
+   nesse domínio estiver liberado, ou manualmente — o artigo hoje só tem o range.
+4. Canal de vídeo/Shorts e presença em comunidades — distribuição, não código.
+5. SEO programático por ofício × província — arquitetura nova, maior escopo técnico.
 
-Sigo sem tentar as ~34 páginas restantes de uma vez, pelo mesmo motivo de antes:
-conteúdo de imigração errado é caro. Ritmo sugerido: mais 3 ofícios (soldador,
-mecânico, HVAC) na próxima rodada, replicando o padrão validação+salário que já
-funcionou para eletricista e encanador.
+Ritmo sugerido pra próxima rodada: fechar carpinteiro (o último ofício do "para
+quem" sem conteúdo) e os 3 artigos de processo/documentação do TEA — depois disso,
+o Cluster 1+2 do relatório original estaria essencialmente completo, sobrando só
+Pilar 3 e SEO programático.
