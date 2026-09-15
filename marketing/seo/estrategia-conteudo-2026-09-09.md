@@ -120,29 +120,77 @@ artigos aparecem agora.
 
 ---
 
-## O que fica pendente — não fiz sem confirmar escopo
+## Rodada 2 — 2026-09-15: Cluster 2 (Ofícios específicos)
 
-O plano completo do relatório é **3 páginas-pilar (3.000-5.000 palavras) + 25-30
-artigos de cluster + SEO programático por ofício × província**. Isso é um projeto de
-várias sessões, não uma tarde. O que falta, em ordem de prioridade pelo próprio
-relatório:
+Retomei o backlog via a skill `/seo` (Passo 5, continuação — Passo 0-2 já feitos na
+rodada anterior). Fechei os itens 1, 3 e 6 da lista de pendências:
 
-1. **Pilar 2 — Ofícios específicos** (309A x 442A, encanador, soldador, mecânico, HVAC)
-   e **Pilar 3 — Imigração via Trades** (apprenticeship, OWP Stream em detalhe).
-2. Os ~10 artigos de cluster de maior intenção comercial (Cluster 1 e 2 do relatório:
-   "quanto ganha eletricista no Canadá", "309A x 442A", "checklist de documentos do
-   TEA", etc.) — cada um precisa da mesma verificação de fato que fiz para os 3 de hoje.
-3. Instalar schema `HowTo` (diferente de `FAQPage`, que já existe) nos guias passo a
-   passo — útil especificamente para os artigos de processo.
-4. Canal de vídeo/Shorts e presença em comunidades (Facebook, Reddit
-   r/ImmigrationCanada) — distribuição, não código.
-5. SEO programático por ofício × província — arquitetura nova, maior escopo técnico.
-6. **A FAQ da home cita "3 a 6 meses" para o TEA sem fonte** — não é claim do relatório
-   nem consegui confirmar na fonte oficial (a STO não publica SLA). Vale decidir se
-   suaviza para "sem prazo oficial publicado" como fiz no artigo novo, para as duas
-   páginas não se contradizerem.
+### Três artigos novos, verificados
 
-Recomendo decidirmos o ritmo do restante — cada pilar/cluster novo é uma sessão de
-pesquisa + escrita + verificação, e vale eu saber se a prioridade é cobrir os ofícios
-não-elétricos (encanador, soldador, HVAC — mencionados no produto mas sem conteúdo
-próprio ainda) antes de ir para SEO programático.
+- **`/artigos/309a-x-442a-diferenca-licenca-eletricista`** (Pilar 2) — tabela
+  comparativa: escopo de trabalho, obrigatoriedade, renovação. Confirmado: 309A é
+  compulsório (canteiro de obras, renovação anual $60+HST) e 442A não é
+  (industrial, sem renovação).
+- **`/artigos/quanto-ganha-eletricista-no-canada-2026`** — resolve a divergência de
+  salário que ficou como *caveat* aberto no relatório original (mediana $34/hora do
+  Job Bank do governo federal vs. média $50,92/hora da CTAO). Confirmei os dois
+  números na fonte e expliquei a diferença de metodologia (mediana de todo o NOC
+  72200 vs. média só de journeypersons 309A licenciados) — nenhum concorrente do
+  nicho faz essa transparência.
+- **`/artigos/encanador-plumber-canada-como-validar`** — primeiro ofício fora da
+  elétrica: plumber (NOC 72300), compulsório, 9.000h (8.280 trabalho + 720 escola),
+  mediana $32,50/hora (Job Bank). Reusa o processo do TEA já publicado.
+
+Título 43-49 caracteres, description 150-163, schema `BlogPosting` + `FAQPage` em
+todos, fonte oficial linkada (Job Bank do Governo do Canadá nos dois artigos de
+salário — fortalece ainda mais a Authoritativeness).
+
+### Schema `HowTo` instalado
+
+`Artigo` ganhou o campo opcional `howTo` (nome + lista de passos em texto puro, sem
+HTML — é o que o schema HowTo exige). Aplicado no pilar TEA, que já tinha os 7 passos
+em lista numerada — reuso direto, zero conteúdo novo escrito só pra alimentar schema.
+Qualquer artigo futuro de processo usa o mesmo campo.
+
+### Ligação pilar ↔ cluster nos dois sentidos
+
+Antes, os artigos linkavam *para* o pilar TEA mas o pilar não apontava de volta pros
+clusters. Adicionei seção "O TEA por ofício" no pilar, linkando os 3 artigos novos —
+fecha o padrão de arquitetura que o relatório pede (pilar central, satélites
+interligados nos dois sentidos, não só satélite → pilar).
+
+### Vitrine da home atualizada
+
+`SLUGS_RELACIONADOS` trocou "custo de vida" e "profissões em alta" (genéricos) por
+"quanto ganha eletricista" e "309A x 442A" — mais específicos pro comprador que já
+está avaliando o produto. Confirmado por screenshot: os 3 artigos mais recentes +
+salário + licenças + erros comuns, nessa ordem.
+
+### FAQ da home corrigida
+
+O "3 a 6 meses" pro TEA que ficou pendente na rodada anterior foi trocado por texto
+honesto: a STO não publica prazo oficial, e o motivo (depende da resposta das
+referências e da completude da documentação) — mesma redação do artigo novo. As duas
+páginas não se contradizem mais.
+
+**Total do site agora: 16 artigos** (13 + 3), todos aparecendo na listagem `/artigos`
+e no `sitemap.xml`, zero link quebrado (checado com Playwright em todas as páginas
+novas).
+
+---
+
+## O que ainda fica pendente
+
+1. **Pilar 3 — Imigração via Trades** (apprenticeship em detalhe, OWP Stream
+   aprofundado além do artigo de notícia) — não comecei.
+2. Restam ~7 artigos de cluster de alta intenção comercial do relatório original:
+   soldador, mecânico, HVAC, carpinteiro (ofícios ainda sem conteúdo próprio, citados
+   no produto mas não cobertos), "checklist de documentos do TEA", "erros que
+   reprovam no TEA", "quanto tempo demora todo o processo".
+3. Canal de vídeo/Shorts e presença em comunidades — distribuição, não código.
+4. SEO programático por ofício × província — arquitetura nova, maior escopo técnico.
+
+Sigo sem tentar as ~34 páginas restantes de uma vez, pelo mesmo motivo de antes:
+conteúdo de imigração errado é caro. Ritmo sugerido: mais 3 ofícios (soldador,
+mecânico, HVAC) na próxima rodada, replicando o padrão validação+salário que já
+funcionou para eletricista e encanador.
