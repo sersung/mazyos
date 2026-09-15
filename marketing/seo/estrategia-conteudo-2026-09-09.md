@@ -214,21 +214,84 @@ soldador, mecânico, carpinteiro fica de fora ainda, HVAC).
 
 ---
 
+## Rodada 4 — 2026-09-22: carpinteiro + os 3 artigos de processo
+
+Fechei os dois itens que ficaram no topo da lista de pendências. Com isso, o
+Cluster 1+2 do relatório original de SEO está essencialmente completo.
+
+### Carpinteiro — mesma pegadinha do soldador, resolvida com cuidado extra
+
+Na primeira busca sobre o status do carpinteiro, achei **resultados
+contraditórios**: uma busca disse "compulsório em Ontário", outra disse
+"voluntário em todo lugar exceto Quebec". Não publiquei nenhum dos dois até
+resolver — uma terceira busca, mais específica (checando diretamente a lista
+oficial dos 23 ofícios compulsórios de Ontário), confirmou: **General
+Carpenter é voluntário em Ontário** (código 403A, NOC 72310), mesmo status do
+soldador. Duas buscas independentes e mais direcionadas depois, sem
+contradição. Vale registrar esse padrão: quando duas fontes se contradizem
+numa claim de "compulsório ou não" — que tem consequência prática real pra
+quem lê — o certo é aprofundar a verificação antes de publicar, não escolher
+a resposta que parece mais plausível.
+
+- **`/artigos/carpinteiro-no-canada-oficio-voluntario`** — 7.200h (6.480+720),
+  range Job Bank $22-$48/hora (mediana isolada não encontrada nas buscas
+  disponíveis, mesma situação do mecânico — documentado como tal no artigo).
+
+### Os 3 artigos de processo — a parte que mais gera dúvida real
+
+Esses não dependiam de fato regulatório novo, mas de traduzir com cuidado o
+que a Skilled Trades Ontario já exige oficialmente, sem inventar estatística
+que não existe:
+
+- **`/artigos/checklist-documentos-tea-eletricista`** — schema `HowTo` (7
+  passos). O achado mais útil da pesquisa: a STO só aceita referência de quem
+  **praticou o ofício**, não de supervisor/gerente que nunca exerceu trabalho
+  manual — detalhe que não estava em nenhum artigo anterior do site e que é
+  provavelmente a causa mais comum de aplicação travada.
+- **`/artigos/erros-que-reprovam-no-tea`** — deliberadamente **não** inventa
+  taxa de reprovação (a STO não publica isso, e nenhum site sério deveria
+  fingir que sabe). Em vez disso, traduz os requisitos oficiais da
+  verificação de experiência em erros concretos e evitáveis, e documenta o
+  processo formal de **reassessment** ($100 + HST, exige evidência nova) —
+  informação que a página do pilar TEA tinha só como "existem rotas de
+  reconsideração", vago. Atualizei o pilar com o dado específico.
+- **`/artigos/quanto-tempo-demora-certificacao-oficio-canada`** — inclui uma
+  seção específica desmontando o "3 a 6 meses" que circula em blogs sem fonte
+  (a mesma claim que eu já tinha tirado da FAQ da home na Rodada 1). Em vez de
+  dar um número, explica o que de fato controla a velocidade de cada etapa.
+
+### Pilar TEA totalmente interligado
+
+A seção de ofícios foi de 6 para 7 links (+ carpinteiro), e ganhou uma nova
+seção "Documentação, erros comuns e prazos" com os 3 artigos de processo. Os
+3 artigos de processo linkam entre si e de volta pro pilar. Vitrine da home
+trocada: saíram os 2 artigos de notícia (OINP, Express Entry — mais datados)
+e o "erros comuns" genérico, entraram os 3 artigos de processo — a home agora
+mostra um funil coerente: TEA → salário → licenças → checklist → erros →
+prazo.
+
+**Total do site agora: 23 artigos**, verificado com Playwright sem link
+quebrado, todos os schemas validando como JSON.
+
+---
+
 ## O que ainda fica pendente
 
 1. **Pilar 3 — Imigração via Trades** (apprenticeship em detalhe, OWP Stream
    aprofundado além do artigo de notícia) — não comecei.
-2. Restam ~4 artigos de cluster de alta intenção comercial do relatório original:
-   carpinteiro (único ofício do "para quem" da landing ainda sem conteúdo próprio),
-   "checklist de documentos do TEA", "erros que reprovam no TEA", "quanto tempo
-   demora todo o processo".
-3. **Confirmar a mediana oficial de Automotive Service Technician** direto no Job
-   Bank (jobbank.gc.ca/marketreport/wages-occupation/14799/ON) quando o WebFetch
-   nesse domínio estiver liberado, ou manualmente — o artigo hoje só tem o range.
-4. Canal de vídeo/Shorts e presença em comunidades — distribuição, não código.
-5. SEO programático por ofício × província — arquitetura nova, maior escopo técnico.
+2. **Confirmar a mediana oficial de Automotive Service Technician e de
+   General Carpenter** direto no Job Bank quando o WebFetch nesses domínios
+   estiver liberado — os dois artigos hoje só têm o range, documentado como
+   tal.
+3. Canal de vídeo/Shorts e presença em comunidades — distribuição, não
+   código.
+4. SEO programático por ofício × província — arquitetura nova, maior escopo
+   técnico.
 
-Ritmo sugerido pra próxima rodada: fechar carpinteiro (o último ofício do "para
-quem" sem conteúdo) e os 3 artigos de processo/documentação do TEA — depois disso,
-o Cluster 1+2 do relatório original estaria essencialmente completo, sobrando só
-Pilar 3 e SEO programático.
+Com o Cluster 1+2 fechado (todos os ofícios do "para quem" da landing têm
+conteúdo próprio, mais os 3 artigos de processo), o próximo passo natural do
+relatório original é o Pilar 3. É mais trabalho de síntese que de fato novo
+— a maior parte do material (OWP Stream, Express Entry, CRS) já foi
+verificada nas rodadas anteriores; falta consolidar num pilar único e
+aprofundado, com o passo a passo prático de apprenticeship que ainda não foi
+coberto em nenhum artigo.
