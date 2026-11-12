@@ -14,6 +14,8 @@ Início de operação — sistema recém-instalado, sem identidade visual fixa d
 
 **Pra tirar das costas:** Busca de clientes e resposta para clientes — candidata a virar skill própria via `/mapear-rotinas`.
 
+**Frente ativa:** O projeto `buscador-clientes` é a aposta atual pra esse gargalo — prospecção B2B (Google Places + cold email) pro mercado EUA/Canadá, atendendo as duas frentes de receita. Roda na VPS própria. Candidata a virar produto SaaS depois.
+
 ## O que pode esperar
 
 Identidade visual fixa (fica em aberto — vai variar por projeto).

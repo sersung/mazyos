@@ -8,9 +8,11 @@
 **Perfil:** Solopreneur / criador solo
 **Atende clientes:** Clientes que querem sites profissionais, carrosséis e melhorias em automação
 **Equipe:** Sozinho
-**Ferramentas:**
+**Ferramentas:** VPS própria (hospedagem dos projetos), Google Places API (New), Hunter.io, SMTP + IMAP de domínio próprio
 **Principais entregas:** Sites, SEO, vídeos, cortes, carrosséis, automação
 
 ## Contexto adicional
 
 Renan é engenheiro eletricista de formação e atua também com serviços digitais (sites, SEO, vídeo). As duas frentes competem pelo mesmo gargalo: captação de clientes.
+
+Infraestrutura: hospeda em VPS própria, não em PaaS (Vercel/Netlify). Projetos novos devem assumir deploy self-hosted — Node + systemd + Nginx com TLS — em vez de function serverless.
